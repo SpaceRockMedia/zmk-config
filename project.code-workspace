@@ -1,0 +1,55 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": false,
+    "files.associations": {
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+        "*.cfg": "ini",
+        "*.code-workspace": "json",
+        "*.json": "json",
+        "*.lock": "toml",
+        "*.sql": "sql",
+        "*.toml": "toml",
+        ".env": "shellscript",
+        ".env.*": "shellscript",
+        ".gitchangelog.rc": "python",
+        ".pythonstartup": "python",
+        "Pipfile": "toml",
+        "profile": "shellscript",
+        "rc": "shellscript",
+        "toml": "toml",
+        "*.c": "c",
+        "*.cpp": "cpp",
+        "*.h": "c",
+        "*.hpp": "cpp",
+        "*.inc": "c",
+        "ranges": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "xstddef": "c",
+        "bit": "c",
+        "compare": "c",
+        "condition_variable": "c",
+        "cstddef": "c",
+        "list": "c",
+        "string": "c",
+        "limits": "c",
+        "memory": "c",
+        "mutex": "c",
+        "new": "c",
+        "functional": "c",
+        "*.tcc": "c",
+        "optional": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "array": "c",
+        "regex": "c",
+        "tuple": "c",
+        "variant": "c"
+    }
+  }
+}
