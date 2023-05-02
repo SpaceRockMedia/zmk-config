@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 // #define QWERTY 1
@@ -53,11 +54,11 @@
 // | SHIFT |  Z  |  X  |  C   |  D   |  V   |  C_PP  |  | MUTE  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3    &kp N4    &kp N5                           &kp N6     &kp N7   &kp N8    &kp N9   &kp N0   &kp BSPC
-&kp TAB   AS(Q)  AS(W)    AS(F)     AS(P)     AS(B)                            AS(J)     AS(L)    AS(U)     AS(Y)     AS(SEMI)  AS(BSLH)
-&kp ESC   AS(A)  AS(R)    AS(S)     AS(T)     AS(G)                            AS(M)     AS(N)    AS(E)     AS(I)     AS(O)     AS(SQT)
-&kp LSHFT AS(Z)  AS(X)    AS(C)     AS(D)     AS(V)      &kp C_PP   &kp C_MUTE AS(K)     AS(H)    AS(COMMA) AS(DOT)   AS(FSLH)  AS(RSHFT)
-                 &kp LGUI &kp LCTRL &kp LALT  &mo LOWER  &kp SPACE  &kp RET    &mo RAISE  &kp RALT &kp RCTRL &to CONF
+AS(GRAVE) AS(N1) AS(N2)   AS(N3)    AS(N4)    AS(N5)                           AS(N6)    AS(N7)   AS(N8)    AS(N9)    AS(N0)   AS(BSPC)
+&kp TAB   AS(Q)  AS(W)    AS(F)     AS(P)     AS(B)                            AS(J)     AS(L)    AS(U)     AS(Y)     AS(SEMI) AS(BSLH)
+&kp ESC   AS(A)  AS(R)    AS(S)     AS(T)     AS(G)                            AS(M)     AS(N)    AS(E)     AS(I)     AS(O)    AS(SQT)
+&kp LSHFT AS(Z)  AS(X)    AS(C)     AS(D)     AS(V)      &kp C_PP   &kp C_MUTE AS(K)     AS(H)    AS(COMMA) AS(DOT)   AS(FSLH) AS(RSHFT)
+                 &kp LGUI &kp LCTRL &kp LALT  &mo LOWER  &kp SPACE  &kp RET    &mo RAISE &kp RALT &kp RCTRL &mo CONF
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -85,16 +86,16 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // -------------------------------------------------------------------------------------------------------------
 // |       |  F1  |  F2  |  F3  |  F4   |  F5  |                |  F6   |  F7  |  F8  |  F9   |  F10  |  F11  |
-// | BTCLR | BT1  | BT2  | BT3  | BT4   | BT5  |                | PG_UP | HOME |  UP  | END   |       |  F12  |
+// |       |      |      |      |       |      |                | PG_UP | HOME |  UP  | END   |       |  F12  |
 // | CAPS  |      |      |      |       |      |                | PG_DN | LEFT | DOWN | RIGHT |       |       |
 // |       | UNDO | CUT  | COPY | PASTE |      |      |  |      |       |      |      |       |       |       |
 //                |      |      |       |      |      |  |      |       |      |      |       |
             bindings = <
-&trans     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                       &kp F6    &kp F7   &kp F8   &kp F9    &kp F1    &kp F11
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &kp PG_UP &kp HOME &kp UP   &kp END   &kp PSCRN &kp F12
-&caps_word &trans       &trans       &trans       &trans       &trans                       &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans    &trans
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans       &trans   &trans &trans    &trans   &trans   &trans    &trans    &trans
-                        &trans       &trans       &trans       &trans       &trans   &trans &trans    &trans   &trans   &trans
+&trans     &kp F1     &kp F2    &kp F3     &kp F4      &kp F5                   &kp F6    &kp F7   &kp F8   &kp F9    &kp F1    &kp F11
+&trans     &trans     &trans    &trans     &trans      &trans                   &kp PG_UP &kp HOME &kp UP   &kp END   &kp PSCRN &kp F12
+&caps_word &trans     &trans    &trans     &trans      &trans                   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans    &trans
+&trans     &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &trans &trans   &trans   &trans    &trans   &trans   &trans    &trans    &trans
+                      &trans    &trans     &trans      &trans &trans   &kp BSPC &trans    &trans   &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_NEXT C_PREV>;
@@ -108,11 +109,11 @@
 // |     |  |   |  =   |  +   |  {   |  [  |      |  |      |  ]  |  }  |  -  |  _  |  \  | Num   |
 //              |      |      |      |     |      |  |      |     |     |     |     |
             bindings = <
-&trans    &trans   &trans    &trans      &trans   &trans                     &trans    &trans    &trans       &trans    &trans   &kp C_SLEEP
+ftrans    &trans   &trans    &trans      &trans   &trans                     &trans    &trans    &trans       &trans    &trans   &kp C_SLEEP
 &kp GRAVE &kp N1   &kp N2    &kp N3      &kp N4   &kp N5                     &kp N6    &kp N7    &kp N8       &kp N9    &kp N0   &kp INS
 &trans    &kp EXCL &kp AT    &kp HASH    &kp DLLR &kp PRCNT                  &kp CARET &kp AMPS  &kp ASTRK    &kp LPAR  &kp RPAR &kp SLCK
 &trans    &kp PIPE &kp EQUAL &kp KP_PLUS &kp LBRC &kp LBKT &trans    &trans  &kp RBKT  &kp RBRC  &kp KP_MINUS &kp UNDER &kp BSLH &kp KP_NUM
-                   &trans    &trans      &trans   &trans   &trans    &trans  &trans    &trans    &trans       &trans
+                   &trans    &trans      &trans   &trans   &kp DEL   &trans  &trans    &trans    &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -121,17 +122,17 @@
 
         conf_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |BTCLR |       |       |       |       |       |                |      |  7  |  8  |  9  |  +  | Sleep |
-// |EXTPWR|RGB_EFF|RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|                |      |  4  |  5  |  6  |  -  | Ins   |
-// |      |RGB_EFR|RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|                |      |  1  |  2  |  3  |  *  | Scroll|
-// |      |       |       |       |       |       |RGB_TOG| |      |      |  0  |  =  |  .  |  /  | Num   |
+// |BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                |      |  7  |  8  |  9  |  +  | Sleep |
+// |EXTPWR |RGB_EFF|RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|                |      |  4  |  5  |  6  |  -  | Ins   |
+// |       |RGB_EFR|RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|                |      |  1  |  2  |  3  |  *  | Scroll|
+// |OUT_TOG|       |       |       |       |       |RGB_TOG| |      |      |  0  |  =  |  .  |  /  | Num   |
 //                |       |       |       |       |       | |      |      |     |     |     |
         bindings = <
-&none             &none           &none           &none           &none           &none                                  &none &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp KP_PLUS     &kp C_SLEEP
+&bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                           &none &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp KP_PLUS     &kp C_SLEEP
 &ext_power EP_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI                        &none &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp KP_MINUS    &kp INS
 &none             &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD                        &none &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_ASTERISK &kp SLCK
-&none             &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
-                                  &none           &trans          &trans          &none           &none            &none &none &none &none &to BASE
+&out OUT_TOG      &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
+                                  &none           &trans          &trans          &none           &none            &none &none &none     &none     &none
         >;
         };
 
