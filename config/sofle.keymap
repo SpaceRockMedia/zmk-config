@@ -23,13 +23,13 @@
 / {
 
    // Activate CONF layer by pressing raise and lower
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-            conf_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <CONF>;
-        };
-    };
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //         conf_layer {
+    //         if-layers = <LOWER RAISE>;
+    //         then-layer = <CONF>;
+    //     };
+    // };
 
     behaviors {
         as: auto_shift {
@@ -58,7 +58,7 @@ AS(GRAVE) AS(N1) AS(N2)   AS(N3)    AS(N4)    AS(N5)                           A
 &kp TAB   AS(Q)  AS(W)    AS(F)     AS(P)     AS(B)                            AS(J)     AS(L)    AS(U)     AS(Y)     AS(SEMI) AS(BSLH)
 &kp ESC   AS(A)  AS(R)    AS(S)     AS(T)     AS(G)                            AS(M)     AS(N)    AS(E)     AS(I)     AS(O)    AS(SQT)
 &kp LSHFT AS(Z)  AS(X)    AS(C)     AS(D)     AS(V)      &kp C_PP   &kp C_MUTE AS(K)     AS(H)    AS(COMMA) AS(DOT)   AS(FSLH) AS(RSHFT)
-                 &kp LGUI &kp LCTRL &kp LALT  &mo LOWER  &kp SPACE  &kp RET    &mo RAISE &kp RALT &kp RCTRL &kp RGUI
+                 &kp LGUI &kp LCTRL &kp LALT  &mo LOWER  &kp SPACE  &kp RET    &mo RAISE &kp RALT &kp RCTRL &to CONF
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -76,7 +76,7 @@ AS(GRAVE) AS(N1) AS(N2)   AS(N3)    AS(N4)    AS(N5)                           A
 // &kp TAB   &kp Q  &kp W    &kp E     &kp R     &kp T                            &kp Y      &kp U    &kp I     &kp O    &kp P    &kp BSLH
 // &kp ESC   &kp A  &kp S    &kp D     &kp F     &kp G                            &kp H      &kp J    &kp K     &kp L    &kp SEMI &kp SQT
 // &kp LSHFT &kp Z  &kp X    &kp C     &kp V     &kp B      &kp C_PP   &kp C_MUTE &kp N      &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-//                  &kp LGUI &kp LCTRL &kp LALT  &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RALT &kp RCTRL &kp RGUI
+//                  &kp LGUI &kp LCTRL &kp LALT  &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RALT &kp RCTRL &to CONF
 //             >;
 //
 //             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -126,13 +126,13 @@ AS(GRAVE) AS(N1) AS(N2)   AS(N3)    AS(N4)    AS(N5)                           A
 // |EXTPWR |RGB_EFF|RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|                |      |  4  |  5  |  6  |  -  | Ins   |
 // |       |RGB_EFR|RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|                |      |  1  |  2  |  3  |  *  | Scroll|
 // |OUT_TOG|       |       |       |       |       |RGB_TOG| |      |      |  0  |  =  |  .  |  /  | Num   |
-//                |       |       |       |       |       | |      |      |     |     |     |
+//                 |       |       |       |       |       | |      |      |     |     |     |
         bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                           &none &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp KP_PLUS     &kp C_SLEEP
 &ext_power EP_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI                        &none &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp KP_MINUS    &kp INS
 &none             &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD                        &none &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_ASTERISK &kp SLCK
 &out OUT_TOG      &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
-                                  &none           &trans          &trans          &none           &none            &none &none &none     &none     &none
+                                  &none           &trans          &trans          &none           &none            &none &none &none     &none     &to BASE
         >;
         };
 
