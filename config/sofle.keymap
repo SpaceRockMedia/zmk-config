@@ -20,10 +20,10 @@
 // https://zmk.dev/docs/behaviors/hold-tap
 #define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
 
-#define HYP        LS(LC(LA(LGUI)))
-#define HYPER(key) LS(LC(LA(LG(key))))
-#define MEH        LS(LC(LALT))
-#define MEHM(key)  LS(LC(LA(key)))
+#define HYP LS(LC(LA(LGUI)))
+// #define HYPER(key) LS(LC(LA(LG(key))))
+#define MEH LS(LC(LALT))
+// #define MEHM(key)  LS(LC(LA(key)))
 
 /
 {
@@ -44,7 +44,7 @@
     {
       compatible = "zmk,behavior-hold-tap";
       label      = "AUTO_SHIFT";
-// clang-format off
+      // clang-format off
       #binding-cells = <2>;
       // clang-format on
       tapping_term_ms = <225>;
@@ -58,24 +58,12 @@
     * https://zmk.dev/docs/behavrs/mod-morph
     */
 
-    //   back:
-    //     altback
-    //     {
-    //       compatible = "zmk,behavior-mod-morph";
-    //       label      = "ALT_BACK";
-    // // clang-format off
-    //       #binding-cells = <0>;
-    //       // clang-format on
-    //       bindings = <&bdel>, <&kp BSPC>;
-    //       mods     = <(MOD_LALT | MOD_RALT)>;
-    //     };
-
   bdel:
     back_del
     {
       compatible = "zmk,behavior-mod-morph";
       label      = "BACK_DEL";
-// clang-format off
+      // clang-format off
       #binding-cells = <0>;
       // clang-format on
       bindings = <&kp BSPC>, <&kp DEL>;
@@ -195,7 +183,7 @@ AS(GRAVE)    AS(N1) AS(N2)    AS(N3)   AS(N4)    AS(N5)                         
 &ext_power EP_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI                        &none &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp KP_MINUS    &kp INS
 &none             &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD                        &none &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_ASTERISK &kp SLCK
 &out OUT_TOG      &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
-                                  &none           &trans          &trans          &none           &none            &none &none &none     &none     &to BASE
+                                  &none           &trans          &trans          &none           &none            &none &none &none     &none     &none
         // clang-format on
         >;
     };
