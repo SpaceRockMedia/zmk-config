@@ -105,6 +105,11 @@ AUTHORS text
 *.pyw 	text
 *.pyx  	text
 
+# C/C++
+
+*.dtsi   linguist-language=C++
+*.keymap linguist-language=C++
+
 # Python Binary
 *.db	binary
 *.p 	binary
