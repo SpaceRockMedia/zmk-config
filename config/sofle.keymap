@@ -44,7 +44,7 @@
     {
       compatible = "zmk,behavior-hold-tap";
       label      = "AUTO_SHIFT";
-      // clang-format off
+// clang-format off
       #binding-cells = <2>;
       // clang-format on
       tapping_term_ms = <225>;
@@ -75,7 +75,7 @@
     {
       compatible = "zmk,behavior-mod-morph";
       label      = "BACK_DEL";
-      // clang-format off
+// clang-format off
       #binding-cells = <0>;
       // clang-format on
       bindings = <&kp BSPC>, <&kp DEL>;
@@ -173,7 +173,7 @@ AS(GRAVE)    AS(N1) AS(N2)    AS(N3)   AS(N4)    AS(N5)                         
 &kp GRAVE &kp F1   &kp F2    &kp F3      &kp F4    &kp F5                        &kp F6    &kp F7   &kp F8    &kp F9 &kp F10  &kp F11
 &trans    &kp EXCL &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp CARET &kp AMPS &kp ASTRK &trans &trans   &kp F12
 &trans    &trans   &trans    &trans      &trans    &kp KP_PLUS                   &kp MINUS &trans   &trans    &trans &trans   &trans
-&trans    &trans   &tran     &trans      &trans    &kp EQUAL   &trans    &trans  &kp UNDER &trans   &trans    &trans &trans   &trans
+&trans    &trans   &trans    &trans      &trans    &kp EQUAL   &trans    &trans  &kp UNDER &trans   &trans    &trans &trans   &trans
                    &trans    &trans      &trans    &kp LBKT    &kp LBRC  &trans  &trans    &trans   &trans    &trans
         // clang-format on
         >;
