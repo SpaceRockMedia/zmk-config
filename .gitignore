@@ -1,4 +1,1 @@
-.lh/.lhignore
-.lh/config/sofle.conf.json
-.lh/config/sofle.keymap.json
-.lh/config/west.yml.json
+.lh/
