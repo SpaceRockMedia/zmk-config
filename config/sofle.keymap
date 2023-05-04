@@ -94,7 +94,7 @@ ZMK_LAYER(
     &mt CONF TAB &kp Q  &kp W    &kp F    &kp P     &kp B                                       &kp J       &kp L     &kp U     &kp Y   &kp SEMI &kp BSLH
     &kp ESC      &kp A  &kp R    &kp S    &kp T     &kp G                                       &kp M       &kp N     &kp E     &kp I   &kp O    &kp SQT
     &kp LCTRL    &kp Z  &kp X    &kp C    &kp D     &kp V         &kp C_PP       &kp C_MUTE     &kp K       &kp H     &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                        &kp LGUI &kp LALT &mo NAV &mt HYP SPACE &mt LSHFT LPAR &mt RSHFT RPAR &mt MEH RET &mo SYM &kp RALT  &bdel,
+                        &kp LGUI &kp LALT &mo NAV &mt HYP SPACE &mt LSHFT LPAR &mt RSHFT RPAR &mt MEH RET &mo SYM &kp RALT  &bdel
     , &inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN
 )
 
@@ -136,7 +136,7 @@ ZMK_LAYER( // NAV
     ______     ______     ______    ______     ______      ______                   &kp HOME &kp PG_DN &kp PG_UP &kp END      &kp PSCRN ______
     &caps_word ______     ______    ______     ______      ______                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT    ______    ______
     ______     &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE ______ ______   ______   ______   ______    ______    ______       ______    ______
-                          ______    ______     ______      ______ ______   &kp RBRC &kp RBKT ______    ______    &kp LC(BSPC),
+                          ______    ______     ______      ______ ______   &kp RBRC &kp RBKT ______    ______    &kp LC(BSPC)
     , &inc_dec_kp DOWN UP &inc_dec_kp C_NEXT C_PREV
 )
 
@@ -157,7 +157,7 @@ ZMK_LAYER( // SYM
     ______    &kp EXCL &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp CARET &kp AMPS &kp ASTRK ______ ______   &kp F12
     ______    ______   ______    ______      ______    &kp KP_PLUS                   &kp MINUS ______   ______    ______ ______   ______
     ______    ______   ______    ______      ______    &kp EQUAL   ______    ______  &kp UNDER ______   ______    ______ ______   ______
-                       ______    ______      ______    &kp LBKT    &kp LBRC  ______  ______    ______   ______    ______,
+                       ______    ______      ______    &kp LBKT    &kp LBRC  ______  ______    ______   ______    ______
     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
 )
 
@@ -178,6 +178,6 @@ ZMK_LAYER( // CONF
     &ext_power EP_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI                        &none &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp KP_MINUS    &kp INS
     &none             &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD                        &none &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_ASTERISK &kp SLCK
     &out OUT_TOG      &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
-                                      &none           ______          ______          &none           &none            &none &none &none     &none     &none,
+                                      &none           ______          ______          &none           &none            &none &none &none     &none     &none
     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
 )
