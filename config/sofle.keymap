@@ -42,7 +42,6 @@ ZMK_BEHAVIOR(as, hold_tap,
  * https://zmk.dev/docs/behavrs/mod-morph
  */
 ZMK_BEHAVIOR(bdel, mod_morph,
-    global-quick-tap;
     bindings = <&kp BSPC>, <&kp DEL>;
     mods     = <(MOD_LSFT | MOD_RSFT)>;
 )
