@@ -13,9 +13,9 @@
 
 #define BASE 0
 // #define QWERTY 1
-#define NAV 1
-#define SYM 2
-#define CONF 3
+// #define NAV 1
+// #define SYM 2
+// #define CONF 3
 
 // https://zmk.dev/docs/behaviors/hold-tap
 #define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
