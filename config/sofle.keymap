@@ -56,7 +56,6 @@ ZMK_BEHAVIOR(bdel, mod_morph,
 #define MEH LS(LC(LALT))
 // #define MEHM(key)  LS(LC(LA(key)))
 
-/ {
 
     // Activate CONF layer by pressing raise and lower
   // conditional_layers {
@@ -66,26 +65,6 @@ ZMK_BEHAVIOR(bdel, mod_morph,
   //         then-layer = <CONF>;
   //     };
   // };
-
-  behaviors {
-
-    /*
-    * MOD MORPH
-    * https://zmk.dev/docs/behavrs/mod-morph
-    */
-
-  bdel:
-    back_del {
-      compatible = "zmk,behavior-mod-morph";
-      label      = "BACK_DEL";
-      // clang-format off
-      #binding-cells = <0>;
-      // clang-format on
-      bindings = <&kp BSPC>, <&kp DEL>;
-      mods     = <(MOD_LSFT | MOD_RSFT)>;
-    };
-
-  }; // behaviors
 
 /*
  * KEYMAPS
@@ -99,11 +78,11 @@ ZMK_BEHAVIOR(bdel, mod_morph,
 *              |  50 |  51 |  52 |  53 |  54 |  55 |  56 |  57 |  58 |  59 |
 */
 
+
+
+/ {
   keymap {
     compatible = "zmk,keymap";
-
-
-
     default_layer {
       // .----------------------------------------.                   .---------------------------------------------.
       // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
