@@ -73,7 +73,7 @@
  * HOLD TAPS
  */
 // https://zmk.dev/docs/behaviors/hold-tap
-ZMK_BEHAVIOR(AS, hold_tap,
+ZMK_BEHAVIOR(as, hold_tap,
     flavor = "balanced";   // was 'tap-=preferred'
     tapping-term-ms = <225>;
     quick-tap-ms = <125>;
