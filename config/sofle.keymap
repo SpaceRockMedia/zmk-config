@@ -116,6 +116,26 @@ ZMK_LAYER(default_layer,
 //                           &trans    &trans     &trans      &trans &trans   &kp RBRC &kp RBKT &trans    &trans    &kp LC(BSPC),
 //     sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_NEXT C_PREV>
 // )
+// ZMK_LAYER( // NAV
+//     // ╭──────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
+//     // |      |     |     |     |     |     |                 |     |     |     |     |     | Sleep|
+//     // ├──────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |      |     |     |     |     |     |                 | HOME|PG_DN|PG_UP| END |     |      |
+//     // ├──────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
+//     // | CAPS |     |     |     |     |     |                 | <-  |  v  |  ^  | ->  |     |      |
+//     // ├──────┼─────┼─────┼─────┼─────┼─────┤───────╮ ╭───────┤─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |      | UNDO| CUT | COPY| PSTE|     |       | |       |     |     |     |     |     |      |
+//     // ╰──────┴─────┼─────┼─────┼─────┼─────┤───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┴──────╯
+//     //              |     |     |     |     |       | |    }  |  ]  |     |     | BSPC|
+//     //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
+//     nav_layer,
+//     &trans     &trans     &trans    &trans     &trans      &trans                   &trans   &trans    &trans    &trans       &trans    &kp C_SLEEP
+//     &trans     &trans     &trans    &trans     &trans      &trans                   &kp HOME &kp PG_DN &kp PG_UP &kp END      &kp PSCRN &trans
+//     &caps_word &trans     &trans    &trans     &trans      &trans                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT    &trans    &trans
+//     &trans     &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &trans &trans   &trans   &trans   &trans    &trans    &trans       &trans    &trans
+//                           &trans    &trans     &trans      &trans &trans   &kp RBRC &kp RBKT &trans    &trans    &kp LC(BSPC),
+//     sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_NEXT C_PREV>
+// )
 
 // ZMK_LAYER( // SYM
 //     // ╭─────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
