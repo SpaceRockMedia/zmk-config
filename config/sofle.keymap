@@ -11,6 +11,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
+
 #include "../zmk-nodefree-config/helper.h"
 
 #define BASE 0
@@ -32,7 +34,6 @@ ZMK_BEHAVIOR(as, hold_tap,
     quick-tap-ms = <125>;
     bindings = <&kp>, <&kp>;
 )
-#define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
 
 #define HYP LS(LC(LA(LGUI)))
 // #define HYPER(key) LS(LC(LA(LG(key))))
