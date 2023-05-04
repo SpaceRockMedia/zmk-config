@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
+#define AS(keycode) &ashft LS(keycode) keycode // Autoshift Macro
 
 #include "../zmk-nodefree-config/helper.h"
 
@@ -28,7 +28,7 @@
 
 
 // https://zmk.dev/docs/behaviors/hold-tap
-ZMK_BEHAVIOR(as, hold_tap,
+ZMK_BEHAVIOR(ashft, hold_tap,
     flavor = "balanced";   // was 'tap-=preferred'
     tapping-term-ms = <225>;
     quick-tap-ms = <125>;
