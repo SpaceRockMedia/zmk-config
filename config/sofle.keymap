@@ -19,7 +19,20 @@
 #define RAISE 2
 #define CONF  3
 
+/*
+ * CONDITIONAL LAYERS
+ */
+// ZMK_CONDITIONAL_LAYER(BASE NAV, CONF)
+
+
 // https://zmk.dev/docs/behaviors/hold-tap
+ZMK_BEHAVIOR(as, hold_tap,
+    flavor = "balanced";   // was 'tap-=preferred'
+    tapping-term-ms = <225>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+)
 #define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
 
 #define HYP LS(LC(LA(LGUI)))
