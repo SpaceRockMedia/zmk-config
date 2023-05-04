@@ -15,9 +15,9 @@
 
 #define BASE 0
 // #define QWERTY 1
-#define LOWER 1
-#define SYM 2
-#define CONF  3
+// #define LOWER 1
+// #define SYM 2
+// #define CONF  3
 
 
 /*
@@ -91,10 +91,10 @@ ZMK_LAYER(
     //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
     default_layer,
     AS(GRAVE)    AS(N1) AS(N2)   AS(N3)   AS(N4)    AS(N5)                                      AS(N6)      AS(N7)    AS(N8)    AS(N9)  AS(N0)   &kp BSPC
-    &mt CONF TAB &kp Q  &kp W    &kp F    &kp P     &kp B                                       &kp J       &kp L     &kp U     &kp Y   &kp SEMI &kp BSLH
+    &kp TAB &kp Q  &kp W    &kp F    &kp P     &kp B                                       &kp J       &kp L     &kp U     &kp Y   &kp SEMI &kp BSLH
     &kp ESC      &kp A  &kp R    &kp S    &kp T     &kp G                                       &kp M       &kp N     &kp E     &kp I   &kp O    &kp SQT
     &kp LCTRL    &kp Z  &kp X    &kp C    &kp D     &kp V         &kp C_PP       &kp C_MUTE     &kp K       &kp H     &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                        &kp LGUI &kp LALT &mo NAV &mt HYP SPACE &mt LSHFT LPAR &mt RSHFT RPAR &mt MEH RET &mo SYM &kp RALT  &bdel
+                        &kp LGUI &kp LALT ______ &mt HYP SPACE &mt LSHFT LPAR &mt RSHFT RPAR &mt MEH RET ______ &kp RALT  &bdel
     , &inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN
 )
 
@@ -119,65 +119,65 @@ ZMK_LAYER(
 //     , &inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN
 // )
 
-ZMK_LAYER( // NAV
-    // ╭──────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
-    // |      |     |     |     |     |     |                 |     |     |     |     |     | Sleep|
-    // ├──────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
-    // |      |     |     |     |     |     |                 | HOME|PG_DN|PG_UP| END |     |      |
-    // ├──────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
-    // | CAPS |     |     |     |     |     |                 | <-  |  v  |  ^  | ->  |     |      |
-    // ├──────┼─────┼─────┼─────┼─────┼─────┤───────╮ ╭───────┤─────┼─────┼─────┼─────┼─────┼──────┤
-    // |      | UNDO| CUT | COPY| PSTE|     |       | |       |     |     |     |     |     |      |
-    // ╰──────┴─────┼─────┼─────┼─────┼─────┤───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┴──────╯
-    //              |     |     |     |     |       | |    }  |  ]  |     |     | BSPC|
-    //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
-    nav_layer,
-    ______     ______     ______    ______     ______      ______                   ______   ______    ______    ______       ______    &kp C_SLEEP
-    ______     ______     ______    ______     ______      ______                   &kp HOME &kp PG_DN &kp PG_UP &kp END      &kp PSCRN ______
-    &caps_word ______     ______    ______     ______      ______                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT    ______    ______
-    ______     &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE ______ ______   ______   ______   ______    ______    ______       ______    ______
-                          ______    ______     ______      ______ ______   &kp RBRC &kp RBKT ______    ______    &kp LC(BSPC)
-    , &inc_dec_kp DOWN UP &inc_dec_kp C_NEXT C_PREV
-)
+// ZMK_LAYER( // NAV
+//     // ╭──────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
+//     // |      |     |     |     |     |     |                 |     |     |     |     |     | Sleep|
+//     // ├──────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |      |     |     |     |     |     |                 | HOME|PG_DN|PG_UP| END |     |      |
+//     // ├──────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
+//     // | CAPS |     |     |     |     |     |                 | <-  |  v  |  ^  | ->  |     |      |
+//     // ├──────┼─────┼─────┼─────┼─────┼─────┤───────╮ ╭───────┤─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |      | UNDO| CUT | COPY| PSTE|     |       | |       |     |     |     |     |     |      |
+//     // ╰──────┴─────┼─────┼─────┼─────┼─────┤───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┴──────╯
+//     //              |     |     |     |     |       | |    }  |  ]  |     |     | BSPC|
+//     //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
+//     nav_layer,
+//     ______     ______     ______    ______     ______      ______                   ______   ______    ______    ______       ______    &kp C_SLEEP
+//     ______     ______     ______    ______     ______      ______                   &kp HOME &kp PG_DN &kp PG_UP &kp END      &kp PSCRN ______
+//     &caps_word ______     ______    ______     ______      ______                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT    ______    ______
+//     ______     &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE ______ ______   ______   ______   ______    ______    ______       ______    ______
+//                           ______    ______     ______      ______ ______   &kp RBRC &kp RBKT ______    ______    &kp LC(BSPC)
+//     , &inc_dec_kp DOWN UP &inc_dec_kp C_NEXT C_PREV
+// )
 
-ZMK_LAYER( // SYM
-    // ╭─────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
-    // |  `  | F1  | F2  | F3  | F4  |  F5 |                 |  F6 |  F7 |  F8 |  F9 | F10 | F11  |
-    // ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
-    // |     | !   | @   | #   | $   |  %  |                 |  ^  |  &  |  *  |     |     | F12  |
-    // ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
-    // |     |     |     |     |     |  +  |                 |  -  |     |     |     |     |      |
-    // ├─────┼─────┼─────┼─────┼─────┼─────┤───────╮ ╭───────┤─────┼─────┼─────┼─────┼─────┼──────┤
-    // |     |     |     |     |     |  =  |       | |       |  _  |     |     |     |     |      |
-    // ╰─────┴─────┼─────┼─────┼─────┼─────┤───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┴──────╯
-    //             |     |     |     |  [  |  {    | |       |     |     |     |     |
-    //             ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
-    sym_layer,
-    &kp GRAVE &kp F1   &kp F2    &kp F3      &kp F4    &kp F5                        &kp F6    &kp F7   &kp F8    &kp F9 &kp F10  &kp F11
-    ______    &kp EXCL &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp CARET &kp AMPS &kp ASTRK ______ ______   &kp F12
-    ______    ______   ______    ______      ______    &kp KP_PLUS                   &kp MINUS ______   ______    ______ ______   ______
-    ______    ______   ______    ______      ______    &kp EQUAL   ______    ______  &kp UNDER ______   ______    ______ ______   ______
-                       ______    ______      ______    &kp LBKT    &kp LBRC  ______  ______    ______   ______    ______
-    , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
-)
+// ZMK_LAYER( // SYM
+//     // ╭─────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
+//     // |  `  | F1  | F2  | F3  | F4  |  F5 |                 |  F6 |  F7 |  F8 |  F9 | F10 | F11  |
+//     // ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |     | !   | @   | #   | $   |  %  |                 |  ^  |  &  |  *  |     |     | F12  |
+//     // ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |     |     |     |     |     |  +  |                 |  -  |     |     |     |     |      |
+//     // ├─────┼─────┼─────┼─────┼─────┼─────┤───────╮ ╭───────┤─────┼─────┼─────┼─────┼─────┼──────┤
+//     // |     |     |     |     |     |  =  |       | |       |  _  |     |     |     |     |      |
+//     // ╰─────┴─────┼─────┼─────┼─────┼─────┤───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┴──────╯
+//     //             |     |     |     |  [  |  {    | |       |     |     |     |     |
+//     //             ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
+//     sym_layer,
+//     &kp GRAVE &kp F1   &kp F2    &kp F3      &kp F4    &kp F5                        &kp F6    &kp F7   &kp F8    &kp F9 &kp F10  &kp F11
+//     ______    &kp EXCL &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp CARET &kp AMPS &kp ASTRK ______ ______   &kp F12
+//     ______    ______   ______    ______      ______    &kp KP_PLUS                   &kp MINUS ______   ______    ______ ______   ______
+//     ______    ______   ______    ______      ______    &kp EQUAL   ______    ______  &kp UNDER ______   ______    ______ ______   ______
+//                        ______    ______      ______    &kp LBKT    &kp LBRC  ______  ______    ______   ______    ______
+//     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
+// )
 
-ZMK_LAYER( // CONF
-    // ╭───────┬───────┬───────┬───────┬───────┬───────╮                 ╭───────┬───────┬───────┬───────┬───────┬───────╮
-    // |BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                 |       |   7   |   8   |   9   |   +   | Sleep |
-    // ├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
-    // |EXTPWR |RGB_EFF|RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|                 |       |   4   |   5   |   6   |   -   | Ins   |
-    // ├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
-    // |       |RGB_EFR|RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|                 |       |   1   |   2   |   3   |   *   | Scroll|
-    // ├───────┼───────┼───────┼───────┼───────┼───────┼───────╮ ╭───────┤───────┼───────┼───────┼───────┼───────┼───────┤
-    // |OUT_TOG|       |       |       |       |       |RGB_TOG| |       |       |   0   |   =   |   .   |   /   | Num   |
-    // ╰───────┴───────┼───────┼───────┼───────┼───────┼───────┤ ├───────┼───────┼───────┼───────┼───────┼───────┴───────╯
-    //                 |       |       |       |       |       | |       |       |       |       |       |
-    //                 ╰───────┴───────┴───────┴───────┴───────╯ ╰───────┴───────┴───────┴───────┴───────╯
-    conf_layer,
-    &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                           &none &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp KP_PLUS     &kp C_SLEEP
-    &ext_power EP_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI                        &none &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp KP_MINUS    &kp INS
-    &none             &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD                        &none &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_ASTERISK &kp SLCK
-    &out OUT_TOG      &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
-                                      &none           ______          ______          &none           &none            &none &none &none     &none     &none
-    , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
-)
+// ZMK_LAYER( // CONF
+//     // ╭───────┬───────┬───────┬───────┬───────┬───────╮                 ╭───────┬───────┬───────┬───────┬───────┬───────╮
+//     // |BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                 |       |   7   |   8   |   9   |   +   | Sleep |
+//     // ├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
+//     // |EXTPWR |RGB_EFF|RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|                 |       |   4   |   5   |   6   |   -   | Ins   |
+//     // ├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
+//     // |       |RGB_EFR|RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|                 |       |   1   |   2   |   3   |   *   | Scroll|
+//     // ├───────┼───────┼───────┼───────┼───────┼───────┼───────╮ ╭───────┤───────┼───────┼───────┼───────┼───────┼───────┤
+//     // |OUT_TOG|       |       |       |       |       |RGB_TOG| |       |       |   0   |   =   |   .   |   /   | Num   |
+//     // ╰───────┴───────┼───────┼───────┼───────┼───────┼───────┤ ├───────┼───────┼───────┼───────┼───────┼───────┴───────╯
+//     //                 |       |       |       |       |       | |       |       |       |       |       |
+//     //                 ╰───────┴───────┴───────┴───────┴───────╯ ╰───────┴───────┴───────┴───────┴───────╯
+//     conf_layer,
+//     &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                           &none &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp KP_PLUS     &kp C_SLEEP
+//     &ext_power EP_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI                        &none &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp KP_MINUS    &kp INS
+//     &none             &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD                        &none &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_ASTERISK &kp SLCK
+//     &out OUT_TOG      &none           &none           &none           &none           &none           &rgb_ug RGB_TOG  &none &none &kp KP_N0 &kp EQUAL &kp KP_DOT &kp KP_SLASH    &kp KP_NUM
+//                                       &none           ______          ______          &none           &none            &none &none &none     &none     &none
+//     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
+// )
