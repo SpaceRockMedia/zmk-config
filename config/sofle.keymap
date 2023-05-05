@@ -59,7 +59,7 @@
  - Maybe tap+hold does word backspace, or double tap
  - home, end, pg up/down on bottom row so top row still works with combos?
  - alt+tab key. Hold tab? or tap+hold?
- - tap dance/tap hold rather than &as ) for number layer?
+ - tap dance/tap hold rather than &kp ) for number layer?
  - Game mode where only needing left half for gaming with mouse. WASD/WARS for nav.
  -
  */
@@ -73,13 +73,13 @@
  * HOLD TAPS
  */
 // https://zmk.dev/docs/behaviors/hold-tap
-ZMK_BEHAVIOR(as, hold_tap,
-    flavor = "balanced";   // was 'tap-=preferred'
-    tapping-term-ms = <225>;
-    quick-tap-ms = <125>;
-    bindings = <&kp>, <&kp>;
-)
-// #define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
+// ZMK_BEHAVIOR(as, hold_tap,
+//     flavor = "balanced";   // was 'tap-=preferred'
+//     tapping-term-ms = <225>;
+//     quick-tap-ms = <125>;
+//     bindings = <&kp>, <&kp>;
+// )
+// #define AS(keycode) &kp LS(keycode) keycode // Autoshift Macro
 
 /*
  * MOD MORPH
@@ -154,7 +154,7 @@ ZMK_LAYER(default_layer,
     // ╰──────┴─────┼─────┼─────┼─────┼─────┤───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┴──────╯
     //              | GUI | ALT | CTRL| LWR | SPACE | | ENTER | RSE | CTRL| ALT | GUI |
     //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
-    &as GRAVE   &as N1 &as N2   &as N3   &as N4  &as N5                                      &as N6      &as N7  &as N8    &as N9  &as N0   &kp BSPC
+    &kp GRAVE   &kp N1 &kp N2   &kp N3   &kp N4  &kp N5                                      &kp N6      &kp N7  &kp N8    &kp N9  &kp N0   &kp BSPC
     &lt CNF TAB &kp Q  &kp W    &kp F    &kp P   &kp B                                       &kp J       &kp L   &kp U     &kp Y   &kp SEMI &kp BSLH
     &kp ESC     &kp A  &kp R    &kp S    &kp T   &kp G                                       &kp M       &kp N   &kp E     &kp I   &kp O    &kp SQT
     &kp LCTRL   &kp Z  &kp X    &kp C    &kp D   &kp V         &kp C_PP       &kp C_MUTE     &kp K       &kp H   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
@@ -175,7 +175,7 @@ ZMK_LAYER(default_layer,
 //     //              | GUI | ALT | CTRL| NAV | ENTER | | SPACE | SYM | CTRL| ALT | GUI |
 //     //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
 //     default_layer,
-//     &as GRAVE)    &as N1) &as N2)   &as N3)   &as N4)  &as N5)                                      &as N6)      &as N7)  &as N8)    &as N9)  &as N0)   &kp BSPC
+//     &kp GRAVE)    &kp N1) &kp N2)   &kp N3)   &kp N4)  &kp N5)                                      &kp N6)      &kp N7)  &kp N8)    &kp N9)  &kp N0)   &kp BSPC
 //     &mt CNF TAB &kp Q  &kp W    &kp E    &kp R   &kp T                                       &kp Y       &kp U   &kp I     &kp O   &kp P    &kp BSLH
 //     &kp ESC      &kp A  &kp S    &kp D    &kp F   &kp G                                       &kp H       &kp J   &kp K     &kp L   &kp SEMI &kp SQT
 //     &kp LCTRL    &kp Z  &kp X    &kp C    &kp V   &kp B         &kp C_PP       &kp C_MUTE     &kp N       &kp M   &kp COMMA &kp DOT &kp FSLH &kp RSHFT
