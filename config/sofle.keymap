@@ -155,7 +155,7 @@ ZMK_LAYER(default_layer,
     //              | GUI | ALT | CTRL| LWR | SPACE | | ENTER | RSE | CTRL| ALT | GUI |
     //              ╰─────┴─────┴─────┴─────┴───────╯ ╰───────┴─────┴─────┴─────┴─────╯
     &as GRAVE   &as N1 &as N2   &as N3   &as N4  &as N5                                      &as N6      &as N7  &as N8    &as N9  &as N0   &kp BSPC
-    &mt CNF TAB &kp Q  &kp W    &kp F    &kp P   &kp B                                       &kp J       &kp L   &kp U     &kp Y   &kp SEMI &kp BSLH
+    &lt CNF TAB &kp Q  &kp W    &kp F    &kp P   &kp B                                       &kp J       &kp L   &kp U     &kp Y   &kp SEMI &kp BSLH
     &kp ESC     &kp A  &kp R    &kp S    &kp T   &kp G                                       &kp M       &kp N   &kp E     &kp I   &kp O    &kp SQT
     &kp LCTRL   &kp Z  &kp X    &kp C    &kp D   &kp V         &kp C_PP       &kp C_MUTE     &kp K       &kp H   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
                        &kp LGUI &kp LALT &mo NAV &mt HYP SPACE &mt LSHFT LPAR &mt RSHFT RPAR &mt MEH RET &mo SYM &kp RALT  &bdel
