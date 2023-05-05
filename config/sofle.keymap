@@ -154,7 +154,6 @@ ZMK_BEHAVIOR(swap, macro,
  */
 #define ______ &trans
 
-/ {
 ZMK_LAYER(default_layer,
     // ╭──────┬─────┬─────┬─────┬─────┬─────╮                 ╭─────┬─────┬─────┬─────┬─────┬──────╮
     // | `    |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -256,4 +255,3 @@ ZMK_LAYER(dig_layer,
                                       &none           ______          ______          &none           &none            &none &none &none     &none     &none
     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
 )
-};
