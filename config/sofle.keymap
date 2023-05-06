@@ -251,19 +251,19 @@ ZMK_LAYER(nav_layer,
 //     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
 // )
 
-#define POW(keycode) &ext_power keycode;
-#define UG(keycode) &rgb_ug keycode;
+// #define POW(keycode) &ext_power keycode;
+// #define UG(keycode) &rgb_ug keycode;
 
-#define BTS(index) &bt BT_SEL index;
+// #define BTS(index) &bt BT_SEL index;
 ZMK_LAYER(cnf_layer,
 //╭────────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                          ╭────────────┬───────────┬───────────┬───────────┬────────────┬───────────╮
    XXX          XXX         XXX         XXX         XXX         XXX                                    XXX          &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS  &kp C_SLEEP
 //├────────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                          ├────────────┼───────────┼───────────┼───────────┼────────────┼───────────┤
-   POW(EP_TOG)  UG(RGB_EFF) UG(RGB_HUI) UG(RGB_SAI) UG(RGB_BRI) UG(RGB_SPI)                            XXX          &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS &kp INS
+   &ext_power EP_TOG  &rgb_ug GB_EFF &rgb_ug GB_HUI &rgb_ug GB_SAI &rgb_ug GB_BRI &rgb_ug GB_SPI                            XXX          &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS &kp INS
 //├────────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                          ├────────────┼───────────┼───────────┼───────────┼────────────┼───────────┤
-   &out OUT_TOG UG(RGB_EFR) UG(RGB_HUD) UG(RGB_SAD) UG(RGB_BRD) UG(RGB_SPD)                            XXX          &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp ASTRK    &kp SLCK
+   &out OUT_TOG &rgb_ug GB_EFR &rgb_ug GB_HUD &rgb_ug GB_SAD &rgb_ug GB_BRD &rgb_ug GB_SPD                            XXX          &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp ASTRK    &kp SLCK
 //├────────────┼───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮ ╭────────────┼────────────┼───────────┼───────────┼───────────┼────────────┼───────────┤
-   &bt BT_CLR   BTS(0)      BTS(1)      BTS(2)      BTS(3)      BTS(4)      UG(RGB_TOG)   XXX          XXX          &kp KP_N0   &kp EQUAL   &kp KP_DOT  &kp KP_SLASH &kp KP_NUM
+   &bt BT_CLR   &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4      &rgb_ug GB_TOG   XXX          XXX          &kp KP_N0   &kp EQUAL   &kp KP_DOT  &kp KP_SLASH &kp KP_NUM
 //╰────────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤ ├────────────┴────────────┼───────────┼───────────┼───────────┼────────────┼───────────╯
                             XXX         XXX         XXX         XXX         XXX           XXX          XXX          XXX         XXX         XXX
 //                         ╰───────────┴───────────┴───────────┴───────────┴───────────╯ ╰────────────┴────────────┴───────────┴───────────┴───────────╯
