@@ -251,10 +251,10 @@ ZMK_LAYER(nav_layer,
 //     , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
 // )
 
-#define POW(keycode) &ext_power keycode;
-#define UG(keycode) $rgp_ug keycode;
+#define POW(keycode) &ext_power keycode
+#define UG(keycode) $rgp_ug keycode
 
-#define BTS(index) &bt BT_SEL index;
+#define BTS(index) &bt BT_SEL index
 ZMK_LAYER(cnf_layer,
 //╭────────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                          ╭────────────┬───────────┬───────────┬───────────┬────────────┬───────────╮
    XXX          XXX         XXX         XXX         XXX         XXX                                    XXX          &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS  &kp C_SLEEP
