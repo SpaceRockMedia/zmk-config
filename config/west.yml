@@ -11,13 +11,13 @@ manifest:
       # remote: zmkfirmware
       # revision: main
       # import: app/west.yml
-    - name: zmk
-      remote: autoferrit
-      revision: main
-      import: app/west.yml
     # - name: zmk
-      # remote: infused-kim
-      # revision: sofle
+      # remote: autoferrit
+      # revision: main
       # import: app/west.yml
+    - name: zmk
+      remote: infused-kim
+      revision: sofle
+      import: app/west.yml
   self:
     path: config

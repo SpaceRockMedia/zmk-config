@@ -6,7 +6,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define BASE 0
-
+#define ___ &trans
+#define XXX &none
 / {
     keymap {
         compatible = "zmk,keymap";
