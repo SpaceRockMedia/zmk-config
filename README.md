@@ -25,3 +25,8 @@ However, while these fixes and features may not meet the quality standards of th
 5. Download the firmware from the actions tab
 
 Alternatively, you could probably even use github's built-in editor to edit the keymap and config file after forking.
+
+
+# Notes
+
+https://www.jonashietala.se/blog/2022/09/06/the_current_t-34_keyboard_layout/#long-press
