@@ -5,20 +5,32 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define BASE 0
-#define ___ &trans
-#define XXX &none
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-___      ___       ___      ___      ___      ___                              ___      ___      ___      ___      ___      ___
-___      ___       ___      ___      ___      ___                              ___      ___      ___      ___      ___      ___
-___      ___       ___      ___      ___      ___                              ___      ___      ___      ___      ___      ___
-___      ___       ___      ___      ___      ___      ___            ___      ___      ___      ___      ___      ___      ___
-                   &kp LGUI ___      ___      ___      ___            ___      ___      ___      ___      ___
-            >;
-        };
-    };
-};
+#include "../zmk-nodefree-config/helper.h"
+
+// #define BASE 0
+// #define ___ &trans
+// #define XXX &none
+
+/* source the main keymap */
+#include "base.keymap"
+
+#define HYP LS(LC(LA(LGUI)))
+#define HY(keycode) LS(LC(LA(LG(keycode))))
+
+// Global shoftcuts such as opening apps, copy/cut/paste?
+#define MEH LS(LC(LALT))
+
+ZMK_LAYER(default_layer,
+//╭───────────┬────────┬────────┬─────────┬───────┬─────────────╮                                ╭──────────────┬───────┬─────────┬────────┬─────────┬──────────╮
+   &kp GRAVE   __LAY_COLE_DH_LT__                                                                 __LAY_COLE_DH_RT__                                  &kp F11
+//├───────────┼────────┼────────┼─────────┼───────┼─────────────┤                                ├──────────────┼───────┼─────────┼────────┼─────────┼──────────┤
+   &kp TAB     __LAY_COLE_DH_LM__                                                                 __LAY_COLE_DH_RM__                        &kp SEMI  &kp F12
+//├───────────┼────────┼────────┼─────────┼───────┼─────────────┤                                ├──────────────┼───────┼─────────┼────────┼─────────┼──────────┤
+   &kp ESC     __LAY_COLE_DH_LB__                                                                 __LAY_COLE_DH_RB__                                  &kp SQT
+//├───────────┼────────┼────────┼─────────┼───────┼─────────────┼───────────────╮ ╭──────────────┼──────────────┼───────┼─────────┼────────┼─────────┼──────────┤
+   &kp LCTRL   __LAY_COLE_DH_LF__                                &kp C_PP          &kp C_MUTE     __LAY_COLE_DH_RF__     &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
+//╰───────────┴────────┼────────┼─────────┼───────┼─────────────┼───────────────┤ ├──────────────┼──────────────┼───────┼─────────┼────────┼─────────┴──────────╯
+                        &kp LGUI &kp LALT  &kp MEH &kp SPACE     &kp LSHFT         &kp RSHFT      &kp RET        &kp MEH &kp RALT  &kp DEL
+//                     ╰────────┴─────────┴───────┴─────────────┴───────────────╯ ╰──────────────┴──────────────┴───────┴─────────┴────────╯
+, __ENC_L_ROT__ __ENC_R_ROT__
+)
