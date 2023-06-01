@@ -68,3 +68,5 @@ maybe we just have a toggle for them as a single layer so only one can be focuse
 - alt+tab key. Hold tab? or tap+hold?
 - tap dance/tap hold rather than &kp ) for number layer?
 - Game mode where only needing left half for gaming with mouse. WASD/WARS for nav.
+- https://www.jonashietala.se/blog/2022/09/06/the_current_t-34_keyboard_layout/#long-press
+
