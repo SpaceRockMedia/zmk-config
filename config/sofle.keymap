@@ -7,28 +7,18 @@
 
 #include "../zmk-nodefree-config/helper.h"
 
-// #define BASE 0
-// #define ___ &trans
-// #define XXX &none
-
 /* source the main keymap */
 #include "base.keymap"
 
-#define HYP LS(LC(LA(LGUI)))
-#define HY(keycode) LS(LC(LA(LG(keycode))))
-
-// Global shoftcuts such as opening apps, copy/cut/paste?
-#define MEH LS(LC(LALT))
-
 ZMK_LAYER(default_layer,
 //╭───────────┬────────┬────────┬─────────┬───────┬─────────────╮                                ╭──────────────┬───────┬─────────┬────────┬─────────┬──────────╮
-   &kp GRAVE   __LAY_COLE_DH_LT__                                                                 __LAY_COLE_DH_RT__                                  &kp F11
+   &kp GRAVE   _______________LAY_L_FUN_01_05_______________                                      _______________LAY_R_FUN_06_10_______________       &kp F11
 //├───────────┼────────┼────────┼─────────┼───────┼─────────────┤                                ├──────────────┼───────┼─────────┼────────┼─────────┼──────────┤
-   &kp TAB     __LAY_COLE_DH_LM__                                                                 __LAY_COLE_DH_RM__                        &kp SEMI  &kp F12
+   &kp TAB     _______________LAY_COLE_DH__LT_______________                                      _______________LAY_COLE_DH__RT_______________       &kp F12
 //├───────────┼────────┼────────┼─────────┼───────┼─────────────┤                                ├──────────────┼───────┼─────────┼────────┼─────────┼──────────┤
-   &kp ESC     __LAY_COLE_DH_LB__                                                                 __LAY_COLE_DH_RB__                                  &kp SQT
+   &kp ESC     _______________LAY_COLE_DH__LM_______________                                      _______________LAY_COLE_DH__RM_______________  &kp SQT
 //├───────────┼────────┼────────┼─────────┼───────┼─────────────┼───────────────╮ ╭──────────────┼──────────────┼───────┼─────────┼────────┼─────────┼──────────┤
-   &kp LCTRL   __LAY_COLE_DH_LF__                                &kp C_PP          &kp C_MUTE     __LAY_COLE_DH_RF__     &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
+   &kp LCTRL   _______________LAY_COLE_DH__LB_______________     &kp C_PP          &kp C_MUTE     _______________LAY_COLE_DH__RB_______________  &kp RCTRL
 //╰───────────┴────────┼────────┼─────────┼───────┼─────────────┼───────────────┤ ├──────────────┼──────────────┼───────┼─────────┼────────┼─────────┴──────────╯
                         &kp LGUI &kp LALT  &kp MEH &kp SPACE     &kp LSHFT         &kp RSHFT      &kp RET        &kp MEH &kp RALT  &kp DEL
 //                     ╰────────┴─────────┴───────┴─────────────┴───────────────╯ ╰──────────────┴──────────────┴───────┴─────────┴────────╯

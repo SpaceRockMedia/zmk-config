@@ -1,6 +1,4 @@
  /* source keypos definitions */
-// #include "../zmk-nodefree-config/keypos_def/keypos_60keys.h"
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -9,69 +7,37 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #include "../zmk-nodefree-config/helper.h"
-#include "combos.dtsi"
+#include "base.h"
 
-#define DEF 0
-// #define NAV 1
-// #define FUN 2
-// #define SYM 2
-// #define DIG 3
-// #define CNF 2
+#define QUICK_TAP_MS 175
 
-// #include "combos.dtsi"  // requires layer aliases
+&sk {  // sticky-key config
+    release-after-ms = <600>;  // release after 0.6s
+    quick-release;             // no double capitalization when rolling keys
+};
 
-#define ___ &trans
-#define XXX &none
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
 
-/*
-*
- * GLOBAL VARS
- *
- */
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
 
-// HYPER
-
-// HYP/MEH could work well with sticky keys $sk
-// https://zmk.dev/docs/behaviors/sticky-key
-// In app shortcuts
-#define HYP LS(LC(LA(LGUI)))
-#define HY(keycode) LS(LC(LA(LG(keycode))))
-
-// Global shoftcuts such as opening apps, copy/cut/paste?
-#define MEH LS(LC(LALT))
-// #define MEHM(key)  LS(LC(LA(key)))
-
-/* Global settings */
-
-// #define QUICK_TAP_MS 175
-
-// &sk {  // sticky-key config
-    // release-after-ms = <600>;  // release after 0.6s
-    // quick-release;             // no double capitalization when rolling keys
-// };
-//
-// &sl {  // sticky-layer config
-    // ignore-modifiers;          // allow chording sticky mods & layers
-// };
-//
-// &lt {  // layer-tap config
-    // flavor = "balanced";
-    // tapping-term-ms = <200>;
-    // quick-tap-ms = <QUICK_TAP_MS>;
-// };
-//
 // /* Nav cluster */
 //
 // long-tap action on hold, short-tap action on all interrupts
-// #define MT_CORE \
-    // flavor = "tap-preferred"; \
-    // tapping-term-ms = <220>; \
-    // quick-tap-ms = <220>; \
-    // hold-trigger-key-positions = <0>;
-//
-// &mt { MT_CORE };
-// #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
-// #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
+#define MT_CORE \
+    flavor = "tap-preferred"; \
+    tapping-term-ms = <220>; \
+    quick-tap-ms = <220>; \
+    hold-trigger-key-positions = <0>;
+
+&mt { MT_CORE };
+#define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
+#define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
 /* Braces */
 
@@ -87,23 +53,4 @@
 //     mods = <(MOD_RSFT)>;
 // )
 
-
-// KEEB LAYOUTS
-
-// COLEMAK-DH
-#define __LAY_L_FUN_01_05__      &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
-#define __LAY_R_FUN_06_10__      &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-
-#define __LAY_COLE_DH_LT__ __LAY_L_FUN_01_05__
-#define __LAY_COLE_DH_LM__ &kp Q &kp W &kp F &kp P &kp B
-#define __LAY_COLE_DH_LB__ &kp A &kp R &kp S &kp T &kp G
-#define __LAY_COLE_DH_LF__ &kp Z &kp X &kp C &kp D &kp V
-
-#define __ENC_L_ROT__ &inc_dec_kp DOWN UP
-
-#define __LAY_COLE_DH_RT__ __LAY_R_FUN_06_10__
-#define __LAY_COLE_DH_RM__ &kp J &kp L &kp U &kp Y
-#define __LAY_COLE_DH_RB__ &kp M &kp N &kp E &kp I &kp O
-#define __LAY_COLE_DH_RF__ &kp K &kp H
-
-#define __ENC_R_ROT__ &inc_dec_kp C_VOL_UP C_VOL_DN
+#include "combos.dtsi"
