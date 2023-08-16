@@ -1,0 +1,31 @@
+ /* source keypos definitions */
+// #include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+// #include <dt-bindings/zmk/bt.h>
+// #include <dt-bindings/zmk/ext_power.h>
+// #include <dt-bindings/zmk/outputs.h>
+// #include <dt-bindings/zmk/rgb.h>
+
+#include "../zmk-nodefree-config/helper.h"
+// #include "spacerock.h"
+
+#include "spacerock.h"
+#include "spacerock_behaviors.dtsi"
+
+#include "spacerock_rgb.dtsi"
+
+
+
+// tap: right-shift | left-shift + tap: ]
+// ZMK_BEHAVIOR(bclose, mod_morph,
+//     bindings = <&kp RPAR>, <&kp RBKT>;
+//     mods = <(MOD_LSFT)>;
+// )
+
+// // tap: left-shift | right-shift + tap: [
+// ZMK_BEHAVIOR(bopen, mod_morph,
+//     bindings = <&kp LPAR>, <&kp LBKT>;
+//     mods = <(MOD_RSFT)>;
+// )
+
+#include "spacerock_combos.dtsi"

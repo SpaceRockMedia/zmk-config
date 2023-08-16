@@ -1,0 +1,82 @@
+/*                                      52 KEY MATRIX / LAYOUT MAPPING
+
+  ╭────────────────────────╮               ╭────────────────────────╮
+  │  0   1   2   3   4   5 │               │  6   7   8   9  10  11 │
+  │ 12  13  14  15  16  17 ╰──╮         ╭──╯ 18  19  20  21  22  23 │
+  │ 24  25  26  27  28  29  30╰────┬────╯31  32  33  34  35  36  37 │
+  │ 38  39  40      41  42  43  44 │ 45  46  47  48      49  50  51 │
+  ╰────────────────────────────────┴────────────────────────────────╯
+ ╭─────────────────────────╮               ╭─────────────────────────╮
+ │ LT5 LT4 LT3 LT2 LT1 LT0 │               │ RT0 RT1 RT2 RT3 RT4 RT5 │
+ │ LM5 LM4 LM3 LM2 LM1 LM0 ╰──╮         ╭──╯ RM0 RM1 RM2 RM3 RM4 RM5 │
+ │ LB5 LB4 LB3 LB2 LB1 LB0 LH4╰────┬────╯RH4 RB0 RB1 RB2 RB3 RB4 RB5 │
+ │ LP2 LP1 LP0╭───╮LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3╭───╮RP0 RP1 RP2 │
+ ╰────────────╯   ╰────────────────┴────────────────╯   ╰────────────╯
+ T : Top
+ M : Middle
+ B : Bottom
+ H : Hand
+ P : Palm
+*/
+
+#include "../zmk-nodefree-config/helper.h"
+
+// use global-quick-tap-ms for combos (requires PR 1387)
+#undef COMBO_HOOK
+#define COMBO_HOOK global-quick-tap-ms = <100>;
+
+#define COMBO_TERM_FAST 45
+#define COMBO_TERM_SLOW 65
+
+//
+// Horizontal combos
+//
+/* left hand */
+// these will need to call mod-taps so when held with shift, they do the
+// word/character opposite versions.
+// they should default to word based
+ZMK_COMBO(ul_bspc,  &kp BSPC, LT3 LT2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_del,   &kp DEL,  LT2 LT1,     ALL, COMBO_TERM_FAST)
+
+ZMK_COMBO(ur_home,  &kp HOME,     LM3 LM2,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_end,   &kp END,      LM2 LM1,     ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(repeat,HRC_REPEAT,   LM1 LM0,     ALL, COMBO_TERM_FAST)
+
+ZMK_COMBO(ul_undo  ,&kp LC(Z),    LB4 LB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_cut   ,&kp LC(X),    LB3 LB2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_copy  ,&kp LC(C),    LB2 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_paste ,&kp LC(V),    LB3 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_redo  ,&kp LC(Y),    LB1 LB0,     ALL, COMBO_TERM_FAST)
+
+/* right hand */
+ZMK_COMBO(ur_bspc,  &kp LC(BSPC), RT1 RT2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ur_del,   &kp LC(DEL),  RT2 RT3,     ALL, COMBO_TERM_FAST)
+
+ZMK_COMBO(ur_sqt,   &kp SQT,      RB1 RB2,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_dqt,   &kp DQT,      RB2 RB3,     ALL, COMBO_TERM_SLOW)
+
+//
+// Vertical combos
+//
+/* left hand */
+ZMK_COMBO(ul_excl,  &kp EXCL,      LT4 LM4,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_at,    &kp AT,        LT3 LM3,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_hash,  &kp HASH,      LT2 LM2,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_dllr,  &kp DLLR,      LT1 LM1,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_prcnt, &kp PRCNT,     LT0 LM0,     ALL, COMBO_TERM_SLOW)
+
+ZMK_COMBO(ul_grave, &kp GRAVE,     LM3 LB3,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_bslh,  &kp BSLH,      LM2 LB2,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_equal, &kp EQUAL,     LM1 LB1,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ul_tilde, &kp TILDE,     LM0 LB0,     ALL, COMBO_TERM_SLOW)
+
+/* right hand */
+ZMK_COMBO(ur_caret, &kp CARET,     RT0 RM0,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_amps,  &kp AMPS,      RT1 RM1,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_star,  &kp STAR,      RT2 RM2,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_plus,  &kp PLUS,      RT3 RM3,     ALL, COMBO_TERM_SLOW)
+
+ZMK_COMBO(ur_under, &kp UNDER,     RM0 RB0,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_pipe,  &kp PIPE,      RM1 RB1,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_fslh,  &kp FSLH,      RM2 RB2,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(ur_minus, &kp MINUS,     RM3 RB3,     ALL, COMBO_TERM_SLOW)
