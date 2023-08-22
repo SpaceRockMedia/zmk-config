@@ -32,5 +32,6 @@
         "**/*.uf2": true,
         "**/.build": true
     },
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
+    "cmake.configureOnOpen": false
 }

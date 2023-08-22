@@ -1,4 +1,10 @@
 {
+  "extensions": {
+    "recommendations": [
+      "spadin.zmk-tools",
+      "spmeesseman.vscode-taskexplorer"
+    ]
+  },
   "folders": [
     {
       "path": "."

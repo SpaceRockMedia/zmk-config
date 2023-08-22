@@ -2,6 +2,10 @@
 {
   "recommendations": [
     "ms-vscode.cpptools",
-    "spadin.zmk-tools"
+    "spadin.zmk-tools",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "plorefice.devicetree",
+    "twxs.cmake"
   ]
 }

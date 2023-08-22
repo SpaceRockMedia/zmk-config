@@ -1,8 +1,8 @@
 
 #pragma once
 
-#define QUICK_TAP_MS 175
-#define GLOBAL_QUICK_TAP_MS 175
+#define QUICK_TAP_MS 75
+#define GLOBAL_QUICK_TAP_MS 75
 
 //
 // MOD MORPHs
