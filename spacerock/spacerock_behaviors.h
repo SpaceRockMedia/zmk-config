@@ -58,13 +58,13 @@
   )
 
 MAKE_HOLD_TAP(hold_tap_ctl_esc, &kp, &kp)
-#define HT_CTL_ESC &hold_tap_ctl_esc LCTL ESC
+#define HT_CTL_ESC &hold_tap_ctl_esc LCTRL ESC
 
-MAKE_HOLD_TAP(hold_tap_alt_spc, &kp, &kp)
-#define HT_ALT_SPC &hold_tap_alt_spc LALT SPACE
+MAKE_HOLD_TAP(hold_tap_meh_spc, &kp, &kp)
+#define HT_MEH_SPC &hold_tap_meh_spc MEH SPACE
 
-MAKE_HOLD_TAP(hold_tap_alt_ent, &kp, &kp)
-#define HT_ALT_ENT &hold_tap_alt_ent LALT ENTER
+MAKE_HOLD_TAP(hold_tap_meh_ent, &kp, &kp)
+#define HT_MEH_ENT &hold_tap_meh_ent MEH ENTER
 
 MAKE_HOLD_TAP(hold_tap_tog_nav, &mo, &to)
 #define HT_TOG_NAV &hold_tap_tog_nav LY_NAV LY_NAV
@@ -73,10 +73,10 @@ MAKE_HOLD_TAP(hold_tap_tog_num, &mo, &to)
 #define HT_TOG_NUM &hold_tap_tog_num LY_NUM LY_NUM
 
 MAKE_HOLD_TAP(hold_tap_ctl_def, &kp, &to)
-#define HT_CTL_DEF &hold_tap_ctl_def RCTL LY_DEF
+#define HT_CTL_DEF &hold_tap_ctl_def LCTRL LY_DEF
 
 MAKE_HOLD_TAP(hold_tap_ctl_gam, &kp, &to)
-#define HT_CTL_GAM &hold_tap_ctl_gam RCTL LY_GAM
+#define HT_CTL_GAM &hold_tap_ctl_gam LCTRL LY_GAM
 
 //
 // Sticky Keys

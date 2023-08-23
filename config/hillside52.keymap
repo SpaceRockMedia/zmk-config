@@ -39,8 +39,8 @@
 ) ZMK_LAYER(name, \
     &kp TAB    __________________________LT__________________________                                               __________________________RT__________________________ &kp C_PP  \
     HT_CTL_ESC __________________________LM__________________________                                               __________________________RM__________________________ &kp C_VOL_UP \
-    &kp LCTL   __________________________LB__________________________ &kp HYP                            &kp MEH    __________________________RB__________________________ &kp K_VOL_DN \
-    &kp C_PP   &kp MEH    XXX                   &kp LGUI   HT_TOG_NAV HT_ALT_SPC &sk LSHFT    &kp RSHFT  HT_ALT_ENT SMART_NUM  &kp RGUI              XXX        &kp HYP    &kp C_MUTE \
+    &sk LGUI   __________________________LB__________________________ &kp HYP                            &kp MEH    __________________________RB__________________________ &kp RGUI \
+    &sk LALT   &kp MEH &sk LGUI       &sk LCTRL   HT_TOG_NAV HT_MEH_SPC &sk LSHFT    &kp RSHFT  HT_MEH_ENT SMART_NUM  &sk RCTRL         &sk RGUI  &kp HYP    &kp C_MUTE \
     , __ENC_VOL__ __ENC_VOL_REV__ \
 )
 
