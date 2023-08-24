@@ -60,6 +60,9 @@
 MAKE_HOLD_TAP(hold_tap_ctl_esc, &kp, &kp)
 #define HT_CTL_ESC &hold_tap_ctl_esc LCTRL ESC
 
+MAKE_HOLD_TAP(hold_tap_ctl_quote, &kp, &kp)
+#define HT_CTL_SQT &hold_tap_ctl_quote RCTRL SQT
+
 MAKE_HOLD_TAP(hold_tap_meh_spc, &kp, &kp)
 #define HT_MEH_SPC &hold_tap_meh_spc MEH SPACE
 

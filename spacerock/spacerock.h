@@ -4,11 +4,12 @@
 //
 // Layers
 //
-#define LY_DEF 0
-#define LY_GAM 1
+#define LY_GAM 0
+#define LY_DEF 1
 #define LY_NAV 2
-#define LY_NUM 3
-#define LY_CNF 4
+#define LY_FUN 3
+#define LY_MED 4
+#define LY_CNF 5
 
 #define ___ &trans
 #define XXX &none

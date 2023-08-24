@@ -32,4 +32,10 @@
 #define MEH LS(LC(LALT))
 #define ME(keycode)  LS(LC(LA(keycode)))
 
+// Media
+#define H_LIKE &kp HY(PG_UP)
+#define H_SKIP &kp HY(PG_DN)
+#define VOL_UP &kp C_VOL_UP
+#define VOL_DN &kp C_VOL_DOWN
+
 // Hold taps

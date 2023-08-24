@@ -32,7 +32,7 @@ SPACEROCK_MOD_SHIFT(smart_shift, &sk LSHFT, &caps_word)
 //
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl LY_NUM>;  // reverse this for sticky-num on single tap
+    bindings = <&num_word>, <&sl LY_NAV>;  // reverse this for sticky-num on single tap
 )
 ZMK_BEHAVIOR(smart_num, hold_tap,
     flavor = "balanced";
@@ -41,7 +41,7 @@ ZMK_BEHAVIOR(smart_num, hold_tap,
     bindings = <&mo>, <&num_dance>;
 )
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num LY_NUM 0
+#define SMART_NUM &smart_num LY_NAV 0
 
 #define NUM_PERENS \
     KP_LEFT_PARENTHESIS KP_LPAR KP_RIGHT_PARENTHESIS KP_RPAR \
@@ -53,6 +53,30 @@ ZMK_BEHAVIOR(smart_num, hold_tap,
     KP_MINUS KP_SUBTRACT MINUS
 #define NUM_OPERATORS KP_DOT DOT KP_COMMA COMMA KP_EQUAL KP_EQUAL_AS400 EQUAL BSPC DEL UNDER
 &num_word {  // num-word, requires PR #1451
-    layers = <LY_NUM>;
+    layers = <LY_NAV>;
     continue-list = <NUM_PERENS NUM_EMDAS NUM_OPERATORS>;
 };
+
+//
+// Nav Word
+//
+// ZMK_BEHAVIOR(nav_dance, tap_dance,
+//     tapping-term-ms = <200>;
+//     bindings = <&nav_word>, <&sl LY_NAV>;  // reverse this for sticky-num on single tap
+// )
+// ZMK_BEHAVIOR(smart_num, hold_tap,
+//     flavor = "balanced";
+//     tapping-term-ms = <200>;
+//     quick-tap-ms = <QUICK_TAP_MS>;
+//     bindings = <&mo>, <&nav_dance>;
+// )
+// // tap: num-word | double-tap: sticky num-layer | hold: num-layer
+// #define SMART_NAV &smart_num LY_NAV 0
+
+// #define NAVS_LAYOUTS _______________________NAVS_TOP_______________________ _______________________NAVS_MID_______________________
+// #define NAVS HOME END
+// #define NAVS_MODS LSHFT RSHFT LCTRL RCTRL LALT RALT LGUI RGUI
+// &nav_word {  // num-word, requires PR #1451
+//     layers = <LY_NAV>;
+//     continue-list = <NAVS_LAYOUTS NAVS NAVS_MODS>;
+// };
