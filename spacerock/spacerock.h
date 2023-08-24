@@ -8,8 +8,8 @@
 #define LY_DEF 1
 #define LY_NAV 2
 #define LY_FUN 3
-#define LY_MED 4
-#define LY_CNF 5
+// #define LY_MED 3
+#define LY_CNF 4
 
 #define ___ &trans
 #define XXX &none
