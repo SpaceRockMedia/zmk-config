@@ -38,9 +38,10 @@
 ZMK_COMBO(ul_bspc,  &kp BSPC, LT3 LT2,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(ul_del,   &kp DEL,  LT2 LT1,     ALL, COMBO_TERM_FAST)
 
+ZMK_COMBO(ur_esc,   &kp ESC,      LM4 LM3,     ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(ur_home,  &kp HOME,     LM3 LM2,     ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(ur_end,   &kp END,      LM2 LM1,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(repeat,HRC_REPEAT,   LM1 LM0,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(repeat,   HRC_REPEAT,   LM1 LM0,     ALL, COMBO_TERM_FAST)
 
 ZMK_COMBO(ul_undo  ,&kp LC(Z),    LB4 LB3,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(ul_cut   ,&kp LC(X),    LB3 LB2,     ALL, COMBO_TERM_FAST)
