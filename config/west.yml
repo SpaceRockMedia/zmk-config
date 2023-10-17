@@ -4,13 +4,19 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: autoferrit
       url-base: https://github.com/autoferrit
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     # - name: zmk
       # remote: zmkfirmware
       # revision: main
       # import: app/west.yml
+    # - name: zmk
+    #   remote: autoferrit
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk
-      remote: autoferrit
+      remote: urob
       revision: main
       import: app/west.yml
   self:
