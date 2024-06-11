@@ -8,6 +8,9 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "path": "../../sadekbaroudi/zmk-fingerpunch-keyboards"
     }
   ],
   "settings": {
@@ -22,7 +25,7 @@
       "*.hpp": "cpp",
       "*.inc": "c",
       "*.json": "json",
-      "*.keymap": "zmk-keymap",
+      "*.keymap": "c",
       "*.lock": "toml",
       "*.overlay": "dts",
       "*.sql": "sql",
