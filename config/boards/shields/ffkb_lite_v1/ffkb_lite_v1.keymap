@@ -4,6 +4,21 @@
  * SPDX-License-Identifier: MIT
  */
 
+/*
+  ╭────────────────────────┬───────────────────────╮
+  │  0   1   2   3   4   5 │  6   7   8   9 10  11 │
+  │ 12  13  14  15  16  17 │ 18  19  20  21 22  23 │
+  │ 24  25  26  27  28  29 │ 30  31  32  33 34  35 │
+  ╰───────────╮ 36  37  38 │ 39 40  41 ╭───────────╯
+              ╰────────────┴───────────╯
+ ╭─────────────────────────┬─────────────────────────╮
+ │ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
+ │ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
+ │ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
+ ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+             ╰─────────────┴─────────────╯
+*/
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -12,26 +27,15 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-#define DEFAULT 0
-#define NAV     1
-#define SYM     2
-#define FUNC    3
-#define MEDIA   4
-#define WINNAV  5
+#include "../../../../zmk-nodefree-config/keypos_def/keypos_42keys.h"
+#include "../../../../zmk-nodefree-config/helper.h"
+
+#include "../../../../spacerock/spacerock.dtsi"
+
+
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_undo {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            bindings = <&kp LC(Z)>;
-        };
-    };
 };
 
 / {
@@ -57,55 +61,93 @@
 
         default_layer {
             bindings = <
-    &kp GRAVE  &kp Q        &kp W        &kp E       &kp R         &kp T                                       &kp Y        &kp U         &lt WINNAV I  &kp O       &kp P          &lt MEDIA BSP
-    &kp ESC    &hm LGUI A   &hm LALT S   &hm LCTL D  &hs LSHIFT F  &kp G                                       &kp H        &hs RSHIFT J  &hm RCTL K    &hm RALT L  &hm RGUI SEMI  &kp SQT
-    &kp LGUI   &kp Z        &kp X        &kp C       &mt HYPR V    &kp B                                       &kp N        &mt HYPR M    &kp COMMA     &kp DOT     &kp FSLH       &kp RCTRL
-                                                     &lt NAV BSPC  &mt MEH SPACE  &kp LSHIFT  &kp RSHIFT &mt MEH RET  &lt SYM DEL
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+    &kp GRAVE  ______________________QWERTY__LT______________________    ______________________QWERTY__RT______________________ &kp BSPC
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp ESC    &hm LGUI A  &hm LALT S  &hm LCTRL D &hs LSHFT F  &kp G    &kp H      &hs RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SEMI &kp SQT
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp LGUI   ______________________QWERTY__LB______________________    ______________________QWERTY__RB______________________ &kp RCTRL
+// ╰──────────┴──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────╰──────────┴──────────┴──────────┴──────────╯
+                                   &lt NAV BSPC  &kp SPACE  &kp LSHFT    &kp RSHFT  &kp RET    &lt SYM DEL
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
+            >;
+        };
+
+        colemak_layer {
+            bindings = <
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+    &kp GRAVE  ____________________COLEMAK_DH__LT____________________    ____________________COLEMAK_DH__RT____________________ &kp BSPC
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp ESC    ____________________COLEMAK_DH__LM____________________    ____________________COLEMAK_DH__RM____________________ &kp SQT
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp LGUI   ____________________COLEMAK_DH__LB____________________    ____________________COLEMAK_DH__RB____________________ &kp RCTRL
+// ╰──────────┴──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────╰──────────┴──────────┴──────────┴──────────╯
+                                   &lt NAV BSPC  &kp SPACE  &kp LSHFT    &kp RSHFT &kp RET  &lt SYM DEL
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
             >;
         };
 
         nav_layer {
             bindings = <
-    &trans     &kp ESC      &kp HOME     &kp UP      &kp END       &kp PG_UP                                   &kp ASTRK     &kp N7       &kp N8        &kp N9      &kp MINUS   &trans
-    &trans     &trans       &kp LEFT     &kp DOWN    &kp RIGHT     &kp PG_DN                                   &kp FSLH      &kp N4       &kp N5        &kp N6      &kp PLUS    &trans
-    &trans     &trans       &trans       &trans      &trans        &trans                                      &kp EQUAL     &kp N1       &kp N2        &kp N3      &kp N0      &trans
-                                                     &trans        &trans       &kp TAB       &kp BSPC         &kp SPACE     &kp DOT
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+    ___        _______________________NAVS_TOP_______________________    ______________________________________________________ ___
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    ___        _______________________NAVS_MID_______________________    ______________________HRM__CSAG_______________________ ___
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    ___        ______________________________________________________    ______________________________________________________ ___
+// ╰──────────┴──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────╰──────────┴──────────┴──────────┴──────────╯
+                                     ________________________________    ________________________________
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        sym_layer {
+        num_layer {
             bindings = <
-    &trans     &kp EXCL     &kp AT       &kp HASH        &kp DLLR         &kp PRCNT                                   &kp CARET     &kp AMPS          &kp ASTRK     &kp UNDER   &kp EQUAL   &trans
-    &trans     &kp MINUS    &kp LBKT     &kp LBRC        &kp LPAR         &kp LT                                      &kp GT        &kp RPAR          &kp RBRC      &kp RBKT    &kp PLUS    &trans
-    &trans     &kp CAPS     &kp GRAVE    &kp LC(LS(TAB)) &kp LC(LG(LEFT)) &caps_word                                  &trans        &kp LC(LG(RIGHT)) &kp LC(TAB)   &trans      &kp BSLH    &trans
-                                                         &trans           &kp RET       &kp DEL        &kp BSPC       &trans        &trans
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+    ___        ______________________________________________________    _______________________NUMS_TOP_______________________ ___
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    ___        ______________________HRM__GASC_______________________    _______________________NUMS_MID_______________________ ___
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    ___        ______________________________________________________    _______________________NUMS_BOT_______________________ ___
+// ╰──────────┴──────────┴──────────┴──────────┴──────────┴──────────╯  ╰──────────┴──────────╰──────────┴──────────┴──────────┴──────────╯
+                                     ________________________________    ________________________________
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
             >;
         };
 
         func_layer {
             bindings = <
-    &trans     &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans                                      &kp C_PLAY_PAUSE &kp F7       &kp F8        &kp F9      &kp F10     &trans
-    &trans     &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)                                 &kp K_VOL_UP     &kp F4       &kp F5        &kp F6      &kp F11     &trans
-    &trans     &trans       &trans        &trans       &trans        &kp C_MUTE                                  &kp K_VOL_DN     &kp F1       &kp F2        &kp F3      &kp F12     &trans
-                                                       &trans        &trans        &trans       &trans           &kp SPACE        &trans
+    ___     &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) ___                                      &kp C_PLAY_PAUSE &kp F7       &kp F8        &kp F9      &kp F10     ___
+    ___     &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)                                 &kp K_VOL_UP     &kp F4       &kp F5        &kp F6      &kp F11     ___
+    ___     ___       ___        ___       ___        &kp C_MUTE                                  &kp K_VOL_DN     &kp F1       &kp F2        &kp F3      &kp F12     ___
+                                               ________________________________       ___   &kp SPACE        ___
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+    ___     &kp EXCL     &kp AT       &kp HASH        &kp DLLR         &kp PRCNT                                   &kp CARET     &kp AMPS          &kp ASTRK     &kp UNDER   &kp EQUAL   ___
+    ___     &kp MINUS    &kp LBKT     &kp LBRC        &kp LPAR         &kp LT                                      &kp GT        &kp RPAR          &kp RBRC      &kp RBKT    &kp PLUS    ___
+    ___     &kp CAPS     &kp GRAVE    &kp LC(LS(TAB)) &kp LC(LG(LEFT)) &caps_word                                  ___        &kp LC(LG(RIGHT)) &kp LC(TAB)   ___      &kp BSLH    ___
+                                          ___           &kp RET       &kp DEL        &kp BSPC       ___        ___
             >;
         };
 
         media_layer {
             bindings = <
-    &trans     &trans       &trans        &trans       &trans        &trans                                     &trans             &bt BT_PRV        &bt BT_NXT         &trans         &trans          &trans
-    &trans     &trans       &trans        &trans       &trans        &trans                                     &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3    &trans
-    &trans     &trans       &trans        &trans       &trans        &trans                                     &ext_power EP_TOG  &ext_power EP_ON  &ext_power EP_OFF  &out OUT_USB   &out OUT_BLE    &trans
-                                                       &trans        &trans        &trans        &trans         &trans             &trans
+    ___     ___       ___        ___       ___        ___                                     ___             &bt BT_PRV        &bt BT_NXT         ___         ___          ___
+    ___     ___       ___        ___       ___        ___                                     &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3    ___
+    ___     ___       ___        ___       ___        ___                                     &ext_power EP_TOG  &ext_power EP_ON  &ext_power EP_OFF  &out OUT_USB   &out OUT_BLE    ___
+                                                       ___        ___        ___        ___         ___             ___
             >;
         };
 
         winnav_layer {
             bindings = <
-    &trans     &trans       &trans       &kp LG(UP)   &trans        &trans                                      &trans      &trans      &trans      &trans      &trans      &trans
-    &trans     &trans       &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans                                      &trans      &trans      &trans      &trans      &trans      &trans
-    &trans     &trans       &trans       &trans       &trans        &trans                                      &trans      &trans      &trans      &trans      &trans      &trans
-                                                      &trans        &trans        &trans         &trans         &trans      &trans
+    ___     ___       ___       &kp LG(UP)   ___        ___                                      ___      ___      ___      ___      ___      ___
+    ___     ___       &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) ___                                      ___      ___      ___      ___      ___      ___
+    ___     ___       ___       ___       ___        ___                                      ___      ___      ___      ___      ___      ___
+                                                      ___        ___        ___         ___         ___      ___
             >;
         };
     };

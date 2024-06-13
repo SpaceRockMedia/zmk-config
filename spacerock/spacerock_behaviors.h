@@ -70,16 +70,16 @@ MAKE_HOLD_TAP(hold_tap_meh_ent, &kp, &kp)
 #define HT_MEH_ENT &hold_tap_meh_ent MEH ENTER
 
 MAKE_HOLD_TAP(hold_tap_tog_nav, &mo, &to)
-#define HT_TOG_NAV &hold_tap_tog_nav LY_NAV LY_NAV
+#define HT_TOG_NAV &hold_tap_tog_nav NAV NAV
 
 MAKE_HOLD_TAP(hold_tap_tog_num, &mo, &to)
-#define HT_TOG_NUM &hold_tap_tog_num LY_NUM LY_NUM
+#define HT_TOG_NUM &hold_tap_tog_num NUM NUM
 
 MAKE_HOLD_TAP(hold_tap_ctl_def, &kp, &to)
-#define HT_CTL_DEF &hold_tap_ctl_def LCTRL LY_DEF
+#define HT_CTL_DEF &hold_tap_ctl_def LCTRL DEF
 
 MAKE_HOLD_TAP(hold_tap_ctl_gam, &kp, &to)
-#define HT_CTL_GAM &hold_tap_ctl_gam LCTRL LY_GAM
+#define HT_CTL_GAM &hold_tap_ctl_gam LCTRL COL
 
 //
 // Sticky Keys

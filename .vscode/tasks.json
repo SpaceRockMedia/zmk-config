@@ -1,24 +1,6 @@
 {
   "tasks": [
     {
-      "command": "cd /workspaces/zmk/app && west build -p -d build/hillside/left -b nice_nano_v2 -- -DSHIELD=hillside52_left -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/hillside/left/zephyr/zmk.uf2 /workspaces/zmk-config/build/hillside/left.uf2",
-      "group": {
-        "isDefault": true,
-        "kind": "build"
-      },
-      "label": "Build hillside left",
-      "type": "shell"
-    },
-    {
-      "command": "cd /workspaces/zmk/app && west build -p -d build/hillside/right -b nice_nano_v2 -- -DSHIELD=hillside52_right -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/hillside/right/zephyr/zmk.uf2 /workspaces/zmk-config/build/hillside/right.uf2",
-      "group": {
-        "isDefault": true,
-        "kind": "build"
-      },
-      "label": "Build hillside right",
-      "type": "shell"
-    },
-    {
       "command": "cd /workspaces/zmk/app && west build -p -d build/kyria/left -b nice_nano_v2 -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/kyria/left/zephyr/zmk.uf2 /workspaces/zmk-config/build/kyria/left.uf2",
       "group": {
         "isDefault": true,
@@ -34,6 +16,15 @@
         "kind": "build"
       },
       "label": "Build kyria right",
+      "type": "shell"
+    },
+    {
+      "command": "cd /workspaces/zmk/app && west build -p -d build/ffkb_lite_v1 -b nice_nano_v2 -- -DSHIELD=ffkb_lite_v1 -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/ffkb_lite_v1/zephyr/zmk.uf2 /workspaces/zmk-config/build/ffkb_lite_v1.uf2",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build ffkb_lite_v1",
       "type": "shell"
     },
     {

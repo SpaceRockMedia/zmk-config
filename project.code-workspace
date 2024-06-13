@@ -25,7 +25,7 @@
       "*.hpp": "cpp",
       "*.inc": "c",
       "*.json": "json",
-      "*.keymap": "c",
+      "*.keymap": "dts",
       "*.lock": "toml",
       "*.overlay": "dts",
       "*.sql": "sql",
