@@ -1,3 +1,0 @@
-[submodule "zmk-nodefree-config"]
-	path = zmk-nodefree-config
-	url = git@github.com:autoferrit/zmk-nodefree-config.git
