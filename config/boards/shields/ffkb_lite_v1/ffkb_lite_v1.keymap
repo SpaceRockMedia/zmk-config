@@ -27,8 +27,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-#include "../../../../zmk-nodefree-config/keypos_def/keypos_42keys.h"
-#include "../../../../zmk-nodefree-config/helper.h"
+#include "../../../../zmk-helpers/keypos_def/keypos_42keys.h"
+#include "../../../../zmk-helpers/helper.h"
 
 #include "../../../../spacerock/spacerock.dtsi"
 

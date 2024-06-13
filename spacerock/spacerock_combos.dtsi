@@ -21,7 +21,7 @@
  P : Palm
 */
 
-#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-helpers/helper.h"
 
 // use global-quick-tap-ms for combos (requires PR 1387)
 #undef COMBO_HOOK

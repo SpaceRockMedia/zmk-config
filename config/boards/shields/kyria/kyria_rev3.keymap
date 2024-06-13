@@ -32,8 +32,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#include "../zmk-nodefree-config/keypos_def/keypos_50keys.h"
-#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-helpers/keypos_def/keypos_50keys.h"
+#include "../zmk-helpers/helper.h"
 
 #include "../spacerock/spacerock.dtsi"
 

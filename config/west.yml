@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: autoferrit
-      url-base: https://github.com/autoferrit
+    - name: spacerock
+      url-base: https://github.com/spacerock
     - name: urob
       url-base: https://github.com/urob
     - name: sadekbaroudi
@@ -14,8 +14,8 @@ manifest:
       url-base: https://github.com/dhruvinsh
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: feat/pointers-move-scroll
+      remote: spacerock
+      revision: main
       import: app/west.yml
     # Replace the one above with the commented one below when that branch gets merged
     # into ZMK main, or if you're not using pointing devices for your build.
