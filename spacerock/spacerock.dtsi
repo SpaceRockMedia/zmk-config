@@ -7,12 +7,11 @@
 // #include <dt-bindings/zmk/rgb.h>
 
 #include "../lib/zmk-helpers/helper.h"
-// #include "spacerock.h"
 
 #include "spacerock.h"
-#include "spacerock_behaviors.dtsi"
+#include "behaviors.dtsi"
 
-#include "spacerock_rgb.dtsi"
+//#include "rgb.dtsi"
 
 
 
@@ -28,4 +27,4 @@
 //     mods = <(MOD_RSFT)>;
 // )
 
-#include "spacerock_combos.dtsi"
+//#include "combos.dtsi"

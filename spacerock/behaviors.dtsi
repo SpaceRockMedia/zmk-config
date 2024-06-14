@@ -6,9 +6,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #include "../lib/zmk-helpers/helper.h"
-#include "./behaviors/caps_word.dtsi"
-#include "./behaviors/num_word.dtsi"
-#include "./behaviors/swapper.dtsi"
+#include "behaviors/caps_word.dtsi"
+//#include "behaviors/space_word.dtsi"
+#include "behaviors/swapper.dtsi"
 
 //
 // HOLD TAPs (&mt)

@@ -1,8 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#include "../../lib/zmk-helpers/helper.h"
 #include <behaviors/num_word.dtsi>
+#include "../../lib/zmk-helpers/helper.h"
 
 // these pressed will keep numword going
 #define NUM_PERENS \
@@ -15,9 +15,12 @@
     KP_MINUS KP_SUBTRACT MINUS
 #define NUM_OPERATORS KP_DOT DOT KP_COMMA COMMA KP_EQUAL KP_EQUAL_AS400 EQUAL BSPC DEL UNDER
 
-#define ZMK_BEHAVIOR_CORE_num_word \
-    compatible = "zmk,behavior-num-word"; \
-    #binding-cells = <0>
+//#define ZMK_BEHAVIOR_CORE_space_word compatible = "zmk,behavior-space-word"; #binding-cells = <0>
+
+&num_word {
+  layers = <NAV>;
+  continue-list = <NUM_PERENS NUM_EMDAS NUM_OPERATORS>;
+}
 
 ZMK_BEHAVIOR(space_word, num_word,
     layers = <NAV>;

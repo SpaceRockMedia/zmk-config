@@ -16,8 +16,8 @@
 #define ___ &trans
 #define XXX &none
 
-#include "spacerock_layouts.h"
-#include "spacerock_keys.h"
-#include "spacerock_behaviors.h"
+#include "layouts.h"
+#include "keys.h"
+#include "behaviors.h"
 
-#include "spacerock_sensors.h"
+#include "sensors.h"

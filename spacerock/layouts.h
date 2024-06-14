@@ -2,7 +2,7 @@
 #pragma once
 
 #include <dt-bindings/zmk/keys.h>
-#include "./spacerock_keys.h"
+#include "./keys.h"
 
 
 // FN row
@@ -32,10 +32,18 @@
 #define ______________________QWERTY__RB______________________ &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
 
 //
+// HRM
+//
+#define _____________HRM__QWERTY__GACS_____________ &hm LGUI A  &hm LALT S  &hm LCTRL D &hs LSHFT F
+#define _____________HRM__QWERTY__SCAG_____________ &hs RSHFT J &hm RCTRL K &hm LALT L  &hm RGUI SEMI
+#define _____________HRM__COLEMAK__GACS____________ &hm LGUI A  &hm LALT R  &hm LCTRL S &hs LSHFT T
+#define _____________HRM__COLEMAK__SCAG____________ &hs RSHFT N &hm RCTRL I &hm LALT I  &hm RGUI O
+
+//
 // MODS
 //
-#define ______________________HRM__GASC_______________________ &kp LGUI  &kp LALT  &kp LSHFT &kp LCTRL
-#define ______________________HRM__CSAG_______________________ &kp LCTRL &kp LSHFT &kp LALT &kp LGUI
+#define _________________MOD__GACS_________________ &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT
+#define _________________MOD__SCAG_________________ &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI
 
 
 //
