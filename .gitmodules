@@ -1,0 +1,3 @@
+[submodule "lib/zmk-helpers"]
+	path = lib/zmk-helpers
+	url = https://github.com/urob/zmk-helpers.git
