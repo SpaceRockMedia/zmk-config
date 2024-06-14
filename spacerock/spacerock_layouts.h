@@ -2,6 +2,7 @@
 #pragma once
 
 #include <dt-bindings/zmk/keys.h>
+#include "./spacerock_keys.h"
 
 
 // FN row
@@ -46,8 +47,8 @@
 //
 // NUMS
 //
-#define ________________________NUMS_TOP_______________________ &kp EQUAL  &kp N7     &kp N8     &kp N9     &kp MINUS
-#define ________________________NUMS_MID_______________________ &kp ASTRK  &kp N4     &kp N5     &kp N6     &kp PLUS
-#define ________________________NUMS_BOT_______________________ &kp N0     &kp N1     &kp N2     &kp N3     &kp FSLH
+#define _______________________NUMS_TOP_______________________ &kp EQUAL  &kp N7     &kp N8     &kp N9     &kp MINUS
+#define _______________________NUMS_MID_______________________ &kp ASTRK  &kp N4     &kp N5     &kp N6     &kp PLUS
+#define _______________________NUMS_BOT_______________________ &kp N0     &kp N1     &kp N2     &kp N3     &kp FSLH
 
 

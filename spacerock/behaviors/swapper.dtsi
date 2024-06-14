@@ -1,0 +1,14 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#include "../../modules/zmk-helpers/helper.h"
+
+// swapper
+// https://github.com/dhruvinsh/zmk-tri-state
+ZMK_BEHAVIOR(swapper, tri-state,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <1>;
+)

@@ -51,7 +51,7 @@
 //
 #define MAKE_HOLD_TAP(NAME, HOLD, TAP) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
-        global-quick-tap-ms = <GLOBAL_QUICK_TAP_MS>; \
+        require-prior-idle-ms = <GLOBAL_QUICK_TAP_MS>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-on-release; \
         MT_CORE \

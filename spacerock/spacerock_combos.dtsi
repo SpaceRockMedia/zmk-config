@@ -21,11 +21,11 @@
  P : Palm
 */
 
-#include "../zmk-helpers/helper.h"
+#include "../modules/zmk-helpers/helper.h"
 
-// use global-quick-tap-ms for combos (requires PR 1387)
+// use require-prior-idle-ms for combos
 #undef COMBO_HOOK
-#define COMBO_HOOK global-quick-tap-ms = <100>;
+#define COMBO_HOOK require-prior-idle-ms = <100>;
 
 #define COMBO_TERM_FAST 45
 #define COMBO_TERM_SLOW 65

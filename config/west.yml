@@ -36,9 +36,11 @@ manifest:
       remote: urob
       revision: main
       import: app/west.yml
+    # https://github.com/dhruvinsh/zmk-num-word
     - name: zmk-num-word
       remote: dhruvinsh
       revision: main
+    # https://github.com/dhruvinsh/zmk-tri-state
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
