@@ -32,10 +32,13 @@ manifest:
       remote: sadekbaroudi
       revision: main
       import: config/deps.yml
-    - name: urob
+    # - name: urob
+    #   remote: urob
+    #   revision: main
+    #   import: app/west.yml
+    - name: zmk-helpers
       remote: urob
-      revision: main
-      import: app/west.yml
+      revision: v2 # this will eventually become main
     # https://github.com/dhruvinsh/zmk-num-word
     - name: zmk-num-word
       remote: dhruvinsh

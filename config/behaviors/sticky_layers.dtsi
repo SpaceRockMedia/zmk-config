@@ -1,0 +1,3 @@
+&sl {
+    ignore-modifiers;          // allow chording sticky mods & layers
+};

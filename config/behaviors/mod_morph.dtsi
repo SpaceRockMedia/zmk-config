@@ -1,0 +1,47 @@
+
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+// SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
+// SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+
+// tap: dot | shift + tap: colon | ctrl + shift + tap: >
+// SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
+// SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+
+// tap: qmark | shift + tap: excl
+// SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+
+// tap: left/right parenthesis | shft + tap: less-than/greater-than
+// SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
+// SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+
+
+#define SPACEROCK_MOD_SHIFT(NAME, BINDING, SHIFT_BINDING) \
+  ZMK_MOD_MORPH(NAME, \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+    bindings = <BINDING>, <SHIFT_BINDING>; \
+  )
+
+#define SPACEROCK_MOD_CTRL(NAME, BINDING, CTRL_BINDING) \
+  ZMK_MOD_MORPH(NAME, \
+    mods = <(MOD_LCTL|MOD_RCTL)>; \
+    bindings = <BINDING>, <CTRL_BINDING>; \
+  )
+
+#define SPACEROCK_MOD_ALT(NAME, BINDING, ALT_BINDING) \
+  ZMK_MOD_MORPH(NAME, \
+    mods = <(MOD_LALT|MOD_RALT)>; \
+    bindings = <BINDING>, <ALT_BINDING>; \
+  )
+
+#define SPACEROCK_MOD_GUI(NAME, BINDING, GUI_BINDING) \
+  ZMK_MOD_MORPH(NAME, \
+    mods = <(MOD_LGUI|MOD_RGUI)>; \
+    bindings = <BINDING>, <GUI_BINDING>; \
+  )

@@ -1,6 +1,8 @@
 // The default layout has 34 keys. Additional keys can be added by pre-setting any of
 // the macros defined in this file to one or more keys before sourcing this file.
 
+#pragma once
+
 /* left of left half */
 #if !defined X_LT  // top row, left
     #define X_LT
@@ -15,6 +17,20 @@
     #define X_LH
 #endif
 
+/* inner left column */
+#if !defined X_MLT  // top row, middle left
+    #define X_MLT
+#endif
+#if !defined X_MLM  // middle row, middle left
+    #define X_MLM
+#endif
+#if !defined X_MLB  // bottom row, middle left
+    #define X_MLB
+#endif
+#if !defined X_MLH  // thumb row, middle
+    #define X_MLH
+#endif
+
 /* between left and right half */
 #if !defined X_MT  // top row, middle
     #define X_MT
@@ -27,6 +43,20 @@
 #endif
 #if !defined X_MH  // thumb row, middle
     #define X_MH
+#endif
+
+/* inner right column */
+#if !defined X_MRT  // top row, middle right
+    #define X_MRT
+#endif
+#if !defined X_MRM  // middle row, middle right
+    #define X_MRM
+#endif
+#if !defined X_MRB  // bottom row, middle right
+    #define X_MRB
+#endif
+#if !defined X_MRH  // thumb row, middle right
+    #define X_MRH
 #endif
 
 /* right of right half */
