@@ -1,6 +1,15 @@
 My own personal ZMK Config, heavily inspired by [UROB's ZMK Config](https://github.com/urob/zmk-config) 
 as well as his [ZMK Helpers v2](https://github.com/urob/zmk-helpers/tree/v2)
 
+# Currently Supported Boards
+
+* Fingerpunch FFKB Lite
+
+# Not yet working
+
+* SplitKB Kyria
+* Fingerpunch Pinkies Out v3
+
 # urob's zmk-config
 
 This is my personal [ZMK firmware](https://github.com/zmkfirmware/zmk/)
