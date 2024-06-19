@@ -6,20 +6,20 @@
         bindings = <BINDING1>, <BINDING2>; \
     )
 
-// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-// SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-// SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+// tap: comma | shift + tap: < | ctrl + shift + tap: semicolon
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
+SIMPLE_MORPH(comma_inner_morph, CTL, &kp LESS_THAN, &kp SEMICOLON)
 
-// tap: dot | shift + tap: colon | ctrl + shift + tap: >
-// SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-// SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+// tap: dot | shift + tap: > | ctrl + shift + tap: colon
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
+SIMPLE_MORPH(dot_inner_morph, CTL, &kp GREATER_THAN, &kp COLON)
 
 // tap: qmark | shift + tap: excl
-// SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 // tap: left/right parenthesis | shft + tap: less-than/greater-than
-// SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
-// SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
+SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
 
 #define SPACEROCK_MOD_SHIFT(NAME, BINDING, SHIFT_BINDING) \

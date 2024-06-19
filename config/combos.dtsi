@@ -21,7 +21,7 @@
  P : Palm
 */
 
-#include "modules/zmk-helpers/helper.h"
+#include "../modules/zmk-helpers/include/zmk-helpers/helper.h"
 
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK

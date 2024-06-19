@@ -2,10 +2,10 @@
 #pragma once
 
 #include <dt-bindings/zmk/keys.h>
-#include "./keys.h"
+#include "aliases.h"
 
 
-// FN row
+// FUN row
 #define _______________LAY_L_FUN_01_05_______________ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
 #define _______________LAY_R_FUN_06_10_______________ &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
 

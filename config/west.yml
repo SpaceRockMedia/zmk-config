@@ -44,8 +44,8 @@ manifest:
       remote: dhruvinsh
       revision: main
     # https://github.com/dhruvinsh/zmk-tri-state
-    - name: zmk-tri-state
-      remote: dhruvinsh
-      revision: main
+    # - name: zmk-tri-state
+    #   remote: dhruvinsh
+    #   revision: main
   self:
     path: config

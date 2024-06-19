@@ -8,8 +8,8 @@ BUILDDIR=${CFGDIR}/build
 MODDIR=${CFGDIR}/modules
 MODULES="'\
 ${MODDIR}/zmk-num-word;\
-${MODDIR}/zmk-tri-state\
 '"
+# ${MODDIR}/zmk-tri-state\
 
 BOARD=nice_nano_v2
 SHIELD=ffkb_lite_v1
