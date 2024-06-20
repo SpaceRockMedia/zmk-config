@@ -1,0 +1,366 @@
+layout: {qmk_keyboard: crkbd/rev1, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  base:
+  - - '`'
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - {t: I, h: win}
+    - O
+  - - P
+    - BSPC
+    - '&smart_mouse'
+    - {t: A, h: LGUI}
+    - {t: S, h: LALT}
+    - {t: D, h: LCTRL}
+    - {t: F, h: LSHFT}
+    - G
+    - H
+    - {t: J, h: RSHFT}
+  - - {t: K, h: LCTRL}
+    - {t: L, h: LALT}
+    - {t: ;, h: LGUI}
+    - '&smart_mouse'
+    - LGUI
+    - Z
+    - X
+    - C
+    - V
+    - B
+  - - N
+    - M
+    - {t: ',', s: <}
+    - {t: ., s: '>'}
+    - {t: '?', s: '!'}
+    - RGUI
+    - {t: '&num_dance', h: num}
+    - {t: SPACE, h: num}
+    - {t: LSHFT, h: sticky, s: '&caps_word'}
+    - {t: LSHFT, h: sticky, s: '&caps_word'}
+  - - {t: RET, h: nav}
+    - {t: '&num_dance', h: num}
+  nav:
+  - - '`'
+    - PG UP
+    - {t: BSPC, h: Ctl+ BSPC}
+    - {t: UP, h: Ctl+ HOME}
+    - {t: DEL, h: Ctl+ DEL}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Sft+ TAB
+    - '&swapper'
+  - - {t: ▽, type: trans}
+    - BSPC
+    - '&smart_mouse'
+    - PG DN
+    - {t: LEFT, h: HOME}
+    - {t: DOWN, h: Ctl+ END}
+    - {t: RIGHT, h: END}
+    - RET
+    - {t: LSHFT, h: sticky}
+    - {t: LCTRL, h: sticky}
+  - - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: ▽, type: trans}
+    - '&smart_mouse'
+    - LGUI
+    - INS
+    - TAB
+    - <
+    - '>'
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - RGUI
+    - {t: '&num_dance', h: num}
+    - {t: base, h: toggle}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: CANCEL, type: held}
+    - {t: '&num_dance', h: num}
+  fun:
+  - - '`'
+    - F12
+    - F7
+    - F8
+    - F9
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - PREV
+    - VOL UP
+    - NEXT
+  - - '&win_sleep'
+    - BSPC
+    - '&smart_mouse'
+    - {t: F11, h: LGUI}
+    - {t: F4, h: LALT}
+    - {t: F5, h: LCTRL}
+    - {t: F6, h: LSHFT}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: Gui+Ctl+ LEFT, h: LCTRL}
+  - - {t: VOL DN, h: RSHFT}
+    - {t: Gui+Ctl+ RIGHT, h: LALT}
+    - {t: ▽, type: trans}
+    - '&smart_mouse'
+    - LGUI
+    - F10
+    - F1
+    - F2
+    - F3
+    - {t: ▽, type: trans}
+  - - Gui+Ctl+Sft+ A
+    - Gui+Ctl+Sft+ Q
+    - Alt+ `
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - RGUI
+    - {t: '&num_dance', h: num}
+    - {t: base, h: toggle}
+    - {t: ▽, type: trans}
+    - MUTE
+  - - PP
+    - {t: '&num_dance', h: num}
+  num:
+  - - '`'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '='
+    - '7'
+    - '8'
+    - '9'
+  - - '-'
+    - BSPC
+    - '&smart_mouse'
+    - {t: ▽, type: trans}
+    - {t: LGUI, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LCTRL, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - '*'
+    - '4'
+  - - '5'
+    - '6'
+    - +
+    - '&smart_mouse'
+    - LGUI
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - '0'
+    - '1'
+    - '2'
+    - '3'
+    - /
+    - RGUI
+    - {t: '&num_dance', h: num, type: held}
+    - {t: base, h: toggle}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: '&num_dance', h: num}
+  sys:
+  - - '`'
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - BT CLR
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - BSPC
+    - '&smart_mouse'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&bootloader'
+    - '&bootloader'
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&smart_mouse'
+    - LGUI
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&sys_reset'
+  - - '&sys_reset'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - RGUI
+    - {t: '&num_dance', h: num}
+    - {t: base, h: toggle}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: '&num_dance', h: num}
+  mouse:
+  - - '`'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&msc SCRL_LEFT'
+    - '&msc SCRL_DOWN'
+    - '&mmv MOVE_UP'
+    - '&msc SCRL_UP'
+  - - '&msc SCRL_RIGHT'
+    - BSPC
+    - '&smart_mouse'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&mmv MOVE_LEFT'
+  - - '&mmv MOVE_DOWN'
+    - '&mmv MOVE_RIGHT'
+    - {t: ▽, type: trans}
+    - '&smart_mouse'
+    - LGUI
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '&mkp MB4'
+    - '&mkp MCLK'
+    - '&mkp MB5'
+    - {t: ▽, type: trans}
+    - RGUI
+    - {t: '&num_dance', h: num}
+    - {t: base, h: toggle}
+    - {t: ▽, type: trans}
+    - '&mkp LCLK'
+  - - '&mkp RCLK'
+    - {t: '&num_dance', h: num}
+  win:
+  - - '`'
+    - '&bootloader'
+    - {t: ▽, type: trans}
+    - Gui+ UP
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+  - - '&bootloader'
+    - BSPC
+    - '&smart_mouse'
+    - '&sys_reset'
+    - Gui+ LEFT
+    - Gui+ DOWN
+    - Gui+ RIGHT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&sys_reset'
+    - '&smart_mouse'
+    - LGUI
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - RGUI
+    - {t: '&num_dance', h: num}
+    - {t: base, h: toggle}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: '&num_dance', h: num}
+combos:
+- p: [2, 3]
+  k: BSPC
+- p: [3, 4]
+  k: DEL
+- p: [13, 14]
+  k: ESC
+- p: [14, 15]
+  k: HOME
+- p: [15, 16]
+  k: END
+- p: [25, 26]
+  k: Ctl+ Z
+- p: [26, 27]
+  k: Ctl+ X
+- p: [27, 28]
+  k: Ctl+ C
+- p: [26, 28]
+  k: Ctl+ V
+- p: [28, 29]
+  k: Ctl+ Y
+- p: [7, 8]
+  k: Ctl+ BSPC
+- p: [8, 9]
+  k: Ctl+ DEL
+- p: [31, 32]
+  k: ''''
+- p: [32, 33]
+  k: '"'
+- p: [1, 13]
+  k: '!'
+- p: [2, 14]
+  k: '@'
+- p: [3, 15]
+  k: '#'
+- p: [4, 16]
+  k: $
+- p: [5, 17]
+  k: '%'
+- p: [14, 26]
+  k: '`'
+- p: [15, 27]
+  k: \
+- p: [16, 28]
+  k: '='
+- p: [17, 29]
+  k: '~'
+- p: [6, 18]
+  k: ^
+- p: [7, 19]
+  k: '&'
+- p: [8, 20]
+  k: '*'
+- p: [9, 21]
+  k: +
+- p: [18, 30]
+  k: _
+- p: [19, 31]
+  k: '|'
+- p: [20, 32]
+  k: /
+- p: [21, 33]
+  k: '-'

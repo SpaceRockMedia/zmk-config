@@ -39,19 +39,21 @@
 // they should default to word based
 ZMK_COMBO(ul_bspc,  &kp BSPC, LT3 LT2,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(ul_del,   &kp DEL,  LT2 LT1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_tab,   &kp TAB,  LT1 LT0,     ALL, COMBO_TERM_FAST)
 
 ZMK_COMBO(ur_esc,   &kp ESC,      LM4 LM3,     ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(ur_home,  &kp HOME,     LM3 LM2,     ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(ur_end,   &kp END,      LM2 LM1,     ALL, COMBO_TERM_SLOW)
 // ZMK_COMBO(repeat,   HRC_REPEAT,   LM1 LM0,     ALL, COMBO_TERM_FAST)
 
-ZMK_COMBO(ul_undo  ,&kp LC(Z),    LB4 LB3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_cut   ,&kp LC(X),    LB3 LB2,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_copy  ,&kp LC(C),    LB2 LB1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_paste ,&kp LC(V),    LB3 LB1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_redo  ,&kp LC(Y),    LB1 LB0,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_undo,  &kp LC(Z),    LB4 LB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_cut,   &kp LC(X),    LB3 LB2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_copy,  &kp LC(C),    LB2 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_paste, &kp LC(V),    LB3 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_redo,  &kp LC(Y),    LB1 LB0,     ALL, COMBO_TERM_FAST)
 
 /* right hand */
+ZMK_COMBO(ul_stab,  &kp LS(TAB),  RT0 LT1,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(ur_bspc,  &kp LC(BSPC), RT1 RT2,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(ur_del,   &kp LC(DEL),  RT2 RT3,     ALL, COMBO_TERM_FAST)
 
