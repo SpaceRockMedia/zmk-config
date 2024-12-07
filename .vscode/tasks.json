@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "command": "cd /workspaces/zmk/app && west build -p -d build/kyria/left -b nice_nano_v2 -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/kyria/left/zephyr/zmk.uf2 /workspaces/zmk-config/build/kyria/left.uf2",
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh kyria_rev3_left nice_nano_v2",
       "group": {
         "isDefault": true,
         "kind": "build"
@@ -10,7 +10,7 @@
       "type": "shell"
     },
     {
-      "command": "cd /workspaces/zmk/app && west build -p -d build/kyria/right -b nice_nano_v2 -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/kyria/right/zephyr/zmk.uf2 /workspaces/zmk-config/build/kyria/right.uf2",
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh kyria_rev3_right nice_nano_v2",
       "group": {
         "isDefault": true,
         "kind": "build"
@@ -19,12 +19,57 @@
       "type": "shell"
     },
     {
-      "command": "cd /workspaces/zmk/app && west build -p -d build/ffkb_lite_v1 -b nice_nano_v2 -- -DSHIELD=ffkb_lite_v1 -DZMK_CONFIG='/workspaces/zmk-config/config' && mv /workspaces/zmk/app/build/ffkb_lite_v1/zephyr/zmk.uf2 /workspaces/zmk-config/build/ffkb_lite_v1.uf2",
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh ffkb_lite_v1 nice_nano_v2",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
       "label": "Build ffkb_lite_v1",
+      "type": "shell"
+    },
+    {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh bykeeb_left seeeduino_xiao_ble",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build bykeeb left",
+      "type": "shell"
+    },
+    {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh bykeeb_right seeeduino_xiao_ble",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build bykeeb right",
+      "type": "shell"
+    },
+    {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh pinkies_out_v3@3.0.0 vik_cirque_i2c",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build pinkies_out_v3",
+      "type": "shell"
+    },
+    {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh settings_reset seeeduino_xiao_ble",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build xiao ble reset",
+      "type": "shell"
+    },
+    {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh settings_reset nice_nano_v2",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build nice_nano_v2 reset",
       "type": "shell"
     },
     {

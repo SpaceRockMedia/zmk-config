@@ -17,7 +17,7 @@
 #define FUN 2
 #define NUM 3
 #define SYS 4
-#define MOUSE 5
+#define PNT 5
 #define WIN 6
 
 //

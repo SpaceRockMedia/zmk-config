@@ -1,3 +1,23 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors/num_word.dtsi>
+#include "../../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
+
+// these pressed will keep numword going
+#define NUM_PERENS \
+    KP_LEFT_PARENTHESIS KP_LPAR KP_RIGHT_PARENTHESIS KP_RPAR \
+    LEFT_PARENTHESIS LPAR RIGHT_PARENTHESIS RPAR
+#define NUM_EMDAS \
+    KP_MULTIPLY KP_ASTERISK ASTERISK ASTRK STAR \
+    KP_DIVIDE KP_SLASH SLASH FSLH \
+    KP_PLUS PLUS \
+    KP_MINUS KP_SUBTRACT MINUS
+#define NUM_OPERATORS KP_DOT DOT KP_COMMA COMMA KP_EQUAL KP_EQUAL_AS400 EQUAL BSPC DEL UNDER
+
+// &num_word {
+//   continue-list = <NUM_PERENS NUM_EMDAS NUM_OPERATORS>;
+// }
+
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num,
@@ -8,9 +28,5 @@ ZMK_HOLD_TAP(smart_num,
 )
 ZMK_TAP_DANCE(num_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
-&num_word {  // num-word, requires PR #1451
-    layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};

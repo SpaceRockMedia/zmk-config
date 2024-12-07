@@ -19,7 +19,7 @@
              ╰─────────────┴─────────────╯
 */
 /* source key position labels */
-#include "../../../../modules/zmk-helpers/include/zmk-helpers/key-labels/42.h"
+#include "../../../../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/42.h"
 //#include "ffkb_lite_v1.overlay"
 
 /* activate bluetooth */

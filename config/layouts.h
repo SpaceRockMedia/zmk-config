@@ -13,29 +13,14 @@
 #define ______________________________________________________ ___ ___ ___ ___ ___
 #define ________________________________                       ___ ___ ___
 
-// COLEMAK-DH
-#define ____________________COLEMAK_DH__LT____________________ &kp Q &kp W &kp F &kp P &kp B
-#define ____________________COLEMAK_DH__LM____________________ &kp A &kp R &kp S &kp T &kp G
-#define ____________________COLEMAK_DH__LB____________________ &kp Z &kp X &kp C &kp D &kp V
-
-#define ____________________COLEMAK_DH__RT____________________ &kp J &kp L &kp U     &lt WIN Y &kp SEMI
-#define ____________________COLEMAK_DH__RM____________________ &kp M &kp N &kp E     &kp I     &kp O
-#define ____________________COLEMAK_DH__RB____________________ &kp K &kp H &kp COMMA &kp DOT   &kp FSLH
-
-// QWERTY
-#define ______________________QWERTY__LT______________________ &kp Q &kp W &kp E &kp R &kp T
-#define ______________________QWERTY__LM______________________ &kp A &kp S &kp D &kp F &kp G
-#define ______________________QWERTY__LB______________________ &kp Z &kp X &kp C &kp V &kp B
-
-#define ______________________QWERTY__RT______________________ &kp Y &kp U  &kp I     &kp O   &kp P
-#define ______________________QWERTY__RM______________________ &kp H &kp J  &kp K     &kp L   &kp SEMI
-#define ______________________QWERTY__RB______________________ &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-
 //
 // HRM
 //
 #define _____________HRM__QWERTY__GACS_____________ &hm LGUI A  &hm LALT S  &hm LCTRL D &hs LSHFT F
 #define _____________HRM__QWERTY__SCAG_____________ &hs RSHFT J &hm RCTRL K &hm LALT L  &hm RGUI SEMI
+#define _____________HRM__QWERTY__CASG_____________ &hm LCTRL A &hm LALT S  &hs LSHFT D &hm LGUI F
+#define _____________HRM__QWERTY__GSAC_____________ &hs RGUI J  &hs RSHFT K &hm LALT L  &hm RCTRL SEMI
+
 #define _____________HRM__COLEMAK__GACS____________ &hm LGUI A  &hm LALT R  &hm LCTRL S &hs LSHFT T
 #define _____________HRM__COLEMAK__SCAG____________ &hs RSHFT N &hm RCTRL I &hm LALT I  &hm RGUI O
 

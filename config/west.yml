@@ -24,10 +24,6 @@ manifest:
     #   remote: zmkfirmware
     #   revision: main
     #   import: app/west.yml
-    # - name: zmk
-    #   remote: autoferrit
-    #   revision: main
-    #   import: app/west.yml
     - name: zmk-fingerpunch-keyboards
       remote: sadekbaroudi
       revision: main
@@ -38,7 +34,10 @@ manifest:
     #   import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: v2 # this will eventually become main
+      revision: main
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
     # https://github.com/dhruvinsh/zmk-num-word
     - name: zmk-num-word
       remote: dhruvinsh

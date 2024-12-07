@@ -7,10 +7,8 @@
   },
   "folders": [
     {
+      "name": "zmk-config",
       "path": "."
-    },
-    {
-      "path": "../../sadekbaroudi/zmk-fingerpunch-keyboards"
     }
   ],
   "settings": {
@@ -61,6 +59,12 @@
       "utility": "c",
       "variant": "c",
       "xstddef": "c"
+    },
+    "vars": {
+      "zmk": "/workspaces/zmk",
+      "zmk_build": "/workspaces/zmk-config/scripts/build.sh",
+      "zmk_config": "/workspaces/zmk-config",
+      "zmk_modules": "/workspaces/zmk-modules"
     }
   }
 }

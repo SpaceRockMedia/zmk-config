@@ -10,7 +10,7 @@
 
 #if CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
-    #define _BT_SEL_KEYS_ BT0 BT1 BT2 BT3 &bt BT_CLR
+    #define ____________________________BT_SEL_KEYS____________________________ BT0 BT1 BT2 BT3 &bt BT_CLR
 #else
-    #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
+    #define ____________________________BT_SEL_KEYS____________________________ &trans &trans &trans &trans &trans
 #endif
