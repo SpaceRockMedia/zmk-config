@@ -1,29 +1,25 @@
 #!/usr/bin/env bash
 
 # HOST builds
-# ZMKDIR=${1:-$HOME/projects/spacerockmedia/zmk}
-# CFGDIR=${2:-$ZMKDIR/../zmk-config}
-# MODDIR=${3:-$ZMKDIR/../zmk-modules}
+WORKSPACE_DIR=$HOME/projects/spacerockmedia
+ZMKDIR=$WORKSPACE_DIR/zmk
+CFGDIR=$WORKSPACE_DIR/zmk-config
+MODDIR=$WORKSPACE_DIR/zmk-modules
 
-# Docker builds
-ZMKDIR=/workspaces/zmk
-CFGDIR=/workspaces/zmk-config
-MODDIR=/workspaces/zmk-modules
-
-SHIELD=${4:-ffkb_lite_v1}
-BOARD=${5:-nice_nano_v2}
+SHIELD=${1:-ffkb_lite_v1}
+BOARD=${2:-nice_nano_v2}
 
 APPDIR=$ZMKDIR/app
 
 MODULES="'\
-${MODDIR}/zmk-helpers;\
-${MODDIR}/zmk-fingerpunch-controllers;\
-${MODDIR}/zmk-fingerpunch-vik;\
 ${MODDIR}/cirque-input-module;\
-${MODDIR}/zmk-tri-state;\
 ${MODDIR}/zmk-auto-layer;\
+${MODDIR}/zmk-fingerpunch-controllers;\
+${MODDIR}/zmk-fingerpunch-keyboards;\
+${MODDIR}/zmk-fingerpunch-vik;\
+${MODDIR}/zmk-helpers;\
 '"
-# ${MODDIR}/zmk-fingerpunch-keyboards;\
+# ${MODDIR}/zmk-tri-state;\
 
 source ${ZMKDIR}/.venv/bin/activate
 

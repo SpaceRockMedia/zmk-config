@@ -9,6 +9,10 @@
     {
       "name": "zmk-config",
       "path": "."
+    },
+    {
+      "name": "zmk-modules",
+      "path": "../zmk-modules"
     }
   ],
   "settings": {
@@ -61,10 +65,9 @@
       "xstddef": "c"
     },
     "vars": {
-      "zmk": "/workspaces/zmk",
-      "zmk_build": "/workspaces/zmk-config/scripts/build.sh",
-      "zmk_config": "/workspaces/zmk-config",
-      "zmk_modules": "/workspaces/zmk-modules"
+      "build": "${workspaceFolder}/scripts/build_docker.sh ${config:vars.zmk} ${workspaceFolder} ${config:vars.zmk_modules}",
+      "zmk": "${workspaceFolder}/../zmk",
+      "zmk_modules": "${workspaceFolder}/../zmk-modules"
     }
   }
 }

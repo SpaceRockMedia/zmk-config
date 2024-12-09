@@ -12,15 +12,13 @@ APPDIR=$ZMKDIR/app
 
 MODULES="'\
 ${MODDIR}/cirque-input-module;\
-${MODDIR}/zmk-tri-state;\
 ${MODDIR}/zmk-auto-layer;\
-${MODDIR}/zmk-fingerpunch-keyboards;\
 ${MODDIR}/zmk-fingerpunch-controllers;\
+${MODDIR}/zmk-fingerpunch-keyboards;\
 ${MODDIR}/zmk-fingerpunch-vik;\
+${MODDIR}/zmk-helpers;\
+${MODDIR}/zmk-tri-state;\
 '"
-
-source ${ZMKDIR}/.venv/bin/activate
-
 
 buildcmd="west \
   build -p \
@@ -33,11 +31,12 @@ buildcmd="west \
 
 echo "### building with:"
 echo "${buildcmd}"
+echo ""
 
 mkdir -p ${CFGDIR}/build
 
+
 cd ${APPDIR} \
-  && echo "in ${PWD}" \
   && eval $buildcmd \
   && echo "### moving uf2 builds" \
   && mv \
