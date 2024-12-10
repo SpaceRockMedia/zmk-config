@@ -21,7 +21,6 @@
 #include "../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
 /* source key position labels */
 #include "../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/42.h"
-//#include "ffkb_lite_v1.overlay"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
@@ -42,35 +41,3 @@
 #include "base.keymap"
 
 ZMK_APPLY_MATRIX_TRANSFORM(default_transform)
-
-
-
-//         func_layer {
-//             bindings = <
-//     ___     &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) ___                                      &kp C_PLAY_PAUSE &kp F7       &kp F8        &kp F9      &kp F10     ___
-//     ___     &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)                                 &kp K_VOL_UP     &kp F4       &kp F5        &kp F6      &kp F11     ___
-//     ___     ___       ___        ___       ___        &kp C_MUTE                                  &kp K_VOL_DN     &kp F1       &kp F2        &kp F3      &kp F12     ___
-//                                                ________________________________       ___   &kp SPACE        ___
-//             >;
-//         };
-
-//         sym_layer {
-//             bindings = <
-//     ___     &kp EXCL     &kp AT       &kp HASH        &kp DLLR         &kp PRCNT                                   &kp CARET     &kp AMPS          &kp ASTRK     &kp UNDER   &kp EQUAL   ___
-//     ___     &kp MINUS    &kp LBKT     &kp LBRC        &kp LPAR         &kp LT                                      &kp GT        &kp RPAR          &kp RBRC      &kp RBKT    &kp PLUS    ___
-//     ___     &kp CAPS     &kp GRAVE    &kp LC(LS(TAB)) &kp LC(LG(LEFT)) &caps_word                                  ___        &kp LC(LG(RIGHT)) &kp LC(TAB)   ___      &kp BSLH    ___
-//                                           ___           &kp RET       &kp DEL        &kp BSPC       ___        ___
-//             >;
-//         };
-
-//         media_layer {
-//             bindings = <
-//     ___     ___       ___        ___       ___        ___                                     ___             &bt BT_PRV        &bt BT_NXT         ___         ___          ___
-//     ___     ___       ___        ___       ___        ___                                     &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3    ___
-//     ___     ___       ___        ___       ___        ___                                     &ext_power EP_TOG  &ext_power EP_ON  &ext_power EP_OFF  &out OUT_USB   &out OUT_BLE    ___
-//                                                        ___        ___        ___        ___         ___             ___
-//             >;
-//         };
-
-//     };
-// };
