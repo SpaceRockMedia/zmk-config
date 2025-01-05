@@ -25,3 +25,7 @@ include:
     shield: bykeeb_left
   - board: seeeduino_xiao_ble
     shield: bykeeb_right
+  - board: seeeduino_xiao_ble
+    shield: totem_left
+  - board: seeeduino_xiao_ble
+    shield: totem_right
