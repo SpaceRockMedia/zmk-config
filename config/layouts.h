@@ -43,18 +43,3 @@
 #define _______________________NUMS_TOP_______________________ &kp EQUAL  &kp N7     &kp N8     &kp N9     &kp MINUS
 #define _______________________NUMS_MID_______________________ &kp ASTRK  &kp N4     &kp N5     &kp N6     &kp PLUS
 #define _______________________NUMS_BOT_______________________ &kp N0     &kp N1     &kp N2     &kp N3     &kp FSLH
-
-#define thumb_base_left  &kp MEH     DSPACE     &kp LSHIFT
-#define thumb_base_right &lt NAV RET SMART_NUM
-#define thumb_nav_left   &kp MEH     &to 0      ___
-#define thumb_nav_right  ___         CANCEL
-#define thumb_fun_left   &kp MEH     &to 0      ___
-#define thumb_fun_right  &kp C_MUTE  &kp C_PP
-#define thumb_num_left   &kp MEH     &to 0      ___
-#define thumb_num_right  ___         ___
-#define thumb_sys_left   &kp MEH     &to 0      ___
-#define thumb_sys_right  ___         ___
-#define thumb_pnt_left   &kp MEH     &to 0      ___
-#define thumb_pnt_right  &mkp LCLK   &mkp RCLK
-#define thumb_win_left   &kp MEH     &to 0      ___
-#define thumb_win_right  ___         ___

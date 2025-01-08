@@ -21,6 +21,10 @@ ${MODDIR}/zmk-helpers;\
 '"
 # ${MODDIR}/zmk-tri-state;\
 
+if [[ $SHIELD == *"anywhy_flake"* ]]; then
+  MODULES="${MODULES};${MODDIR}/anywhy-flake"
+fi
+
 source ${ZMKDIR}/.venv/bin/activate
 
 buildcmd="${ZMKDIR}/.venv/bin/west \

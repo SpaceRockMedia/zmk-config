@@ -19,6 +19,34 @@
  #define MEDIA   4
  #define WINNAV  5
 
+ // In this case, we added a cirque trackpad using the pro micro position i2c pins and a hand wired data ready pin
+&pro_micro_i2c {
+    status = "okay";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        // The aforementioned LED data pin that we're not using, hand wired to cirque DR
+        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
+
+        sensitivity = "4x";
+        sleep;
+        no-taps;
+    };
+};
+
+/ {
+    glidepoint_input {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+
+        xy-swap;
+        y-invert;
+        x-invert;
+    };
+};
+
  &caps_word {
      continue-list = <UNDERSCORE MINUS>;
  };
@@ -57,9 +85,9 @@
 
          default_layer {
              bindings = <
-     &mkp MCLK  &kp Q        &kp W        &kp F       &kp P         &kp B                                       &kp J         &kp L        &lt WINNAV U  &kp Y       &kp SEMI    &kp BSLH
-     &mkp LCLK  &hm LCTL A   &hm LGUI R   &hm LALT S  &hs LSHIFT T  &kp G                                       &kp M         &hs RSHIFT N &hm RALT E    &hm RGUI I  &hm RCTL O  &kp SQT
-     &mkp RCLK  &kp Z        &kp X        &kp C       &kp D         &kp V                                       &kp K         &kp H        &kp COMMA     &kp DOT     &kp FSLH    &kp RCTRL
+     &mkp MCLK  &kp Q        &kp W        &kp E       &kp R         &kp T                                       &kp Y         &kp U        &lt WINNAV I  &kp O       &kp P          &kp BSLH
+     &mkp LCLK  &hm LCTL A   &hm LGUI S   &hm LALT D  &hs LSHIFT F  &kp G                                       &kp H         &hs RSHIFT J &hm RALT K    &hm RGUI L  &hm RCTL SEMI  &kp SQT
+     &mkp RCLK  &kp Z        &kp X        &kp C       &kp V         &kp B                                       &kp N         &kp M        &kp COMMA     &kp DOT     &kp FSLH       &kp RCTRL
                                           &kp C_MUTE  &kp DEL       &lt NAV RET  &lt FUNC TAB  &lt MEDIA BSPC   &lt SYM SPACE &kp SQT      &kp LC(BSPC)
              >;
          };
