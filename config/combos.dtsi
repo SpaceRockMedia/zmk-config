@@ -13,7 +13,7 @@
 
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <100>;
+#define COMBO_HOOK require-prior-idle-ms = <100>
 
 #define COMBO_TERM_FAST 45
 #define COMBO_TERM_SLOW 65
@@ -34,16 +34,16 @@ ZMK_COMBO(ur_home,  &kp HOME,     LM3 LM2,     ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(ur_end,   &kp END,      LM2 LM1,     ALL, COMBO_TERM_SLOW)
 // ZMK_COMBO(repeat,   HRC_REPEAT,   LM1 LM0,     ALL, COMBO_TERM_FAST)
 
-ZMK_COMBO(ul_undo,  &kp LC(Z),    LB4 LB3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_cut,   &kp LC(X),    LB3 LB2,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_copy,  &kp LC(C),    LB2 LB1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_paste, &kp LC(V),    LB3 LB1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ul_redo,  &kp LC(Y),    LB1 LB0,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_undo,  &kp LG(Z),    LB4 LB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_cut,   &kp LG(X),    LB3 LB2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_copy,  &kp LG(C),    LB2 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_paste, &kp LG(V),    LB3 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_redo,  &kp LG(Y),    LB1 LB0,     ALL, COMBO_TERM_FAST)
 
 /* right hand */
 ZMK_COMBO(ul_stab,  &kp LS(TAB),  RT0 LT1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ur_bspc,  &kp LC(BSPC), RT1 RT2,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ur_del,   &kp LC(DEL),  RT2 RT3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ur_bspc,  &kp LG(BSPC), RT1 RT2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ur_del,   &kp LG(DEL),  RT2 RT3,     ALL, COMBO_TERM_FAST)
 
 ZMK_COMBO(ur_sqt,   &kp SQT,      RB1 RB2,     ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(ur_dqt,   &kp DQT,      RB2 RB3,     ALL, COMBO_TERM_SLOW)

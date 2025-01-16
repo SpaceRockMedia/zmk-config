@@ -29,12 +29,25 @@
 #define X_LT  &kp GRAVE
 #define X_LM  &smart_mouse
 #define X_LB  &kp LGUI
-#define X_LH  SMART_NUM
 
 #define X_RT  &kp BSPC
 #define X_RM  &kp SQT
 #define X_RB  &kp RGUI
-#define X_RH  SMART_NUM
+
+#define thumb_base_left  &kp MEH     DSPACE      &kp LSHIFT
+#define thumb_base_right &kp RSHIFT  &lt NAV RET SMART_NUM
+#define thumb_nav_left   &kp MEH     &to 0       ___
+#define thumb_nav_right  ___         ___         CANCEL
+#define thumb_fun_left   &kp MEH     &to 0       ___
+#define thumb_fun_right  ___         &kp C_MUTE  &kp C_PP
+#define thumb_num_left   &kp MEH     &to 0       ___
+#define thumb_num_right  ___         ___         ___
+#define thumb_sys_left   &kp MEH     &to 0       ___
+#define thumb_sys_right  ___         ___         ___
+#define thumb_pnt_left   &kp MEH     &to 0       ___
+#define thumb_pnt_right  ___         &mkp LCLK   &mkp RCLK
+#define thumb_win_left   &kp MEH     &to 0       ___
+#define thumb_win_right  ___         ___         ___
 
 
 /* source the main keymap */

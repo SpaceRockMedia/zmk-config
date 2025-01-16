@@ -18,12 +18,17 @@ ${MODDIR}/zmk-fingerpunch-controllers;\
 ${MODDIR}/zmk-fingerpunch-keyboards;\
 ${MODDIR}/zmk-fingerpunch-vik;\
 ${MODDIR}/zmk-helpers;\
-'"
+"
 # ${MODDIR}/zmk-tri-state;\
 
-if [[ $SHIELD == *"anywhy_flake"* ]]; then
-  MODULES="${MODULES};${MODDIR}/anywhy-flake"
+BUILDFLAGS=""
+
+if [[ $SHIELD == *"flake"* ]]; then
+  MODULES="${MODULES}${MODDIR}/flake-zmk-module;"
+  BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
 fi
+
+MODULES="${MODULES}'"
 
 source ${ZMKDIR}/.venv/bin/activate
 
@@ -31,6 +36,7 @@ buildcmd="${ZMKDIR}/.venv/bin/west \
   build -p \
   -d build/${SHIELD} \
   -b ${BOARD} \
+  ${BUILDFLAGS} \
   -- \
     -DSHIELD=${SHIELD} \
     -DZMK_CONFIG=\"${CFGDIR}/config\" \

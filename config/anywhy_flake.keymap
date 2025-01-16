@@ -15,12 +15,12 @@
  │ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
  │ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
  │ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
- ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
-             ╰─────────────┴─────────────╯
+ ╰───╮ LH4 LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 RH4 ╭───╯
+     ╰─────────────────────┴─────────────────────╯
 */
 #include "../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
 /* source key position labels */
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/42.h"
+#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/46.h"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
@@ -29,12 +29,12 @@
 #define X_LT  &kp GRAVE
 #define X_LM  &smart_mouse
 #define X_LB  &kp LGUI
-#define X_LH  SMART_NUM
+#define X_LH  SMART_NUM &kp HYP
 
 #define X_RT  &kp BSPC
 #define X_RM  &kp SQT
 #define X_RB  &kp RGUI
-#define X_RH  SMART_NUM
+#define X_RH  &kp HYP SMART_NUM
 
 #define thumb_base_left  &kp MEH     DSPACE      &kp LSHIFT
 #define thumb_base_right &kp RSHIFT  &lt NAV RET SMART_NUM
@@ -51,44 +51,7 @@
 #define thumb_win_left   &kp MEH     &to 0       ___
 #define thumb_win_right  ___         ___         ___
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
+/* source the main keymap */
+#include "base.keymap"
 
-        base {
-            bindings = <
-&trans  &kp B     &kp L     &kp D      &kp C      &kp V        &kp J  &kp F       &kp O      &kp U     &kp SEMI  &trans
-&trans  &kp N     &kp R     &kp T      &kp S      &kp G        &kp Y  &kp H       &kp A      &kp E     &kp I     &trans
-&trans  &kp X     &kp Q     &kp M      &kp W      &kp Z        &kp K  &kp P       &kp COMMA  &kp DOT   &kp SQT   &trans
-        &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &mo 1        &mo 2  &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT
-            >;
-        };
-
-        num {
-            bindings = <
-&trans  &kp ESC   &kp BACKSPACE  &kp TAB       &kp ENTER  &kp C_VOL_UP        &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp BSLH  &trans
-&trans  &kp LALT  &kp LGUI       &kp LCTRL     &kp LSHFT  &kp C_PP            &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0    &trans
-&trans  &kp DEL   &kp CAPS       &kp LBKT      &kp RBKT   &kp C_VOL_DN        &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
-        &trans    &trans         &trans        &trans     &trans              &mo 3      &trans  &trans  &trans  &trans
-            >;
-        };
-
-        sym {
-            bindings = <
-&trans  &none     &none       &none       &none      &kp C_BRI_UP        &none   &none      &none      &none     &none     &trans
-&trans  &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &kp C_MUTE          &none   &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans
-&trans  &none     &kp C_PREV  &kp C_NEXT  &none      &kp C_BRI_DN        &none   &none      &none      &none     &none     &trans
-        &trans    &trans      &trans      &trans     &mo 3               &trans  &trans     &trans     &trans    &trans
-            >;
-        };
-
-        fun {
-            bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &none         &soft_off     &none         &none         &none         &none         &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &none         &bt BT_CLR    &sk LSHFT     &sk LCTRL     &sk LGUI      &sk LALT      &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-        &trans   &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
-            >;
-        };
-    };
-};
+ZMK_APPLY_MATRIX_TRANSFORM(medium_transform)
