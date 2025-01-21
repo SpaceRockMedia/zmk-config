@@ -17,6 +17,7 @@
 
 #define COMBO_TERM_FAST 45
 #define COMBO_TERM_SLOW 65
+ZMK_COMBO(ul_unlock,  &studio_unlock, LT0 RT0,     ALL, COMBO_TERM_FAST)
 
 //
 // Horizontal combos

@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: grassfedreeve
+      url-base: https://github.com/grassfedreeve
   projects:
     - name: zmk
       remote: spacerock
@@ -46,5 +48,8 @@ manifest:
     # - name: zmk-tri-state
     #   remote: dhruvinsh
     #   revision: main
+    - name: zmk-keyboards-adept
+      remote: grassfedreeve
+      revision: main
   self:
     path: config

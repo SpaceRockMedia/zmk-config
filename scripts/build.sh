@@ -28,12 +28,16 @@ if [[ $SHIELD == *"flake"* ]]; then
   BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
 fi
 
+if [[ $SHIELD == *"adept"* ]]; then
+  MODULES="${MODULES}${MODDIR}/zmk-keyboards-adept;"
+fi
+
 MODULES="${MODULES}'"
 
 source ${ZMKDIR}/.venv/bin/activate
 
 buildcmd="${ZMKDIR}/.venv/bin/west \
-  build -p \
+  build \
   -d build/${SHIELD} \
   -b ${BOARD} \
   ${BUILDFLAGS} \
@@ -50,6 +54,6 @@ mkdir -p ${CFGDIR}/build
 cd ${APPDIR} \
   && eval $buildcmd \
   && echo "### moving uf2 builds" \
-  && mv \
+  && cp -f \
     ${APPDIR}/build/${SHIELD}/zephyr/zmk.uf2 \
     ${CFGDIR}/build/${SHIELD}.uf2

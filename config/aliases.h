@@ -44,7 +44,7 @@
 // HYP/MEH could work well with sticky keys $sk
 // https://zmk.dev/docs/behaviors/sticky-key
 // global shortcuts, as it uses GUI
-#define HYP LS(LC(LA(LGUI)))
+#define HYP LS(LC(LALT(LGUI)))
 #define HY(keycode) LS(LC(LA(LG(keycode))))
 
 // in app shortcuts
