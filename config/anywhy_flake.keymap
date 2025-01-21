@@ -27,13 +27,6 @@
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
 
-#define thumb_nav_right
-#define thumb_fun_right
-#define thumb_num_right  ___         ___         ___         ___         ___
-#define thumb_sys_right  ___         ___         ___         ___         ___
-#define thumb_pnt_right
-#define thumb_win_right
-
 #include "aliases.h"
 #include "extra_keys.h"
 #include "layouts.h"
