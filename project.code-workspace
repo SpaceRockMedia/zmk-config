@@ -11,6 +11,10 @@
       "path": "."
     },
     {
+      "name": "zmk",
+      "path": "../zmk"
+    },
+    {
       "name": "zmk-modules",
       "path": "../zmk-modules"
     }

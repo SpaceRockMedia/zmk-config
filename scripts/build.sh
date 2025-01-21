@@ -57,3 +57,4 @@ cd ${APPDIR} \
   && cp -f \
     ${APPDIR}/build/${SHIELD}/zephyr/zmk.uf2 \
     ${CFGDIR}/build/${SHIELD}.uf2
+  # && west flash -dbuild/${SHIELD} --skip-rebuild

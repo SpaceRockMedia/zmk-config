@@ -20,9 +20,9 @@
 */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
+#include "../../../../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
 /* source key position labels */
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/46.h"
+#include "../../../../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/46.h"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
@@ -45,17 +45,13 @@
 
 #include "combos.dtsi"  // requires layer aliases
 
-/* source the main keymap */
-
-
-
 ZMK_CONDITIONAL_LAYER(sys, NAV NUM, SYS)  // FUN + NUM --> SYSge
 
-ZMK_LAYER(base,
+ZMK_LAYER(default_layer,
     &kp GRAVE &kp Q         &kp W         &kp E         &kp R         &lt FUN T            &lt FUN Y     &kp U         &lt WIN I     &kp O         &kp P          &kp SQT
     &kp ESC   &hml LCTRL A  &hml LSHFT S  &hml LALT D   &hml LGUI F   &kp G                &kp H         &hmr LGUI J   &hmr LALT K   &hmr RSHFT L  &hmr LCTRL SEMI &kp SQT
     &kp LGUI  &kp Z         &kp X         &kp C         &kp V         &kp B                &kp N         &kp M         &comma_morph  &dot_morph    &qexcl         &kp RGUI
-              ___           &studio_unlock &kp MEH      DSPACE        &kp LSHIFT           &kp RSHIFT    &lt NAV RET   SMART_NUM     ___           ___
+              &bootloader   &studio_unlock &kp MEH      DSPACE        &kp LSHIFT           &kp RSHIFT    &lt NAV RET   SMART_NUM     ___           &bootloader
 )
 
 ZMK_LAYER(nav,
