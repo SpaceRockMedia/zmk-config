@@ -26,7 +26,7 @@
           ╰─────────────┴─────────────╯
 */
 /* source key position labels */
-// #include "../../../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/36.h"
+// #include "zmk-helpers/include/zmk-helpers/key-labels/36.h"
 #include "zmk-helpers/include/zmk-helpers/key-labels/36.h"
 
 /* activate bluetooth */

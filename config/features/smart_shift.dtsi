@@ -1,4 +1,4 @@
-#include "../../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
+#include "zmk-helpers/include/zmk-helpers/helper.h"
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
 #define DSPACE &lt NUM SPACE
 // ZMK_HOLD_TAP(lt_spc,

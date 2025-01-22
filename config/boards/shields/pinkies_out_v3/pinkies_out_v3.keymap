@@ -29,8 +29,8 @@
 #include <zephyr/dt-bindings/pwm/pwm.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/68.h"
+#include "zmk-helpers/include/zmk-helpers/helper.h"
+#include "zmk-helpers/include/zmk-helpers/key-labels/68.h"
 
 #define X_LN  &kp ESC
 #define X_LT  &kp GRAVE

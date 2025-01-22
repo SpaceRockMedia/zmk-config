@@ -1,4 +1,4 @@
-#include "../../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
+#include "zmk-helpers/include/zmk-helpers/helper.h"
 // Windows sleep key
 ZMK_BEHAVIOR(win_sleep, macro,
     wait-ms = <100>;

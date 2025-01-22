@@ -22,9 +22,9 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/helper.h"
+#include "zmk-helpers/include/zmk-helpers/helper.h"
 /* source key position labels */
-#include "../../zmk-modules/zmk-helpers/include/zmk-helpers/key-labels/41.h"
+#include "zmk-helpers/include/zmk-helpers/key-labels/41.h"
 
 /* map extra keys */
 #define X_LT  &kp GRAVE
