@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors/num_word.dtsi>
-#include "zmk-helpers/include/zmk-helpers/helper.h"
+#include "zmk-helpers/helper.h"
 
 // these pressed will keep numword going
 #define NUM_PERENS \

@@ -20,9 +20,9 @@
 */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include "zmk-helpers/include/zmk-helpers/helper.h"
+#include "zmk-helpers/helper.h"
 /* source key position labels */
-#include "zmk-helpers/include/zmk-helpers/key-labels/46.h"
+#include "zmk-helpers/key-labels/46.h"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1

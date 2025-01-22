@@ -32,8 +32,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#include "modules/zmk-helpers/include/zmk-helpers/key-labels/kyria.h"
-#include "modules/zmk-helpers/include/zmk-helpers/helper.h"
+#include "modules/zmk-helpers/key-labels/kyria.h"
+#include "modules/zmk-helpers/helper.h"
 
 #include "../spacerock/spacerock.dtsi"
 
