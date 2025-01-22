@@ -21,26 +21,35 @@ include:
   #
   # mono splits
 
-  # - board: nice_nano_v2
-  #   shield: ffkb_lite_v1
+  - board: nice_nano_v2
+    shield: ffkb_V3
+
+  - board: nice_nano_v2
+    shield: ffkb_lite_v1
+
+  - board: sparkfun_pro_micro_rp2040
+    shield: reviung41
+
+  - board: vik_cirque_i2c
+    shield: pinkies_out_v3@3.0.0
 
   #
   # splits
 
-  # - board: nice_nano_v2
-  #   shield: kyria_left
-  # - board: nice_nano_v2
-  #   shield: kyria_right
+  - board: nice_nano_v2
+    shield: kyria_left
+  - board: nice_nano_v2
+    shield: kyria_right
 
-  # - board: seeeduino_xiao_ble
-  #   shield: bykeeb_left
-  # - board: seeeduino_xiao_ble
-  #   shield: bykeeb_right
+  - board: seeeduino_xiao_ble
+    shield: bykeeb_left
+  - board: seeeduino_xiao_ble
+    shield: bykeeb_right
 
-  # - board: seeeduino_xiao_ble
-  #   shield: totem_left
-  # - board: seeeduino_xiao_ble
-  #   shield: totem_right
+  - board: seeeduino_xiao_ble
+    shield: totem_left
+  - board: seeeduino_xiao_ble
+    shield: totem_right
 
   - board: nice_nano_v2
     shield: anywhy_flake_left
@@ -59,4 +68,7 @@ include:
   # resets
 
   - board: nice_nano_v2
+    shield: settings_reset
+
+  - board: seeeduino_xiao_ble
     shield: settings_reset
