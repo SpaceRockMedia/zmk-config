@@ -14,6 +14,8 @@ manifest:
       url-base: https://github.com/dhruvinsh
     - name: grassfedreeve
       url-base: https://github.com/grassfedreeve
+    - name: badjeff
+      url-base: https://github.com/badjeff
     - name: anywhy-io
       url-base: https://github.com/anywhy-io
   projects:
@@ -21,23 +23,32 @@ manifest:
       remote: spacerockmedia
       revision: main
       import: app/west.yml
+
     - name: zmk-fingerpunch-keyboards
       remote: sadekbaroudi
       revision: main
       import: config/deps.yml
+
     - name: zmk-helpers
       remote: spacerockmedia
       revision: main
+
     - name: zmk-auto-layer
       remote: urob
       revision: main
-    # https://github.com/dhruvinsh/zmk-num-word
+
     - name: zmk-num-word
       remote: dhruvinsh
       revision: main
+
     - name: zmk-keyboards-adept
       remote: grassfedreeve
       revision: main
+    - name: zmk-pmw3610-driver
+      remote: badjeff
+      revision: main
+
+
     - name: flake-zmk-module
       remote: anywhy-io
       revision: main
