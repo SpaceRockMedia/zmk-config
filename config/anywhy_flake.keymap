@@ -45,7 +45,7 @@
 
 #include "combos.dtsi"  // requires layer aliases
 
-/ { chosen { zmk,physical-layout = &medium_layout; };
+/ { chosen { zmk,physical-layout = &medium_layout; }; };
 
 ZMK_CONDITIONAL_LAYER(sys, NAV NUM, SYS)  // FUN + NUM --> SYSge
 
