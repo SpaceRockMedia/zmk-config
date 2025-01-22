@@ -51,5 +51,8 @@ manifest:
     - name: zmk-keyboards-adept
       remote: grassfedreeve
       revision: main
+    - name: flake-zmk-module
+      remote: anywhy-io
+      revision: main
   self:
     path: config

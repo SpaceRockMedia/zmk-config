@@ -5,4 +5,10 @@
     chosen {
         zmk,physical-layout = &medium_layout;
     };
+
+    default_transform: <&medium_transform>;
 };
+
+// &medium_layout {
+//     transform = <&medium_transform>;
+// };
