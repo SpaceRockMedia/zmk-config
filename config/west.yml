@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: spacerock
-      url-base: https://github.com/spacerock
+    - name: spacerockmedia
+      url-base: https://github.com/spacerockmedia
     - name: urob
       url-base: https://github.com/urob
     - name: sadekbaroudi
@@ -18,7 +18,7 @@ manifest:
       url-base: https://github.com/anywhy-io
   projects:
     - name: zmk
-      remote: spacerock
+      remote: spacerockmedia
       revision: main
       import: app/west.yml
     - name: zmk-fingerpunch-keyboards
