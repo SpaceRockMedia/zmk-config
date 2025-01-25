@@ -51,54 +51,52 @@
 
 / { chosen { zmk,physical-layout = &medium_layout; }; };
 
-ZMK_CONDITIONAL_LAYER(sys, NAV NUM, SYS)  // FUN + NUM --> SYSge
-
 ZMK_LAYER(default_layer,
-    &kp GRAVE &kp Q         &kp W         &kp E         &kp R         &lt FUN T            &lt FUN Y     &kp U         &lt WIN I     &kp O         &kp P           &kp SQT
+    &lt SYS GRAVE &kp Q     &kp W         &kp E         &kp R         &lt FUN T            &lt FUN Y     &kp U         &lt WIN I     &kp O         &kp P           &lt SYS SQT
     &kp ESC   &hml LCTRL A  &hml LSHFT S  &hml LALT D   &hml LGUI F   &kp G                &kp H         &hmr LGUI J   &hmr LALT K   &hmr RSHFT L  &hmr LCTRL SEMI &kp SQT
     &kp LGUI  &kp Z         &kp X         &kp C         &kp V         &kp B                &kp N         &kp M         &comma_morph  &dot_morph    &qexcl          &kp RGUI
               &kp LPAR      &kp LBKT      &mt MEH BSPC  DSPACE        &kp LSHIFT           &kp RSHIFT    &lt NAV RET   &mt MEH DEL       &kp RBKT      &kp RPAR
 )
 
 ZMK_LAYER(nav,
-    ___       &kp PG_UP     &kp ME(LEFT)  &kp UP        &kp ME(RIGHT) &kp ME(UP)           ___           ___           &kp LS(TAB)   &swapper      ___            &kp SQT
-    ___       &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp ME(DOWN)         ___           &sk LGUI      &sk LALT      &sk LSHFT      &sk LCTRL     &kp SQT
-    ___       &kp INS       &kp TAB       &kp LT        &kp GT        ___                  ___           ___           ___           ___           ___            &kp RGUI
+    ___       &kp PG_UP     &kp ME(LEFT)  &kp UP        &kp ME(RIGHT) &kp ME(UP)           ___           ___           &kp LS(TAB)   &swapper      ___            ___
+    ___       &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp ME(DOWN)         ___           &sk LGUI      &sk LALT      &sk LSHFT      &sk LCTRL     ___
+    ___       &kp INS       &kp TAB       &kp LT        &kp GT        ___                  ___           ___           ___           ___           ___            ___
               ___           ___           &kp MEH       &to 0         ___                  ___           ___           CANCEL       ___            ___
 )
 
 ZMK_LAYER(fun,
-    ___       &kp F12       &kp F7        &kp F8        &kp F9        ___                  ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &win_sleep     &kp SQT
-    ___       &hml LCTRL F11 &hml LSHFT F4 &hml LALT F5 &hml LGUI F6  ___                  ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___            &kp SQT
-    ___       &kp F10       &kp F1        &kp F2        &kp F3        ___                  PIN_APP       PIN_WIN       DSK_MGR       ___           ___            &kp RGUI
+    ___       &kp F12       &kp F7        &kp F8        &kp F9        ___                  ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &win_sleep     ___
+    ___       &hml LCTRL F11 &hml LSHFT F4 &hml LALT F5 &hml LGUI F6  ___                  ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___            ___
+    ___       &kp F10       &kp F1        &kp F2        &kp F3        ___                  PIN_APP       PIN_WIN       DSK_MGR       ___           ___            ___
               ___          ___            &kp MEH       &to 0         ___                  ___           &kp C_MUTE    &kp C_PP      ___           ___
 )
 
 ZMK_LAYER(num,
-    ___       ___           ___           ___           ___           ___                  &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp MINUS      &kp SQT
-    ___       &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___                  &kp ASTRK     &kp N4        &kp N5        &kp N6        &kp PLUS       &kp SQT
-    ___       ___           ___           ___           ___           ___                  &kp N0        &kp N1        &kp N2        &kp N3        &kp FSLH       &kp RGUI
+    ___       ___           ___           ___           ___           ___                  &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp MINUS      ___
+    ___       &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___                  &kp ASTRK     &kp N4        &kp N5        &kp N6        &kp PLUS       ___
+    ___       ___           ___           ___           ___           ___                  &kp N0        &kp N1        &kp N2        &kp N3        &kp FSLH       ___
               ___           ___           &kp MEH       &to 0         ___                  ___           ___           ___           ___           ___
 )
 
 ZMK_LAYER(sys,
-    ___       ____________________________BT_SEL_KEYS____________________________          ___           ___           ___           ___           ___            &kp SQT
-    ___       ___           ___           ___           ___           &bootloader          &bootloader   ___           ___           ___           ___            &kp SQT
-    ___       ___           ___           ___           ___           &sys_reset           &sys_reset    ___           ___           ___           ___            &kp RGUI
+    ___       ____________________________BT_SEL_KEYS____________________________          ___           ___           ___           ___           ___            ___
+    ___       ___           ___           ___           ___           &bootloader          &bootloader   ___           ___           ___           ___            ___
+    &soft_off ___           ___           ___           ___           &sys_reset           &sys_reset    ___           ___           ___           ___            &soft_off
               ___           ___           &kp MEH       &to 0         ___                  ___           ___           ___           ___           ___
 )
 
 ZMK_LAYER(pnt,
-    ___       ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            &kp SQT
-    ___       ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            &kp SQT
-    ___       ___           ___           ___           ___           ___                  ___           &mkp MB4      &mkp MCLK     &mkp MB5      ___            &kp RGUI
+    ___       ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+    ___       ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+    ___       ___           ___           ___           ___           ___                  ___           &mkp MB4      &mkp MCLK     &mkp MB5      ___            ___
                ___          ___           &kp MEH       &to 0         ___                  ___           &mkp LCLK     &mkp RCLK     ___           ___
 )
 
 ZMK_LAYER(win,
-    ___       &bootloader   ___           &kp LG(UP)    ___           ___                  ___           ___           ___           ___           &bootloader    &kp SQT
-    ___       &sys_reset    &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT) ___                  ___           ___           ___           ___           &sys_reset     &kp SQT
-    ___       ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            &kp RGUI
+    ___       &bootloader   ___           &kp LG(UP)    ___           ___                  ___           ___           ___           ___           &bootloader    ___
+    ___       &sys_reset    &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT) ___                  ___           ___           ___           ___           &sys_reset     ___
+    ___       ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
               ___           ___           &kp MEH       &to 0         ___                  ___           ___           ___           ___           ___
 )
 
