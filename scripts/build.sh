@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+shopt -s extglob nullglob
+
 # HOST builds
 WORKSPACE_DIR=$HOME/projects/spacerockmedia
 ZMKDIR=$WORKSPACE_DIR/zmk
@@ -11,28 +13,39 @@ BOARD=${2:-nice_nano_v2}
 
 APPDIR=$ZMKDIR/app
 
-MODULES="'\
-${MODDIR}/cirque-input-module;\
-${MODDIR}/zmk-auto-layer;\
-${MODDIR}/zmk-fingerpunch-controllers;\
-${MODDIR}/zmk-fingerpunch-keyboards;\
-${MODDIR}/zmk-fingerpunch-vik;\
-${MODDIR}/zmk-helpers;\
-"
-# ${MODDIR}/zmk-tri-state;\
+MODULES=""
+
+# You may omit the following subdirectories
+# the syntax is that of extended globs, e.g.,
+# omitdir="cmmdm|not_this_+([[:digit:]])|keep_away*"
+# If you don't want to omit any subdirectories, leave empty: omitdir=
+omitdir=zmk-tri-state
+
+# Create array
+if [[ -z $omitdir ]]; then
+   modarray=( "$MODDIR"/*/ )
+else
+   modarray=( "$MODDIR"/!($omitdir)/ )
+fi
+# remove trailing backslash
+modarray=( "${modarray[@]%/}" )
+
+# At this point you have a nice array modarray, indexed from 0 (for Exit)
+# that contains Exit and all the subdirectories of $MODDIR
+# (except the omitted ones)
+# You should check that you have at least one directory in there:
+if ((${#modarray[@]}<=1)); then
+    printf 'No modules found. \n'
+else
+  # join modules to a string
+  MODULES=$(IFS=\; ; echo "${modarray[*]}")
+fi
 
 BUILDFLAGS=""
 
 if [[ $SHIELD == *"flake"* ]]; then
-  MODULES="${MODULES}${MODDIR}/flake-zmk-module;"
   BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
 fi
-
-if [[ $SHIELD == *"adept"* ]]; then
-  MODULES="${MODULES}${MODDIR}/zmk-keyboards-adept;"
-fi
-
-MODULES="${MODULES}'"
 
 source ${ZMKDIR}/.venv/bin/activate
 
@@ -44,7 +57,7 @@ buildcmd="${ZMKDIR}/.venv/bin/west \
   -- \
     -DSHIELD=${SHIELD} \
     -DZMK_CONFIG=\"${CFGDIR}/config\" \
-    -DZMK_EXTRA_MODULES=${MODULES}"
+    -DZMK_EXTRA_MODULES='${MODULES}'"
 
 echo "### building with:"
 echo "${buildcmd}"
