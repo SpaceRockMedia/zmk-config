@@ -50,7 +50,7 @@ fi
 source ${ZMKDIR}/.venv/bin/activate
 
 buildcmd="${ZMKDIR}/.venv/bin/west \
-  build \
+  build -p \
   -d build/${SHIELD} \
   -b ${BOARD} \
   ${BUILDFLAGS} \
