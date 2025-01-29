@@ -22,7 +22,7 @@ include:
   # mono splits
 
   - board: nice_nano_v2
-    shield: ffkb_V3
+    shield: ffkb_v3
 
   - board: nice_nano_v2
     shield: ffkb_lite_v1
