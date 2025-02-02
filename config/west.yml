@@ -53,6 +53,10 @@ manifest:
       remote: dhruvinsh
       revision: main
 
+    - name: zmk-leader-key
+      remote: urob
+      revision: v0.1 # Set to same version as ZMK.
+
     - name: zmk-keyboards-adept
       remote: grassfedreeve
       revision: main

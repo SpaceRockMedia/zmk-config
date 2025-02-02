@@ -30,12 +30,12 @@
 #define X_LT  &lt SYS GRAVE
 #define X_LM  &kp Q
 #define X_LB  &kp LGUI
-#define X_MLB &kp LEAD &kp HEH
+#define X_MLB ___ &kp MEH
 
 #define X_RT  &lt SYS SQT
 #define X_RM  &kp P
 #define X_RB  &kp RGUI
-#define X_MRB &kp MEH &kp LEAD
+#define X_MRB &kp MEH ___
 
 #define thumb_base_left  &kp LPAR   &kp LBKT    &mt MEH BSPC  DSPACE   &kp LSHIFT
 #define thumb_base_right &kp RSHIFT &lt NAV RET &mt MEH DEL   &kp RBKT &kp RPAR
