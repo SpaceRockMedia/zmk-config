@@ -9,7 +9,7 @@
 
 #include "hardware/hardware.dtsi"
 #include "behaviors/behaviors.dtsi"
-#include "behaviors/leader.dtsi"
+// #include "behaviors/leader.dtsi"
 
 #include "features/hrm.dtsi"
 #include "features/mask_mods.dtsi"
