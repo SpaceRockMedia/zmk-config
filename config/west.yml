@@ -18,6 +18,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: anywhy-io
       url-base: https://github.com/anywhy-io
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
   projects:
     - name: zmk
       remote: spacerockmedia
@@ -26,6 +28,10 @@ manifest:
 
     - name: cirque-input-module
       remote: petejohanson
+      revision: main
+
+    - name: prospector-zmk-module
+      remote: carrefinho
       revision: main
 
     - name: zmk-fingerpunch-keyboards
