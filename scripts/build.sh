@@ -48,9 +48,9 @@ if [[ $SHIELD == *"flake"* ]]; then
   BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
 fi
 
-if [[ $SHIELD == *"kyria"* ]]; then
-  BUILDARGS="${BUILDARGS} -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n"
-fi
+# if [[ $SHIELD == *"kyria"* ]]; then
+#   BUILDARGS="${BUILDARGS} -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n"
+# fi
 
 source ${ZMKDIR}/.venv/bin/activate
 
@@ -74,5 +74,5 @@ cd ${APPDIR} \
   && echo "### moving uf2 builds" \
   && cp -f \
     ${APPDIR}/build/${SHIELD}/zephyr/zmk.uf2 \
-    ${CFGDIR}/build/${SHIELD}.uf2
+    ${CFGDIR}/build/${SHIELD}_${BOARD}.uf2
   # && west flash -dbuild/${SHIELD} --skip-rebuild

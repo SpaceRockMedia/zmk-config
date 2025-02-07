@@ -60,7 +60,7 @@
 #define X_SENSORS_PNT  &inc_dec_kp C_VOL_UP C_VOL_DN
 #define X_SENSORS_WIN  &inc_dec_kp C_VOL_UP C_VOL_DN
 
-#include "base.keymap"
+#include "../../../config/base.keymap"
 
 ZMK_APPLY_MATRIX_TRANSFORM(default_transform)
 
