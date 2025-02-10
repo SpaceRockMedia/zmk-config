@@ -26,9 +26,9 @@ manifest:
       revision: main
       import: app/west.yml
 
-    - name: cirque-input-module
-      remote: petejohanson
-      revision: main
+    # - name: cirque-input-module
+    #   remote: petejohanson
+    #   revision: main
 
     - name: prospector-zmk-module
       remote: carrefinho
