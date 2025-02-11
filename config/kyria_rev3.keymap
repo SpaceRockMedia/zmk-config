@@ -25,7 +25,13 @@
 #include "zmk-helpers/key-labels/kyria.h"
 
 
-#define CONFIG_WIRELESS 1
+// #define CONFIG_WIRELESS 1
+
+/ {
+    kscan: kscan {
+        wakeup-source;
+    };
+};
 
 #define X_LT  &lt SYS GRAVE
 #define X_LM  &kp Q
