@@ -48,10 +48,6 @@ if [[ $SHIELD == *"flake"* ]]; then
   BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
 fi
 
-# if [[ $SHIELD == *"kyria"* ]]; then
-#   BUILDARGS="${BUILDARGS} -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n"
-# fi
-
 source ${ZMKDIR}/.venv/bin/activate
 
 buildcmd="${ZMKDIR}/.venv/bin/west \
