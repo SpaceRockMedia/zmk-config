@@ -29,7 +29,16 @@ ZMK_LAYER(base,
     X_LT    &kp Q         &kp W         &kp E         &kp R         &lt FUN T      X_MLT   X_MRT   &lt FUN Y     &kp U         &lt WIN I     &kp O         &kp P          X_RT
     X_LM    &hml LCTRL A  &hml LSHFT S  &hml LALT D   &hml LGUI F   &kp G          X_MLM   X_MRM   &kp H         &hmr LGUI J   &hmr LALT K   &hmr RSHFT L  &hmr LCTRL SEMI X_RM
     X_LB    &kp Z         &kp X         &kp C         &kp V         &kp B          X_MLB   X_MRB   &kp N         &kp M         &comma_morph  &dot_morph    &qexcl         X_RB
-    X_LH                                              thumb_base_left              X_MLH   X_MRH   thumb_base_right                                                       X_RH,
+    X_LH                                              thumb_base_left              X_MLH   X_MRH   thumb_base_right                                                       X_RH
+    X_SENSORS_BASE
+)
+
+ZMK_LAYER(graph,
+    X_LN    ________________________X_LEFT_ROW_________________________________    X_MLN   X_MRN   ________________________X_RIGHT_ROW________________________________    X_RN
+    X_LT    &kp B         &kp L         &kp D         &kp W         &lt FUN Z      X_MLT   X_MRT   &lt FUN APOS  &kp F         &lt WIN O     &kp U         &kp J          X_RT
+    X_LM    &hml LCTRL N  &hml LSHFT R  &hml LALT T   &hml LGUI S   &kp G          X_MLM   X_MRM   &kp Y         &hmr LGUI H   &hmr LALT A   &hmr RSHFT E  &hmr LCTRL I   X_RM
+    X_LB    &kp Q         &kp X         &kp M         &kp C         &kp V          X_MLB   X_MRB   &kp K         &kp P         &comma_morph  &dot_morph    &qexcl         X_RB
+    X_LH                                              thumb_base_left              X_MLH   X_MRH   thumb_base_right                                                       X_RH
     X_SENSORS_BASE
 )
 
@@ -38,7 +47,7 @@ ZMK_LAYER(nav,
     X_LT    &kp PG_UP     &kp ME(LEFT)  &kp UP        &kp ME(RIGHT) &kp ME(UP)     X_MLT   X_MRT   ___           ___           &kp LS(TAB)   &swapper      ___            X_RT
     X_LM    &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp ME(DOWN)   X_MLM   X_MRM   ___           &sk LGUI      &sk LALT      &sk LSHFT      &sk LCTRL     X_RM
     X_LB    &kp INS       &kp TAB       &kp LT        &kp GT        ___            X_MLB   X_MRB   ___           ___           ___           ___           ___            X_RB
-    X_LH                                              thumb_nav_left               X_MLH   X_MRH   thumb_nav_right                                                        X_RH,
+    X_LH                                              thumb_nav_left               X_MLH   X_MRH   thumb_nav_right                                                        X_RH
     X_SENSORS_NAV
 )
 
@@ -47,7 +56,7 @@ ZMK_LAYER(fun,
     X_LT    &kp F12       &kp F7        &kp F8        &kp F9        ___            X_MLT   X_MRT   ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &win_sleep     X_RT
     X_LM    &hml LCTRL F11 &hml LSHFT F4 &hml LALT F5 &hml LGUI F6  ___            X_MLM   X_MRM   ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___            X_RM
     X_LB    &kp F10       &kp F1        &kp F2        &kp F3        ___            X_MLB   X_MRB   PIN_APP       PIN_WIN       DSK_MGR       ___           ___            X_RB
-    X_LH                                              thumb_fun_left               X_MLH   X_MRH   thumb_fun_right                                                        X_RH,
+    X_LH                                              thumb_fun_left               X_MLH   X_MRH   thumb_fun_right                                                        X_RH
     X_SENSORS_FUN
 )
 
@@ -56,7 +65,7 @@ ZMK_LAYER(num,
     X_LT    ___           ___           ___           ___           ___            X_MLT   X_MRT   &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp MINUS      X_RT
     X_LM    &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___            X_MLM   X_MRM   &kp ASTRK     &kp N4        &kp N5        &kp N6        &kp PLUS       X_RM
     X_LB    ___           ___           ___           ___           ___            X_MLB   X_MRB   &kp N0        &kp N1        &kp N2        &kp N3        &kp FSLH       X_RB
-    X_LH                                              thumb_num_left               X_MLH   X_MRH   thumb_num_right                                                        X_RH,
+    X_LH                                              thumb_num_left               X_MLH   X_MRH   thumb_num_right                                                        X_RH
     X_SENSORS_NUM
 )
 
@@ -65,7 +74,7 @@ ZMK_LAYER(sys,
     X_LT    ____________________________BT_SEL_KEYS____________________________    X_MLT   X_MRT   ___           ___           ___           ___           ___            X_RT
     X_LM    ___           ___           ___           ___           &bootloader    X_MLM   X_MRM   &bootloader   ___           ___           ___           ___            X_RM
     X_LB    &soft_off     ___           ___           ___           &sys_reset     X_MLB   X_MRB   &sys_reset    ___           ___           ___           &soft_off      X_RB
-    X_LH                                              thumb_sys_left               X_MLH   X_MRH   ___           ___                                                      X_RH,
+    X_LH                                              thumb_sys_left               X_MLH   X_MRH   ___           ___                                                      X_RH
     X_SENSORS_SYS
 )
 
@@ -74,7 +83,7 @@ ZMK_LAYER(pnt,
     X_LT    ___           ___           ___           ___           ___            X_MLT   X_MRT   ___           ___           ___           ___           ___            X_RT
     X_LM    ___           ___           ___           ___           ___            X_MLM   X_MRM   ___           ___           ___           ___           ___            X_RM
     X_LB    ___           ___           ___           ___           ___            X_MLB   X_MRB   ___           &mkp MB4      &mkp MCLK     &mkp MB5      ___            X_RB
-    X_LH                                              thumb_pnt_left               X_MLH   X_MRH   thumb_pnt_right                                              X_RH,
+    X_LH                                              thumb_pnt_left               X_MLH   X_MRH   thumb_pnt_right                                              X_RH
     X_SENSORS_PNT
 )
 
@@ -83,7 +92,7 @@ ZMK_LAYER(win,
     X_LT    &bootloader   ___           &kp LG(UP)    ___           ___            X_MLT   X_MRT   ___           ___           ___           ___           &bootloader    X_RT
     X_LM    &sys_reset    &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT) ___            X_MLM   X_MRM   ___           ___           ___           ___           &sys_reset     X_RM
     X_LB    ___           ___           ___           ___           ___            X_MLB   X_MRB   ___           ___           ___           ___           ___            X_RB
-    X_LH                                              thumb_win_left               X_MLH   X_MRH   thumb_win_right                                                        X_RH,
+    X_LH                                              thumb_win_left               X_MLH   X_MRH   thumb_win_right                                                        X_RH
     X_SENSORS_WIN
 )
 

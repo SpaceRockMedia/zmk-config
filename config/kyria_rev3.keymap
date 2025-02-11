@@ -58,13 +58,13 @@
 #define thumb_win_left   ___         ___        &kp MEH       &to 0    ___
 #define thumb_win_right  ___         ___        ___           ___      ___
 
-#define X_SENSORS_BASE &inc_dec_kp C_VOL_UP C_VOL_DN
-#define X_SENSORS_NAV  &inc_dec_kp C_VOL_UP C_VOL_DN
-#define X_SENSORS_FUN  &inc_dec_kp C_VOL_UP C_VOL_DN
-#define X_SENSORS_NUM  &inc_dec_kp C_VOL_UP C_VOL_DN
-#define X_SENSORS_SYS  &inc_dec_kp C_VOL_UP C_VOL_DN
-#define X_SENSORS_PNT  &inc_dec_kp C_VOL_UP C_VOL_DN
-#define X_SENSORS_WIN  &inc_dec_kp C_VOL_UP C_VOL_DN
+#define X_SENSORS_BASE , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+#define X_SENSORS_NAV  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+#define X_SENSORS_FUN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+#define X_SENSORS_NUM  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+#define X_SENSORS_SYS  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+#define X_SENSORS_PNT  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+#define X_SENSORS_WIN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
 
 #include "base.keymap"
 
