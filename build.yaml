@@ -21,61 +21,61 @@ include:
   #
   # mono splits
 
-  - board: nice_nano_v2
-    shield: ffkb_v2
+  - shield: ffkb_v2
+    board: nice_nano_v2
 
-  - board: nice_nano_v2
-    shield: ffkb_v3
+  - shield: ffkb_v3
+    board: nice_nano_v2
 
-  - board: nice_nano_v2
-    shield: ffkb_lite_v1
+  - shield: ffkb_lite_v1
+    board: nice_nano_v2
 
-  - board: sparkfun_pro_micro_rp2040
-    shield: reviung41
+  - shield: reviung41
+    board: sparkfun_pro_micro_rp2040
 
-  - board: vik_cirque_i2c
-    shield: pinkies_out_v3@3.0.0
+  - shield: vik_cirque_i2c
+    board: pinkies_out_v3@3.0.0
 #
   #
   # splits
 
-  - board: nice_nano_v2
-    shield: kyria_rev3_left
-  - board: nice_nano_v2
-    shield: kyria_rev3_right
-  # - board: seeeduino_xiao_ble
-    # shield: kyria_dongle prospector_adapter
+  - shield: kyria_rev3_left
+    board: nice_nano_v2
+  - shield: kyria_rev3_right
+    board: nice_nano_v2
+  # - shield: kyria_dongle prospector_adapter
+  #   board: seeeduino_xiao_ble
 
-  # - board: seeeduino_xiao_ble
-  #   shield: bykeeb_left
-  # - board: seeeduino_xiao_ble
-  #   shield: bykeeb_right
+  # - shield: bykeeb_leftfga
+  #   board: seeeduino_xiao_ble
+  # - shield: bykeeb_right
+  #   board: seeeduino_xiao_ble
 
-  # - board: seeeduino_xiao_ble
-  #   shield: totem_left
-  # - board: seeeduino_xiao_ble
-  #   shield: totem_right
+  # - shield: totem_left
+  #   board: seeeduino_xiao_ble
+  # - shield: totem_right
+  #   board: seeeduino_xiao_ble
 
-  - board: nice_nano_v2
-    shield: anywhy_flake_left
+  - shield: anywhy_flake_left
+    board: nice_nano_v2
     snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
-    shield: anywhy_flake_right
+  - shield: anywhy_flake_right
+    board: nice_nano_v2
 
   #
   # accessories
 
-  # - board: seeeduino_xiao_ble
-    # shield: adept
+  # - shield: adept
+  #   board: seeeduino_xiao_ble
 
   #
   # resets
 
-  - board: nice_nano_v2
-    shield: settings_reset
+  - shield: settings_reset
+    board: nice_nano_v2
 
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+  - shield: settings_reset
+    board: seeeduino_xiao_ble
 
-  - board: seeeduino_xiao_rp2040
-    shield: settings_reset
+  - shield: settings_reset
+    board: seeeduino_xiao_rp2040

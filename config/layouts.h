@@ -4,6 +4,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include "aliases.h"
 
+// NUM row
+#define __X_LEFT_NUM_ROW__ &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
+#define __X_RIGHT_NUM_ROW__ &kp N8 &kp N9 &kp N0 &kp N0 &kp N0
 
 // FUN row
 #define _______________LAY_L_FUN_01_05_______________ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5

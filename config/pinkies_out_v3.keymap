@@ -34,9 +34,9 @@
 
 #define X_LN  &kp ESC
 #define X_LT  &kp GRAVE
-#define X_LM  &smart_mouse
+#define X_LM  ___
 #define X_LB  &kp LGUI
-#define X_LH  SMART_NUM ___ ___
+// #define X_LH  SMART_NUM ___ ___
 
 #define X_MLN &kp N6
 #define X_MLT ___
@@ -54,10 +54,25 @@
 #define X_RT  &kp BSPC
 #define X_RM  &kp SQT
 #define X_RB  &kp RGUI
-#define X_RH  ___ ___ SMART_NUM
+// #define X_RH  ___ ___ SMART_NUM
 
-#define ________________________X_LEFT_ROW_________________________________ &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
-#define ________________________X_RIGHT_ROW________________________________ &kp N8 &kp N9 &kp N0 &kp N0 &kp N0
+#define thumb_base_left  &kp LPAR   &kp LBKT    &mt MEH BSPC  DSPACE   &kp LSHIFT
+#define thumb_base_right &kp RSHIFT &lt NAV RET &mt MEH DEL   &kp RBKT &kp RPAR
+#define thumb_nav_left   ___         ___        &kp MEH       &to 0    ___
+#define thumb_nav_right  ___         ___        CANCEL        ___      ___
+#define thumb_fun_left   ___         ___        &kp MEH       &to 0    ___
+#define thumb_fun_right  ___         &kp C_MUTE &kp C_PP      ___      ___
+#define thumb_num_left   ___         ___        &kp MEH       &to 0    ___
+#define thumb_num_right  ___         ___        ___           ___      ___
+#define thumb_sys_left   ___         ___        &kp MEH       &to 0    ___
+#define thumb_sys_right  ___         ___        ___           ___      ___
+#define thumb_pnt_left   ___         ___        &kp MEH       &to 0    ___
+#define thumb_pnt_right  ___         &mkp LCLK  &mkp RCLK     ___      ___
+#define thumb_win_left   ___         ___        &kp MEH       &to 0    ___
+#define thumb_win_right  ___         ___        ___           ___      ___
+
+#define ________________________X_LEFT_ROW_________________________________ __X_LEFT_NUM_ROW__
+#define ________________________X_RIGHT_ROW________________________________ __X_RIGHT_NUM_ROW__
 
 #define ________________________X_LEFT_NAV_________________________________ ___ ___ ___ ___ ___
 #define ________________________X_RIGHT_NAV________________________________ ___ ___ ___ ___ ___
@@ -77,25 +92,25 @@
 #define ________________________X_LEFT_WIN_________________________________ ___ ___ ___ ___ ___
 #define ________________________X_RIGHT_WIN________________________________ ___ ___ ___ ___ ___
 
-#define X_SENSORS_BASE &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
-#define X_SENSORS_NAV  &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
-#define X_SENSORS_FUN  &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
-#define X_SENSORS_NUM  &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
-#define X_SENSORS_SYS  &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
-#define X_SENSORS_PNT  &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
-#define X_SENSORS_WIN  &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_BASE , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_NAV  , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_FUN  , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_NUM  , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_SYS  , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_PNT  , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
+#define X_SENSORS_WIN  , &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
+// &caps_word {
+//     continue-list = <UNDERSCORE MINUS>;
+// };
 
-/ {
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1 &encoder_2>;
-        triggers-per-rotation = <20>;
-    };
-};
+// / {
+//     sensors {
+//         compatible = "zmk,keymap-sensors";
+//         sensors = <&encoder_1 &encoder_2>;
+//         triggers-per-rotation = <20>;
+//     };
+// };
 
 // / {
 //     macros {
