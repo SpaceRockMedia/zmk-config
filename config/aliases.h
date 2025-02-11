@@ -1,24 +1,13 @@
 #pragma once
 
-//
-// Layers
-//
-// #define DEF 0
-// #define COL 1
-// #define NAV 2
-// #define NUM 3
-// #define FUN 4
-// #define SYM 5
-// #define MED 6
-// #define WIN 7
-
 #define DEF 0
-#define NAV 1
-#define FUN 2
-#define NUM 3
-#define SYS 4
-#define PNT 5
-#define WIN 6
+#define GRP 1
+#define NAV 2
+#define FUN 3
+#define NUM 4
+#define SYS 5
+#define PNT 6
+#define WIN 7
 
 //
 // Custom Keys

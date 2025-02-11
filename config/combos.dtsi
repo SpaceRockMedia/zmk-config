@@ -11,13 +11,17 @@
 
 #include "zmk-helpers/helper.h"
 
+#include "aliases.h"
+
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <100>
 
 #define COMBO_TERM_FAST 45
 #define COMBO_TERM_SLOW 65
-ZMK_COMBO(ul_unlock,  &studio_unlock, LT0 RT0,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(ul_unlock,  &studio_unlock, LT0 RT0,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ul_lgraph,  &to GRP, LT0 RT0, DEF, COMBO_TERM_FAST)
+ZMK_COMBO(ul_ldef,    &to DEF, LT0 RT0, GRP, COMBO_TERM_FAST)
 
 //
 // Horizontal combos
