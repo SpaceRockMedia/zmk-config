@@ -1,77 +1,83 @@
 {
-  "extensions": {
-    "recommendations": [
-      "spadin.zmk-tools",
-      "spmeesseman.vscode-taskexplorer"
-    ]
-  },
-  "folders": [
-    {
-      "name": "zmk-config",
-      "path": "."
+    "extensions": {
+        "recommendations": [
+            "spadin.zmk-tools",
+            "spmeesseman.vscode-taskexplorer"
+        ]
     },
-    {
-      "name": "zmk",
-      "path": "../zmk"
-    },
-    {
-      "name": "zmk-modules",
-      "path": "../zmk-modules"
+    "folders": [
+        {
+            "name": "zmk-config",
+            "path": "."
+        },
+        {
+            "name": "zmk",
+            "path": "../zmk"
+        },
+        {
+            "name": "zmk-modules",
+            "path": "../zmk-modules"
+        }
+    ],
+    "settings": {
+        "aider-composer.pythonPath": "${workspaceFolder}/.venv/bin",
+        "editor.formatOnPaste": false,
+        "files.associations": {
+            "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+            "*.c": "c",
+            "*.cfg": "ini",
+            "*.code-workspace": "json",
+            "*.cpp": "cpp",
+            "*.h": "c",
+            "*.hpp": "cpp",
+            "*.inc": "c",
+            "*.json": "json",
+            "*.keymap": "dts",
+            "*.lock": "toml",
+            "*.overlay": "dts",
+            "*.sql": "sql",
+            "*.tcc": "c",
+            "*.toml": "toml",
+            ".env": "shellscript",
+            ".env.*": "shellscript",
+            ".gitchangelog.rc": "python",
+            ".pythonstartup": "python",
+            "Pipfile": "toml",
+            "array": "c",
+            "bit": "c",
+            "compare": "c",
+            "condition_variable": "c",
+            "cstddef": "c",
+            "functional": "c",
+            "limits": "c",
+            "list": "c",
+            "memory": "c",
+            "mutex": "c",
+            "new": "c",
+            "optional": "c",
+            "profile": "shellscript",
+            "ranges": "c",
+            "ratio": "c",
+            "rc": "shellscript",
+            "regex": "c",
+            "string": "c",
+            "system_error": "c",
+            "toml": "toml",
+            "tuple": "c",
+            "type_traits": "c",
+            "utility": "c",
+            "variant": "c",
+            "xstddef": "c"
+        },
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        "python.envFile": "${workspaceFolder}/.env",
+        "ruff.configuration": "${workspaceFolder}/pyproject.toml",
+        "ruff.configurationPreference": "filesystemFirst",
+        "ruff.lineLength": 79,
+        "vars": {
+            "build": "${workspaceFolder}/scripts/build_docker.sh ${config:vars.zmk} ${workspaceFolder} ${config:vars.zmk_modules}",
+            "zmk": "${workspaceFolder}/../zmk",
+            "zmk_modules": "${workspaceFolder}/../zmk-modules"
+        }
     }
-  ],
-  "settings": {
-    "editor.formatOnPaste": false,
-    "files.associations": {
-      "**/requirements{/**,*}.{txt,in}": "pip-requirements",
-      "*.c": "c",
-      "*.cfg": "ini",
-      "*.code-workspace": "json",
-      "*.cpp": "cpp",
-      "*.h": "c",
-      "*.hpp": "cpp",
-      "*.inc": "c",
-      "*.json": "json",
-      "*.keymap": "dts",
-      "*.lock": "toml",
-      "*.overlay": "dts",
-      "*.sql": "sql",
-      "*.tcc": "c",
-      "*.toml": "toml",
-      ".env": "shellscript",
-      ".env.*": "shellscript",
-      ".gitchangelog.rc": "python",
-      ".pythonstartup": "python",
-      "Pipfile": "toml",
-      "array": "c",
-      "bit": "c",
-      "compare": "c",
-      "condition_variable": "c",
-      "cstddef": "c",
-      "functional": "c",
-      "limits": "c",
-      "list": "c",
-      "memory": "c",
-      "mutex": "c",
-      "new": "c",
-      "optional": "c",
-      "profile": "shellscript",
-      "ranges": "c",
-      "ratio": "c",
-      "rc": "shellscript",
-      "regex": "c",
-      "string": "c",
-      "system_error": "c",
-      "toml": "toml",
-      "tuple": "c",
-      "type_traits": "c",
-      "utility": "c",
-      "variant": "c",
-      "xstddef": "c"
-    },
-    "vars": {
-      "build": "${workspaceFolder}/scripts/build_docker.sh ${config:vars.zmk} ${workspaceFolder} ${config:vars.zmk_modules}",
-      "zmk": "${workspaceFolder}/../zmk",
-      "zmk_modules": "${workspaceFolder}/../zmk-modules"
-    }
-  }
 }

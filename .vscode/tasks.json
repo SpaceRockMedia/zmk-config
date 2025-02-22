@@ -19,6 +19,24 @@
       "type": "shell"
     },
     {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh charybdis_left nice_nano_v2",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build charybdis left",
+      "type": "shell"
+    },
+    {
+      "command": "/workspaces/zmk-config/scripts/build_docker.sh charybdis_right nice_nano_v2",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build charybdis right",
+      "type": "shell"
+    },
+    {
       "command": "/workspaces/zmk-config/scripts/build_docker.sh ffkb_lite_v1 nice_nano_v2",
       "group": {
         "isDefault": true,

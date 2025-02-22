@@ -157,3 +157,46 @@
 #if !defined X_SENSORS_WIN // base layer
     #define X_SENSORS_WIN
 #endif
+
+#if !defined thumb_base_left
+    #define thumb_base_left  &mt MEH BSPC  DSPACE      &kp LSHIFT
+#endif
+#if !defined thumb_base_right
+    #define thumb_base_right &kp RSHIFT    &lt NAV RET &mt MEH DEL
+#endif
+#if !defined thumb_nav_left
+    #define thumb_nav_left   &kp MEH       &to 0       ___
+#endif
+#if !defined thumb_nav_right
+    #define thumb_nav_right  ___           ___         CANCEL
+#endif
+#if !defined thumb_fun_left
+    #define thumb_fun_left   &kp MEH       &to 0       ___
+#endif
+#if !defined thumb_fun_right
+    #define thumb_fun_right  ___           &kp C_MUTE  &kp C_PP
+#endif
+#if !defined thumb_num_left
+    #define thumb_num_left   &kp MEH       &to 0       ___
+#endif
+#if !defined thumb_num_right
+    #define thumb_num_right  ___           ___         ___
+#endif
+#if !defined thumb_sys_left
+    #define thumb_sys_left   &kp MEH       &to 0       ___
+#endif
+#if !defined thumb_sys_right
+    #define thumb_sys_right  ___           ___         ___
+#endif
+#if !defined thumb_pnt_left
+    #define thumb_pnt_left   &kp MEH       &to 0       ___
+#endif
+#if !defined thumb_pnt_right
+    #define thumb_pnt_right  ___           &mkp LCLK   &mkp RCLK
+#endif
+#if !defined thumb_win_left
+    #define thumb_win_left   &kp MEH       &to 0       ___
+#endif
+#if !defined thumb_win_right
+    #define thumb_win_right  ___           ___         ___
+#endif
