@@ -76,8 +76,8 @@ include:
   #
   # accessories
 
-  # - shield: adept
-  #   board: seeeduino_xiao_ble
+  - shield: adept
+    board: seeeduino_xiao_ble
 
   #
   # resets
