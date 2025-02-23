@@ -34,11 +34,15 @@ if [[ $SHIELD == *"flake"* ]]; then
   BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
 fi
 
+if [[ $SHIELD == *"adept"* ]]; then
+  BUILDFLAGS="${BUILDFLAGS} -S studio-rpc-usb-uart "
+fi
+
 source ${ZMKDIR}/.venv/bin/activate
 
 # assemble the zmk build command
 buildcmd="${ZMKDIR}/.venv/bin/west \
-  build -p \
+  build \
   -d build/${SHIELD} \
   -b ${BOARD} \
   ${BUILDFLAGS} \
@@ -56,7 +60,7 @@ cd ${APPDIR} \
   && eval $buildcmd \
   && echo "### moving uf2 builds to" \
   && echo "${CFGDIR}/build/" \
-  && ehco "" \
+  && echo "" \
   && cp -f \
     ${APPDIR}/build/${SHIELD}/zephyr/zmk.uf2 \
     ${CFGDIR}/build/${SHIELD}_${BOARD}.uf2
