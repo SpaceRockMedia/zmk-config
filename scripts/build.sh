@@ -5,6 +5,7 @@ shopt -s extglob nullglob
 SHIELD=${1:-ffkb_lite_v1}
 BOARD=${2:-nice_nano_v2}
 MODULES=${3:-}
+echo "mods:${MODULES}"
 
 # HOST builds
 WORKSPACE_DIR=$HOME/projects/spacerockmedia

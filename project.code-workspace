@@ -20,7 +20,7 @@
         }
     ],
     "settings": {
-        "aider-composer.pythonPath": "${workspaceFolder}/.venv/bin",
+        "aider-composer.pythonPath": "/Users/autoferrit/.local/bin/",
         "editor.formatOnPaste": false,
         "files.associations": {
             "**/requirements{/**,*}.{txt,in}": "pip-requirements",

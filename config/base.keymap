@@ -22,22 +22,22 @@
 
 #include "combos.dtsi"  // requires layer aliases
 
-ZMK_CONDITIONAL_LAYER(sys, NAV NUM, SYS)  // FUN + NUM --> SYSge
+ZMK_CONDITIONAL_LAYER(cond_sys, NAV NUM, SYS)  // FUN + NUM --> SYSge
 
 ZMK_LAYER(base,
     X_LN    ________________________X_LEFT_ROW_________________________________    X_MLN   X_MRN   ________________________X_RIGHT_ROW________________________________    X_RN
     X_LT    &kp Q         &kp W         &kp E         &kp R         &lt FUN T      X_MLT   X_MRT   &lt FUN Y     &kp U         &lt WIN I     &kp O         &kp P          X_RT
-    X_LM    &hml LCTRL A  &hml LSHFT S  &hml LALT D   &hml LGUI F   &kp G          X_MLM   X_MRM   &kp H         &hmr LGUI J   &hmr LALT K   &hmr RSHFT L  &hmr LCTRL SEMI X_RM
+    X_LM    &hml LCTRL A  &hml LSHFT S  &hml LALT D   &hml LGUI F   &kp G          X_MLM   X_MRM   &kp H         &hmr RGUI J   &hmr LALT K   &hmr RSHFT L  &hmr RCTRL SEMI X_RM
     X_LB    &kp Z         &kp X         &kp C         &kp V         &kp B          X_MLB   X_MRB   &kp N         &kp M         &comma_morph  &dot_morph    &qexcl         X_RB
     X_LH                                              thumb_base_left              X_MLH   X_MRH   thumb_base_right                                                       X_RH
     X_SENSORS_BASE
 )
 
-ZMK_LAYER(graph,
+ZMK_LAYER(gallium,
     X_LN    ________________________X_LEFT_ROW_________________________________    X_MLN   X_MRN   ________________________X_RIGHT_ROW________________________________    X_RN
-    X_LT    &kp B         &kp L         &kp D         &kp W         &lt FUN Z      X_MLT   X_MRT   &lt FUN APOS  &kp F         &lt WIN O     &kp U         &kp J          X_RT
-    X_LM    &hml LCTRL N  &hml LSHFT R  &hml LALT T   &hml LGUI S   &kp G          X_MLM   X_MRM   &kp Y         &hmr LGUI H   &hmr LALT A   &hmr RSHFT E  &hmr LCTRL I   X_RM
-    X_LB    &kp Q         &kp X         &kp M         &kp C         &kp V          X_MLB   X_MRB   &kp K         &kp P         &comma_morph  &dot_morph    &qexcl         X_RB
+    X_LT    &kp B         &kp L         &kp D         &kp C         &lt FUN V      X_MLT   X_MRT   &lt FUN J     &kp Y         &lt WIN O     &kp U         &kp COMMA      X_RT
+    X_LM    &hml LCTRL N  &hml LSHFT R  &hml LALT T   &hml LGUI S   &kp G          X_MLM   X_MRM   &kp T         &hmr RGUI H   &hmr LALT A   &hmr RSHFT E  &hmr RCTRL I   X_RM
+    X_LB    &kp X         &kp Q         &kp M         &kp W         &kp Z          X_MLB   X_MRB   &kp K         &kp F         &kp APOS      &kp SEMI      &kp DOT        X_RB
     X_LH                                              thumb_base_left              X_MLH   X_MRH   thumb_base_right                                                       X_RH
     X_SENSORS_BASE
 )
@@ -45,8 +45,8 @@ ZMK_LAYER(graph,
 ZMK_LAYER(nav,
     X_LN    ________________________X_LEFT_NAV_________________________________    X_MLN   X_MRN   ________________________X_RIGHT_NAV________________________________    X_RN
     X_LT    &kp PG_UP     &kp ME(LEFT)  &kp UP        &kp ME(RIGHT) &kp ME(UP)     X_MLT   X_MRT   ___           ___           &kp LS(TAB)   &swapper      ___            X_RT
-    X_LM    &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp ME(DOWN)   X_MLM   X_MRM   ___           &sk LGUI      &sk LALT      &sk LSHFT      &sk LCTRL     X_RM
-    X_LB    &kp INS       &kp TAB       &kp LT        &kp GT        ___            X_MLB   X_MRB   ___           ___           ___           ___           ___            X_RB
+    X_LM    &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp ME(DOWN)   X_MLM   X_MRM   ___           &kp LPAR      &kp RPAR      &kp LT        &kp GT         X_RM
+    X_LB    &kp INS       &kp TAB       &kp LT        &kp GT        ___            X_MLB   X_MRB   ___           &kp LBKT      &kp RBKT      &kp LBRC      &kp RBRC       X_RB
     X_LH                                              thumb_nav_left               X_MLH   X_MRH   thumb_nav_right                                                        X_RH
     X_SENSORS_NAV
 )
@@ -63,8 +63,8 @@ ZMK_LAYER(fun,
 ZMK_LAYER(num,
     X_LN    ________________________X_LEFT_NUM_________________________________    X_MLN   X_MRN   ________________________X_RIGHT_NUM________________________________    X_RN
     X_LT    ___           ___           ___           ___           ___            X_MLT   X_MRT   &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp MINUS      X_RT
-    X_LM    &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___            X_MLM   X_MRM   &kp ASTRK     &kp N4        &kp N5        &kp N6        &kp PLUS       X_RM
-    X_LB    ___           ___           ___           ___           ___            X_MLB   X_MRB   &kp N0        &kp N1        &kp N2        &kp N3        &kp FSLH       X_RB
+    X_LM    &kp LT        &kp GT        &kp LPAR      &kp RPAR      ___            X_MLM   X_MRM   &kp ASTRK     &kp N4        &kp N5        &kp N6        &kp PLUS       X_RM
+    X_LB    &kp LBRC      &kp RBRC      &kp LBKT      &kp RBKT      ___            X_MLB   X_MRB   &kp N0        &kp N1        &kp N2        &kp N3        &kp FSLH       X_RB
     X_LH                                              thumb_num_left               X_MLH   X_MRH   thumb_num_right                                                        X_RH
     X_SENSORS_NUM
 )

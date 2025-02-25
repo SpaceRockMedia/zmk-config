@@ -21,6 +21,8 @@
 //
 #define _____________HRM__QWERTY__GACS_____________ &hm LGUI A  &hm LALT S  &hm LCTRL D &hs LSHFT F
 #define _____________HRM__QWERTY__SCAG_____________ &hs RSHFT J &hm RCTRL K &hm LALT L  &hm RGUI SEMI
+#define _____________HRM__QWERTY__CSAG_____________ &hm LCTRL A &hm LSHFT S &hs LALT D  &hm LGUI F
+#define _____________HRM__QWERTY__GASC_____________ &hs RGUI J  &hs RALT K  &hm LSHFT L &hm RCTRL SEMI
 #define _____________HRM__QWERTY__CASG_____________ &hm LCTRL A &hm LALT S  &hs LSHFT D &hm LGUI F
 #define _____________HRM__QWERTY__GSAC_____________ &hs RGUI J  &hs RSHFT K &hm LALT L  &hm RCTRL SEMI
 

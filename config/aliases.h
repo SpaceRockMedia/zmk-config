@@ -1,13 +1,15 @@
 #pragma once
 
 #define DEF 0
-#define GRP 1
+#define ALT 1
 #define NAV 2
 #define FUN 3
 #define NUM 4
 #define SYS 5
 #define PNT 6
 #define WIN 7
+
+#define LY_BASE DEF ALT
 
 //
 // Custom Keys
@@ -33,7 +35,7 @@
 // HYP/MEH could work well with sticky keys $sk
 // https://zmk.dev/docs/behaviors/sticky-key
 // global shortcuts, as it uses GUI
-#define HYP LS(LC(LALT(LGUI)))
+#define HYP LS(LC(LA(LGUI)))
 #define HY(keycode) LS(LC(LA(LG(keycode))))
 
 // in app shortcuts
