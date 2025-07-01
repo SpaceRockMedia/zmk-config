@@ -159,10 +159,10 @@
 #endif
 
 #if !defined thumb_base_left
-    #define thumb_base_left  &mt MEH BSPC  DSPACE      &kp LSHIFT
+    #define thumb_base_left  &mt MEH BSPC  NUM_SPC     &kp LSHIFT
 #endif
 #if !defined thumb_base_right
-    #define thumb_base_right &kp RSHIFT    &lt NAV RET &mt MEH DEL
+    #define thumb_base_right &kp RSHIFT    NAV_ENT     &mt MEH DEL
 #endif
 #if !defined thumb_nav_left
     #define thumb_nav_left   &kp MEH       &to 0       ___

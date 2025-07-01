@@ -15,7 +15,6 @@
 
         sensitivity = "4x";
         sleep;
-        no-taps;
     };
 };
 
@@ -23,6 +22,6 @@
     glidepoint_input {
         compatible = "zmk,input-listener";
         device = <&glidepoint>;
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 3 2>; // This adjusts the speed of the mouse
     };
 };

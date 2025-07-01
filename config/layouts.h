@@ -39,8 +39,8 @@
 //
 // NAVS
 //
-#define _______________________NAVS_TOP_______________________ &kp PG_UP &kp ME(LEFT) &kp UP   &kp ME(RIGHT) &kp ME(UP)
-#define _______________________NAVS_MID_______________________ &kp PG_DN &kp LEFT     &kp DOWN &kp RIGHT     &kp ME(DOWN)
+#define _______________________NAVS_TOP_______________________ &kp PG_UP &kp PG_UP &kp UP   &kp PG_UP &kp PG_UP
+#define _______________________NAVS_MID_______________________ &kp PG_DN &kp LEFT     &kp DOWN &kp RIGHT     &kp PG_UP
 
 //
 // NUMS

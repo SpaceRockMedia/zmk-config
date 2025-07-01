@@ -65,4 +65,7 @@ cd ${APPDIR} \
   && cp -f \
     ${APPDIR}/build/${SHIELD}/zephyr/zmk.uf2 \
     ${CFGDIR}/build/${SHIELD}_${BOARD}.uf2
-  # && west flash -dbuild/${SHIELD} --skip-rebuild
+
+if [[ -d /Volumes/NICENANO ]]; then
+    west flash -dbuild/${SHIELD} --skip-rebuild
+fi

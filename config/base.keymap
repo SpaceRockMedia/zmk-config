@@ -9,7 +9,7 @@
 
 #include "hardware/hardware.dtsi"
 #include "behaviors/behaviors.dtsi"
-// #include "behaviors/leader.dtsi"
+#include "behaviors/leader.dtsi"
 
 #include "features/hrm.dtsi"
 #include "features/mask_mods.dtsi"
@@ -18,7 +18,7 @@
 #include "features/smart_mouse.dtsi"
 #include "features/swapper.dtsi"
 #include "features/smart_shift.dtsi"
-//#include "features/nav_word.dtsi"
+// #include "features/nav_word.dtsi"
 
 #include "combos.dtsi"  // requires layer aliases
 
@@ -95,5 +95,14 @@ ZMK_LAYER(win,
     X_LH                                              thumb_win_left               X_MLH   X_MRH   thumb_win_right                                                        X_RH
     X_SENSORS_WIN
 )
+
+// ZMK_LAYER(blank,
+//     X_LN    ________________________X_LEFT_ROW_________________________________ X_MLN   X_MRN   ________________________X_RIGHT_ROW________________________________ X_RN
+//     X_LT    ___           ___           ___           ___           ___         X_MLT   X_MRT   ___           ___           ___           ___           ___         X_RT
+//     X_LM    ___           ___           ___           ___           ___         X_MLM   X_MRM   ___           ___           ___           ___           ___         X_RM
+//     X_LB    ___           ___           ___           ___           ___         X_MLB   X_MRB   ___           ___           ___           ___           ___         X_RB
+//     X_LH                                ___           ___           ___         X_MLH   X_MRH   ___           ___                                                   X_RH
+//     X_SENSORS_WIN
+// )
 
 /* vim: set ft=  tw=174: */

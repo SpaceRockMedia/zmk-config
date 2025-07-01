@@ -4,3 +4,4 @@ build/
 modules/
 .DS_Store
 .aider*
+*ignore

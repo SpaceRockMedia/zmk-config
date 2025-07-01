@@ -1,0 +1,103 @@
+#include <behaviors/mouse_keys.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+#include "zmk-helpers/helper.h"
+/* source key position labels */
+#include "zmk-helpers/key-labels/41.h"
+
+/* activate bluetooth */
+#define CONFIG_WIRELESS 1
+
+#define THUMBS LH0 LH1 LH2 RH0 RH1
+
+#include "aliases.h"
+
+#define X_LT  &lt SYS GRAVE
+#define X_LM  &kp Q
+#define X_LB  &kp LGUI
+
+#define X_RT  &lt SYS SQT
+#define X_RM  &kp P
+#define X_RB  &kp RGUI
+
+
+#define thumb_base_left  &mt MEH BSPC  NUM_SPC     &kp LSHIFT
+#define thumb_base_right &kp RSHIFT    &lt NAV RET
+#define thumb_nav_left   &kp MEH       &to 0       ___
+#define thumb_nav_right  ___           ___
+#define thumb_fun_left   &kp MEH       &to 0       ___
+#define thumb_fun_right  &kp C_MUTE &kp C_PP
+#define thumb_num_left   &kp MEH       &to 0       ___
+#define thumb_num_right  ___           ___
+#define thumb_sys_left   &kp MEH       &to 0       ___
+#define thumb_sys_right  ___           ___
+#define thumb_pnt_left   &kp MEH       &to 0       ___
+#define thumb_pnt_right  &mkp LCLK     &mkp RCLK
+#define thumb_win_left   &kp MEH       &to 0       ___
+#define thumb_win_right  ___           ___
+
+#include "base.keymap"
+
+ZMK_APPLY_MATRIX_TRANSFORM(default_transform)
+
+
+// ZMK_LAYER(base,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(gallium,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(nav,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(fun,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(num,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(sys,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(pnt,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )
+
+// ZMK_LAYER(win,
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//     ___    ___           ___           ___           ___           ___                  ___           ___           ___           ___           ___            ___
+//                                        ___           ___           ___                  ___           ___
+// )

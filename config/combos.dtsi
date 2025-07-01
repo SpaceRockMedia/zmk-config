@@ -12,16 +12,24 @@
 #include "zmk-helpers/helper.h"
 
 #include "aliases.h"
+#include "features/hrm.dtsi"
 
-// use require-prior-idle-ms for combos
-#undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <100>
+// Hack: Make HRM combos tap-only (cf, ZMK issue #544).
+// https://github.com/urob/zmk-config/blob/cf955f6c01f40a74b6cc08c3c8978508ab94a1f8/config/base.keymap#L65
+#define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \
+  MAKE_HRM(hm_combo_##NAME, &kp, TAP, SIDE THUMBS)                             \
+  ZMK_COMBO_6(NAME, &hm_combo_##NAME HOLD 0, POS, LAYERS, COMBO_MS, IDLE_MS)
 
 #define COMBO_TERM_FAST 45
 #define COMBO_TERM_SLOW 65
-// ZMK_COMBO(cl_unlock,  &studio_unlock, LT0 RT0,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(cb_lgraph,  &to ALT, LT0 RT0, DEF, COMBO_TERM_FAST)
-ZMK_COMBO(cb_ldef,    &to DEF, LT0 RT0, ALT, COMBO_TERM_FAST)
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
+
+// ZMK_COMBO(cl_unlock,  &studio_unlock, LT0 RT0,     ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cb_lgraph,  &to ALT, LT0 RT0, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cb_ldef,    &to DEF, LT0 RT0, ALT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 //
 // Horizontal combos
@@ -30,56 +38,56 @@ ZMK_COMBO(cb_ldef,    &to DEF, LT0 RT0, ALT, COMBO_TERM_FAST)
 // these will need to call mod-taps so when held with shift, they do the
 // word/character opposite versions.
 // they should default to word based
-ZMK_COMBO(cl_bspc,  &kp BSPC,     LT3 LT2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_del,   &kp DEL,      LT2 LT1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_tab,   &kp TAB,      LT1 LT0,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cl_bspc,  &kp BSPC,     LT3 LT2,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cl_del,   &kp DEL,      LT2 LT1,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cl_tab,   &kp TAB,      LT1 LT0,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(cl_esc,   &kp ESC,      LM4 LM3,     LY_BASE, COMBO_TERM_SLOW)
-ZMK_COMBO(cl_home,  &kp HOME,     LM3 LM2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_end,   &kp END,      LM2 LM1,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cl_esc,   &kp ESC,      LM4 LM3,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST) //, LC(LSHFT), KEYS_R)
+ZMK_COMBO(cl_home,  &kp HOME,     LM3 LM2,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST) //, LA(LSHFT), KEYS_R)
+ZMK_COMBO(cl_end,   &kp END,      LM2 LM1,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST) //, LA(LGUI),  KEYS_R)
 
-// ZMK_COMBO(cl_meh,   &sk MEH,  LM4 LM3 LM2,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(cl_hyp,   &sk HYP,  LM4 LM3 LM2 LM1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(cl_meh,   &sk MEH,  LM4 LM3 LM2,     ALL,     COMBO_TERM_FAST, COMBO_IDLE_FAST) //, LC(LS(LA(LSHFT))),    KEYS_R)
+ZMK_COMBO(cl_hyp,   &sk HYP,  LM4 LM3 LM2 LM1, ALL,     COMBO_TERM_FAST, COMBO_IDLE_FAST) //, LC(LS(LA(LS(LGUI)))), KEYS_R)
 
-ZMK_COMBO(cl_undo,  &kp LG(Z),    LB4 LB3,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_cut,   &kp LG(X),    LB3 LB2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_copy,  &kp LG(C),    LB2 LB1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_paste, &kp LG(V),    LB3 LB1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_redo,  &kp LG(Y),    LB1 LB0,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cl_undo,  &kp LG(Z),    LB4 LB3,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cl_cut,   &kp LG(X),    LB3 LB2,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cl_copy,  &kp LG(C),    LB2 LB1,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cl_paste, &kp LG(V),    LB3 LB1,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cl_redo,  &kp LG(Y),    LB1 LB0,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* right hand */
-ZMK_COMBO(cr_stab,  &kp LS(TAB),  RT0 LT1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_bspc,  &kp LG(BSPC), RT1 RT2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_del,   &kp LG(DEL),  RT2 RT3,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cr_stab,  &kp LS(TAB),  RT0 LT1,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cr_bspc,  &kp LG(BSPC), RT1 RT2,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cr_del,   &kp LG(DEL),  RT2 RT3,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-// ZMK_COMBO(cr_meh,   &sk MEH,  RM4 RM3 RM2,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(cr_hyp,   &sk HYP,  RM4 RM3 RM2 RM1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(cr_meh,   &sk MEH,  RM4 RM3 RM2,     ALL,     COMBO_TERM_FAST, COMBO_IDLE_FAST) //, RC(RS(LA(RSHFT))),    KEYS_L)
+ZMK_COMBO(cr_hyp,   &sk HYP,  RM4 RM3 RM2 RM1, ALL,     COMBO_TERM_FAST, COMBO_IDLE_FAST) //, RC(RS(LA(RS(RGUI)))), KEYS_L)
 
-ZMK_COMBO(cr_sqt,   &kp SQT,      RB1 RB2,     LY_BASE, COMBO_TERM_SLOW)
-ZMK_COMBO(cr_dqt,   &kp DQT,      RB2 RB3,     LY_BASE, COMBO_TERM_SLOW)
+ZMK_COMBO(cr_sqt,   &kp SQT,      RB1 RB2,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cr_dqt,   &kp DQT,      RB2 RB3,     LY_BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 //
 // Vertical combos
 //
 /* left hand */
-ZMK_COMBO(cl_excl,  &kp EXCL,      LT4 LM4,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_at,    &kp AT,        LT3 LM3,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_hash,  &kp HASH,      LT2 LM2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_dllr,  &kp DLLR,      LT1 LM1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_prcnt, &kp PRCNT,     LT0 LM0,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cl_excl,  &kp EXCL,      LT4 LM4,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_at,    &kp AT,        LT3 LM3,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_hash,  &kp HASH,      LT2 LM2,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_dllr,  &kp DLLR,      LT1 LM1,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_prcnt, &kp PRCNT,     LT0 LM0,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(cl_grave, &kp GRAVE,     LM3 LB3,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_bslh,  &kp BSLH,      LM2 LB2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_equal, &kp EQUAL,     LM1 LB1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cl_tilde, &kp TILDE,     LM0 LB0,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cl_grave, &kp GRAVE,     LM3 LB3,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_bslh,  &kp BSLH,      LM2 LB2,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_equal, &kp EQUAL,     LM1 LB1,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cl_tilde, &kp TILDE,     LM0 LB0,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* right hand */
-ZMK_COMBO(cr_caret, &kp CARET,     RT0 RM0,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_amps,  &kp AMPS,      RT1 RM1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_star,  &kp STAR,      RT2 RM2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_plus,  &kp PLUS,      RT3 RM3,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cr_caret, &kp CARET,     RT0 RM0,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cr_amps,  &kp AMPS,      RT1 RM1,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cr_star,  &kp STAR,      RT2 RM2,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cr_plus,  &kp PLUS,      RT3 RM3,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(cr_under, &kp UNDER,     RM0 RB0,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_pipe,  &kp PIPE,      RM1 RB1,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_fslh,  &kp FSLH,      RM2 RB2,     LY_BASE, COMBO_TERM_FAST)
-ZMK_COMBO(cr_minus, &kp MINUS,     RM3 RB3,     LY_BASE, COMBO_TERM_FAST)
+ZMK_COMBO(cr_under, &kp UNDER,     RM0 RB0,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cr_pipe,  &kp PIPE,      RM1 RB1,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cr_fslh,  &kp FSLH,      RM2 RB2,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(cr_minus, &kp MINUS,     RM3 RB3,     LY_BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)

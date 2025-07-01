@@ -12,11 +12,15 @@
     KP_DIVIDE KP_SLASH SLASH FSLH \
     KP_PLUS PLUS \
     KP_MINUS KP_SUBTRACT MINUS
-#define NUM_OPERATORS KP_DOT DOT KP_COMMA COMMA KP_EQUAL KP_EQUAL_AS400 EQUAL BSPC DEL UNDER
+#define NUM_OPERATORS \
+    KP_DOT DOT KP_COMMA COMMA KP_EQUAL KP_EQUAL_AS400 EQUAL BSPC DEL UNDER
+#define NUM_NAV \
+    UP DOWN LEFT RIGHT \
+    HOME END PG_UP PG_DN
 
-// &num_word {
-//   continue-list = <NUM_PERENS NUM_EMDAS NUM_OPERATORS>;
-// }
+&num_word {
+  continue-list = <NUM_PERENS NUM_EMDAS NUM_OPERATORS NUM_NAV>;
+};
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
@@ -26,7 +30,35 @@ ZMK_HOLD_TAP(smart_num,
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&num_dance>;
 )
+
 ZMK_TAP_DANCE(num_dance,
     tapping-term-ms = <200>;
     bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
+)
+
+
+// tap: enter | double-tap: nav-word | hold: nav-layer
+#define NAV_ENT &smart_ent NAV 0
+ZMK_HOLD_TAP(smart_ent,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&ent_dance>;
+)
+ZMK_TAP_DANCE(ent_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp ENTER>, <&num_word NAV>;
+)
+
+// tap: space | double-tap: num-word | hold: num-layer
+#define NUM_SPC &smart_spc NUM 0
+ZMK_HOLD_TAP(smart_spc,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&spc_dance>;
+)
+ZMK_TAP_DANCE(spc_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp SPACE>, <&num_word NUM>;
 )

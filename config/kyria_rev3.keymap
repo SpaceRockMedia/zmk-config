@@ -36,15 +36,15 @@
 #define X_LT  &lt SYS GRAVE
 #define X_LM  &kp Q
 #define X_LB  &kp LGUI
-#define X_MLB ___ &kp MEH
+#define X_MLB &kp MEH ___
 
 #define X_RT  &lt SYS SQT
 #define X_RM  &kp P
 #define X_RB  &kp RGUI
-#define X_MRB &kp MEH ___
+#define X_MRB ___ &kp MEH
 
-#define thumb_base_left  &kp LPAR   &kp LBKT    &mt MEH BSPC  DSPACE   &kp LSHIFT
-#define thumb_base_right &kp RSHIFT &lt NAV RET &mt MEH DEL   &kp RBKT &kp RPAR
+#define thumb_base_left  &kp LPAR   &kp LBKT    &mt MEH BSPC  NUM_SPC  &kp LSHIFT
+#define thumb_base_right &kp RSHIFT NAV_ENT     &mt MEH DEL   &kp RBKT &kp RPAR
 #define thumb_nav_left   ___         ___        &kp MEH       &to 0    ___
 #define thumb_nav_right  ___         ___        CANCEL        ___      ___
 #define thumb_fun_left   ___         ___        &kp MEH       &to 0    ___
@@ -58,13 +58,13 @@
 #define thumb_win_left   ___         ___        &kp MEH       &to 0    ___
 #define thumb_win_right  ___         ___        ___           ___      ___
 
-#define X_SENSORS_BASE , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-#define X_SENSORS_NAV  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-#define X_SENSORS_FUN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-#define X_SENSORS_NUM  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-#define X_SENSORS_SYS  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-#define X_SENSORS_PNT  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-#define X_SENSORS_WIN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_BASE , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_NAV  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_FUN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_NUM  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_SYS  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_PNT  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
+// #define X_SENSORS_WIN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
 
 #include "base.keymap"
 

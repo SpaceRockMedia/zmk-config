@@ -1,15 +1,18 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "../../../config/charybdis-layouts.dtsi"
 
 / {
+    // Replacement for matrix_transform
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    }; 
+        zmk,physical-layout = &charybdis_physical_layout;
+    };
 
+    /* battery monitor*/
     vbatt: vbatt {
 	compatible = "zmk,battery-nrf-vddh";
     };
-          
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
@@ -35,17 +38,9 @@
 					RC(3,3) RC(3,4) RC(3,1)  RC(3,6)  RC(3,8)
         >;
     };
-	
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
 
+    kscan0: kscan {
+        wakeup-source;
         diode-direction = "row2col";
-		row-gpios
-			= <&pro_micro 18 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 5 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 4 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 9 GPIO_ACTIVE_HIGH>
-            ;
     };
 };

@@ -56,3 +56,18 @@
 #define PIN_APP     &kp LG(LC(LS(A)))        // pin application across desktops
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
 #define VOL_DOWN    &hmr RSHFT C_VOL_DN
+
+#if !defined KEYS_L
+    #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // left hand
+#endif
+#if !defined KEYS_R  // top row, middle
+    #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
+#endif
+// only use 3 inner thumb keys for combos
+#if !defined THUMBS  // top row, middle
+    #ifndef LH2
+        #define THUMBS LH1 LH0 RH0 RH1         // Thumbs on 34 keys.
+    #else
+        #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // Thumbs on 36+ keys.
+    #endif                                                 // thumbs
+#endif
