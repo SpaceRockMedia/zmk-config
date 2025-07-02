@@ -74,7 +74,7 @@ ZMK_LAYER(sys,
     X_LT    ____________________________BT_SEL_KEYS____________________________    X_MLT   X_MRT   ___           ___           ___           ___           ___            X_RT
     X_LM    ___           ___           ___           ___           &bootloader    X_MLM   X_MRM   &bootloader   ___           ___           ___           ___            X_RM
     X_LB    &soft_off     ___           ___           ___           &sys_reset     X_MLB   X_MRB   &sys_reset    ___           ___           ___           &soft_off      X_RB
-    X_LH                                              thumb_sys_left               X_MLH   X_MRH   ___           ___                                                      X_RH
+    X_LH                                              thumb_sys_left               X_MLH   X_MRH   thumb_sys_right                                                        X_RH
     X_SENSORS_SYS
 )
 

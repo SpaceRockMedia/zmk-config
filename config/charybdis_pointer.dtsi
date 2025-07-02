@@ -1,6 +1,18 @@
+#include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 // #include "features/mouse.dtsi"
+
+/ {
+  zip_scroll_scaler: zip_scroll_scaler {
+    compatible = "zmk,input-processor-scaler";
+    #input-processor-cells = <2>;
+    type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+    track-remainders;
+  };
+};
 
 &trackball_listener {
     /* base processor chain on all layers */

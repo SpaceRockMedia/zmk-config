@@ -20,12 +20,13 @@
  ╰───────────╮ LH4 LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 RH4 ╭───────────╯
              ╰─────────────────────┴─────────────────────╯
 */
+#include <dt-bindings/zmk/mouse.h>
 
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/kyria.h"
 
 
-// #define CONFIG_WIRELESS 1
+#define CONFIG_WIRELESS 1
 
 / {
     kscan: kscan {
@@ -33,15 +34,17 @@
     };
 };
 
-#define X_LT  &lt SYS GRAVE
-#define X_LM  &kp Q
-#define X_LB  &kp LGUI
-#define X_MLB &kp MEH ___
+#define X_LT  ___
+#define X_LM  ___
+#define X_LB  ___
 
-#define X_RT  &lt SYS SQT
-#define X_RM  &kp P
-#define X_RB  &kp RGUI
-#define X_MRB ___ &kp MEH
+#define X_RT  ___
+#define X_RM  ___
+#define X_RB  ___
+
+// uppper thumbs
+#define X_MLB ___ ___
+#define X_MRB ___ ___
 
 #define thumb_base_left  &kp LPAR   &kp LBKT    &mt MEH BSPC  NUM_SPC  &kp LSHIFT
 #define thumb_base_right &kp RSHIFT NAV_ENT     &mt MEH DEL   &kp RBKT &kp RPAR
