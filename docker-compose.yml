@@ -1,0 +1,26 @@
+services:
+  zmkdev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: zmkdev
+  zmkbuild:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: zmkbuild
+  zmk:
+    build:
+      context: .
+      target: zmk
+    volumes:
+      - zmk-firmware:/workspaces/zmk
+      - zmk-config:/workspaces/zmk-config
+      - zmk-modules:/workspaces/zmk-modules
+    ports:
+      - "3001:3000"
+
+volumes:
+  zmk-firmware:
+  zmk-config:
+  zmk-modules:

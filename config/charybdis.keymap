@@ -15,7 +15,7 @@
 
 #define THUMBS LH0 LH1 LH2 RH0 RH1
 
-#include "aliases.h"
+#include "../spacerock/aliases.h"
 
 #define X_LT  &lt SYS GRAVE
 #define X_LM  &kp Q

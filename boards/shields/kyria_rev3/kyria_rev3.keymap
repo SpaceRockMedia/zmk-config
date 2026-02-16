@@ -34,13 +34,13 @@
     };
 };
 
-#define X_LT  ___
-#define X_LM  ___
-#define X_LB  ___
+#define X_LT &lt SYS GRAVE
+#define X_LM &kp Q
+#define X_LB &kp LGUI
 
-#define X_RT  ___
-#define X_RM  ___
-#define X_RB  ___
+#define X_RT &lt SYS SQT
+#define X_RM &kp P
+#define X_RB &kp RGUI
 
 // uppper thumbs
 #define X_MLB ___ ___
@@ -60,14 +60,6 @@
 #define thumb_pnt_right  ___         &mkp LCLK  &mkp RCLK     ___      ___
 #define thumb_win_left   ___         ___        &kp MEH       &to 0    ___
 #define thumb_win_right  ___         ___        ___           ___      ___
-
-// #define X_SENSORS_BASE , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-// #define X_SENSORS_NAV  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-// #define X_SENSORS_FUN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-// #define X_SENSORS_NUM  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-// #define X_SENSORS_SYS  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-// #define X_SENSORS_PNT  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
-// #define X_SENSORS_WIN  , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp XXX XXX
 
 #include "base.keymap"
 

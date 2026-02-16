@@ -9,18 +9,9 @@
         {
             "name": "zmk-config",
             "path": "."
-        },
-        {
-            "name": "zmk",
-            "path": "../zmk"
-        },
-        {
-            "name": "zmk-modules",
-            "path": "../zmk-modules"
         }
     ],
     "settings": {
-        "aider-composer.pythonPath": "/Users/autoferrit/.local/bin/",
         "editor.formatOnPaste": false,
         "files.associations": {
             "**/requirements{/**,*}.{txt,in}": "pip-requirements",
@@ -78,6 +69,8 @@
             "build": "${workspaceFolder}/scripts/build_docker.sh ${config:vars.zmk} ${workspaceFolder} ${config:vars.zmk_modules}",
             "zmk": "${workspaceFolder}/../zmk",
             "zmk_modules": "${workspaceFolder}/../zmk-modules"
-        }
+        },
+        "shellcheck.enable": true,
+        "shellcheck.useWorkspaceRootAsCwd": true
     }
 }

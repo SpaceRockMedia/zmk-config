@@ -1,34 +1,43 @@
 {
   "tasks": [
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh kyria_rev3_left nice_nano_v2",
+      "command": "scripts/build.sh kyria_rev3",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "label": "Build kyria left",
+      "label": "Build kyria",
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh kyria_rev3_right nice_nano_v2",
+      "command": "scripts/build.sh adept",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "label": "Build kyria right",
+      "label": "Build adept",
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh charybdis_left nice_nano_v2",
+      "command": "scripts/build.sh anywhy_flake",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "label": "Build charybdis left",
+      "label": "Build flake",
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh charybdis_right nice_nano_v2",
+      "command": "scripts/build.sh charybdis",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build charybdis",
+      "type": "shell"
+    },
+    {
+      "command": "scripts/build.sh charybdis_right",
       "group": {
         "isDefault": true,
         "kind": "build"
@@ -37,34 +46,34 @@
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh ffkb_lite_v1 nice_nano_v2",
+      "command": "scripts/build_fingerpunch.sh ffkb_lite_v1",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "label": "Build ffkb_lite_v1",
+      "label": "Build ffkb_lite_v1 5 col",
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh bykeeb_left seeeduino_xiao_ble",
+      "command": "scripts/build_fingerpunch.sh ffkb_v2",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "label": "Build bykeeb left",
+      "label": "Build ffkb v2",
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh bykeeb_right seeeduino_xiao_ble",
+      "command": "scripts/build_fingerpunch.sh ffkb_v3",
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "label": "Build bykeeb right",
+      "label": "Build ffkb v3",
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh pinkies_out_v3@3.0.0 vik_cirque_i2c",
+      "command": "scripts/build_fingerpunch.sh pinkies_out_v3@3.0.0 vik_cirque_i2c",
       "group": {
         "isDefault": true,
         "kind": "build"
@@ -73,7 +82,16 @@
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh settings_reset seeeduino_xiao_ble",
+      "command": "scripts/build_docker.sh reviung41 sparkfun_pro_micro_rp2040",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build reviung41",
+      "type": "shell"
+    },
+    {
+      "command": "scripts/build_reset.sh settings_reset seeeduino_xiao_ble",
       "group": {
         "isDefault": true,
         "kind": "build"
@@ -82,7 +100,7 @@
       "type": "shell"
     },
     {
-      "command": "/workspaces/zmk-config/scripts/build_docker.sh settings_reset nice_nano_v2",
+      "command": "scripts/build_reset.sh settings_reset nice_nano_v2",
       "group": {
         "isDefault": true,
         "kind": "build"

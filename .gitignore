@@ -1,7 +1,6 @@
 .lh/
-build/
-.build/
-modules/
 .DS_Store
 .aider*
 *ignore
+
+build/

@@ -19,15 +19,17 @@
 //
 // HRM
 //
-#define _____________HRM__QWERTY__GACS_____________ &hm LGUI A  &hm LALT S  &hm LCTRL D &hs LSHFT F
-#define _____________HRM__QWERTY__SCAG_____________ &hs RSHFT J &hm RCTRL K &hm LALT L  &hm RGUI SEMI
-#define _____________HRM__QWERTY__CSAG_____________ &hm LCTRL A &hm LSHFT S &hs LALT D  &hm LGUI F
-#define _____________HRM__QWERTY__GASC_____________ &hs RGUI J  &hs RALT K  &hm LSHFT L &hm RCTRL SEMI
-#define _____________HRM__QWERTY__CASG_____________ &hm LCTRL A &hm LALT S  &hs LSHFT D &hm LGUI F
-#define _____________HRM__QWERTY__GSAC_____________ &hs RGUI J  &hs RSHFT K &hm LALT L  &hm RCTRL SEMI
+#define _________________________HRM__QWERTY__GACS_________________________ &hml LGUI A  &hml LALT S  &hml LCTRL D &hml LSHFT F
+#define _________________________HRM__QWERTY__SCAG_________________________ &hmr RSHFT J &hmr RCTRL K &hmr LALT L  &hmr RGUI SEMI
+#define _________________________HRM__QWERTY__GSAC_________________________ &hml LGUI A  &hml LSHFT S &hml LALT D  &hml LCTRL F
+#define _________________________HRM__QWERTY__CASG_________________________ &hmr RCTRL J &hmr LALT K  &hmr LSHFT L &hmr RGUI SEMI
+#define _________________________HRM__QWERTY__CSAG_________________________ &hml LCTRL A &hml LSHFT S &hml LALT D  &hml LGUI F
+#define _________________________HRM__QWERTY__GASC_________________________ &hmr RGUI J  &hmr RALT K  &hmr LSHFT L &hmr RCTRL SEMI
+// #define _________________________HRM__QWERTY__CASG_________________________ &hml LCTRL A &hml LALT S  &hml LSHFT D &hml LGUI F
+// #define _________________________HRM__QWERTY__GSAC_________________________ &hmr RGUI J  &hmr RSHFT K &hmr LALT L  &hmr RCTRL SEMI
 
-#define _____________HRM__COLEMAK__GACS____________ &hm LGUI A  &hm LALT R  &hm LCTRL S &hs LSHFT T
-#define _____________HRM__COLEMAK__SCAG____________ &hs RSHFT N &hm RCTRL I &hm LALT I  &hm RGUI O
+#define _____________HRM__COLEMAK__GACS____________ &hml LGUI A  &hml LALT R  &hml LCTRL S &hml LSHFT T
+#define _____________HRM__COLEMAK__SCAG____________ &hmr RSHFT N &hmr RCTRL I &hmr LALT I  &hmr RGUI O
 
 //
 // MODS

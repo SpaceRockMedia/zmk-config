@@ -20,19 +20,10 @@
 */
 #include "zmk-helpers/helper.h"
 /* source key position labels */
-#include "zmk-helpers/key-labels/42.h"
+#include "zmk-helpers/key-labels/36.h"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
-
-/* map extra keys */
-#define X_LT  &kp GRAVE
-#define X_LM  &smart_mouse
-#define X_LB  &kp LGUI
-
-#define X_RT  &kp BSPC
-#define X_RM  &kp SQT
-#define X_RB  &kp RGUI
 
 #define thumb_base_left  &kp MEH     DSPACE      &kp LSHIFT
 #define thumb_base_right &kp RSHIFT  &lt NAV RET SMART_NUM
@@ -53,4 +44,4 @@
 /* source the main keymap */
 #include "base.keymap"
 
-ZMK_APPLY_MATRIX_TRANSFORM(default_transform)
+ZMK_APPLY_MATRIX_TRANSFORM(5col_transform)
