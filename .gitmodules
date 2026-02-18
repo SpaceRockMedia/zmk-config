@@ -6,25 +6,25 @@
 	url = git@github.com:SpaceRockMedia/flake-zmk-module.git
 [submodule "modules/zmk-auto-layer"]
 	path = modules/zmk-auto-layer
-	url = https://github.com/petejohanson/zmk-auto-layer.git
+	url = https://github.com/urob/zmk-auto-layer.git
 [submodule "modules/zmk-fingerpunch-controllers"]
 	path = modules/zmk-fingerpunch-controllers
-	url = https://github.com/petejohanson/zmk-fingerpunch-controllers.git
+	url = https://github.com/sadekbaroudi/zmk-fingerpunch-controllers.git
 [submodule "modules/zmk-fingerpunch-keyboards"]
 	path = modules/zmk-fingerpunch-keyboards
-	url = https://github.com/petejohanson/zmk-fingerpunch-keyboards.git
+	url = https://github.com/sadekbaroudi/zmk-fingerpunch-keyboards.git
 [submodule "modules/zmk-fingerpunch-vik"]
 	path = modules/zmk-fingerpunch-vik
-	url = https://github.com/petejohanson/zmk-fingerpunch-vik.git
+	url = https://github.com/sadekbaroudi/zmk-fingerpunch-vik.git
 [submodule "modules/zmk-helpers"]
 	path = modules/zmk-helpers
-	url = https://github.com/petejohanson/zmk-helpers.git
+	url = https://github.com/urob/zmk-helpers.git
 [submodule "modules/zmk-leader-key"]
 	path = modules/zmk-leader-key
-	url = https://github.com/petejohanson/zmk-leader-key
+	url = https://github.com/urob/zmk-leader-key.git
 [submodule "modules/zmk-tri-state"]
 	path = modules/zmk-tri-state
-	url = https://github.com/petejohanson/zmk-tri-state.git
+	url = https://github.com/dhruvinsh/zmk-tri-state.git
 [submodule "modules/chiptuner-zmk-module"]
 	path = modules/chiptuner-zmk-module
 	url = https://github.com/petejohanson/chiptuner-zmk-module.git
@@ -39,4 +39,4 @@
 	url = https://github.com/badjeff/zmk-pmw3610-driver.git
 [submodule "modules/zmk-pmw3610-driver-inorichi"]
 	path = modules/zmk-pmw3610-driver-inorichi
-	url = https://github.com/inorichi/zmk-pmw3610-driver
+	url = https://github.com/inorichi/zmk-pmw3610-driver.git

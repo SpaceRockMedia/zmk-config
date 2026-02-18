@@ -22,6 +22,8 @@ manifest:
       url-base: https://github.com/carrefinho
     - name: inorichi
       url-base: https://github.com/inorichi
+    - name: munnich
+      url-base: https://github.com/nmunnich
   projects:
     - name: zmk
       remote: spacerockmedia
@@ -83,5 +85,10 @@ manifest:
     # - name: zmk-tri-state
     #   remote: dhruvinsh
     #   revision: main
+
+    - name: zmk-apiaster-module
+      remote: munnich
+      revision: main
+      import: config/west.yml
   self:
     path: config
