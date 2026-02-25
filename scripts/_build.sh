@@ -29,7 +29,7 @@ get_cmd(){
   BOARD=${2}
   MODSTR="$(get_mods ${@:3})"
 
-  echo "$ZMKDIR/.venv/bin/west \
+  echo "$ZMKDIR/.venv/bin/python -m west \
     build -p \
     -d build/${SHIELD} \
     -b ${BOARD} \

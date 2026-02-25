@@ -28,6 +28,15 @@
       "type": "shell"
     },
     {
+      "command": "scripts/build.sh apiaster",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build apiaster",
+      "type": "shell"
+    },
+    {
       "command": "scripts/build.sh charybdis",
       "group": {
         "isDefault": true,

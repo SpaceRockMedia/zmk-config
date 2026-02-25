@@ -71,6 +71,8 @@
             "zmk_modules": "${workspaceFolder}/../zmk-modules"
         },
         "shellcheck.enable": true,
-        "shellcheck.useWorkspaceRootAsCwd": true
+        "shellcheck.useWorkspaceRootAsCwd": true,
+        "python.languageServer": "None",
+        "python.analysis.typeCheckingMode": "off"
     }
 }

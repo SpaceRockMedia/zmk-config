@@ -40,3 +40,6 @@
 [submodule "modules/zmk-pmw3610-driver-inorichi"]
 	path = modules/zmk-pmw3610-driver-inorichi
 	url = https://github.com/inorichi/zmk-pmw3610-driver.git
+[submodule "modules/zmk-apiaster-module"]
+	path = modules/zmk-apiaster-module
+	url = https://github.com/nmunnich/zmk-apiaster-module.git
